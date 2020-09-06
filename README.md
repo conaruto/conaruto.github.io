@@ -23,4 +23,4 @@ Ce site, les ressources contenues sur ce site et le wiki ne sont pas publiés pa
 
 ## Ressources
 
-Une [page dédié sur le wiki](https://github.com/conaruto/conaruto.github.io/wiki/resources.md) recense, normalement de façon exhautive, les ressources utilisés et en liste leur auteur.
+Une [page dédié sur le wiki](https://github.com/conaruto/conaruto.github.io/wiki/resources) recense, normalement de façon exhautive, les ressources utilisés et en liste leur auteur.
