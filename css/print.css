@@ -14,7 +14,6 @@ div.notprintable {
   display: none;
 }
 div.page-break {
-  clear: both;
   page-break-after: always;
-  padding-top: 20mm;
+  padding-top: 10mm;
 }

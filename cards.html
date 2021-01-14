@@ -57,8 +57,8 @@
                 <div v-if="displayNoItemInCartPlaceHolder" class="add-card-help notprintable">
                     Veuillez ajouter des objets dans le panier pour générer leurs cartes.
                 </div>
-                <div v-else class="capacity-card-body" v-for="page in cartPage">
-                    <div class="page-break"></div>
+                <div v-else class="capacity-card-body page-break" v-for="page in cartPage">
+                    
                     <div class="columnsHeader">
                         <input class="columnHeaderText" type="text" v-for="count in 8" v-bind:value="getColumnHeaderValue(page,count)"/>
                     </div>
