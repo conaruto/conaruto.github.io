@@ -55,6 +55,21 @@ var coFootersConfig = {
         "title": "Naruto",
         "icon": "images/ui/naruto.png",
         "url": "https://www.kana.fr/univers/naruto"
+    }, {
+        "name": "narutopedia",
+        "title": "Narutopedia",
+        "icon": "images/ui/narutopedia.png",
+        "url": "https://naruto.fandom.com/wiki/Narutopedia"
+    }, {
+        "name": "narutowiki",
+        "title": "Naruto Wiki",
+        "icon": "images/ui/narutowiki.png",
+        "url": "https://naruto.fandom.com/fr/wiki/Accueil"
+    }, {
+        "name": "wikipedia",
+        "title": "Wikipedia",
+        "icon": "images/ui/wikipedia.png",
+        "url": "https://fr.wikipedia.org/wiki/Naruto"
     }],
 }
 
