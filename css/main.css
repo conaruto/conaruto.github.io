@@ -1,0 +1,91 @@
+div.iconBar{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    z-index: 1000;
+    background-color:#F8F9F9;
+    border-color: #41270C;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    height: 42px;
+}
+
+/*Reset*/
+.reset>input {
+    display: none;
+}
+img.reset {
+    width: 32px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*cart*/
+div.cartIcon {
+    position: relative;
+    background-image: url("../images/ui/cart.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+span.cartIcon{
+    font-family: 'Arial';
+    position: absolute;
+    font-size: 8px;
+    width: 13px;
+    height: 9px;
+    bottom: 13px;
+    right: 5px;
+    text-align: center;
+    font-weight: bolder;
+    color:#417505;
+}
+div.cart{
+    background-color: white;
+    position: absolute;
+    top: 176px;
+    right: 0px;
+    margin: 8px 47px 8px 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+/*Help*/
+.help>input {
+    display: none;
+}
+img.help {
+    width: 32px;
+    padding: 0px;
+    margin: 0px;
+}
+
+div.help{
+    background-color: white;
+    position: absolute;
+    top: 176px;
+    right: 0px;
+    margin: 8px 8px 8px 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 500px;
+}

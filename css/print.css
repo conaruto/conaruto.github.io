@@ -1,0 +1,20 @@
+@page {
+  size: landscape ;
+  margin: 0px;
+}
+
+body {
+  -webkit-print-color-adjust: exact !important;
+  margin: 0px;
+  color-adjust: exact; /*Firefox*/
+}
+
+/* Headers */
+div.notprintable {
+  display: none;
+}
+div.page-break {
+  clear: both;
+  page-break-after: always;
+  padding-top: 20mm;
+}

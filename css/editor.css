@@ -1,0 +1,235 @@
+@font-face {
+    font-family: "sage-sans";
+    src: url("fonts/sagesans-Regular.ttf");
+}
+@font-face {
+    font-family: "Georgia";
+    src: url("fonts/Georgia.ttf");
+}
+@font-face {
+    font-family: "Georgia Bold";
+    src: url("fonts/Georgia Bold.ttf");
+}
+@font-face {
+    font-family: "Ferox";
+    src: url("fonts/Ferox.ttf");
+}
+
+div.ui-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color:#F8F9F9;
+    border-color: #41270C;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    height:40px;
+    padding-top: 4px;
+}
+
+/*Reset*/
+.reset>input {
+    display: none;
+}
+div.reset {
+    padding: 0px 4px;
+    margin: 0px;
+}
+img.reset {
+    width: 32px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Upload*/
+div.file-upload {
+    padding: 0px 4px;
+    margin: 0px;
+}
+.file-upload>input {
+    display: none;
+}
+img.file-upload {
+    width: 32px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Item type */
+div.item-types {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 4px;
+    margin: 0px;
+    align-items: center;
+}
+div.item-type {
+    padding: 0px 4px;
+    margin: 0px;
+}
+input.item-type {
+    padding: 0px 4px;
+    margin: 0px;
+}
+label.item-type {
+    padding: 0px 4px;
+    margin: 0px;
+}
+div.item-selected {
+    padding: 0px 4px;
+    margin: 0px;
+    align-self: center;
+}
+
+.file-save>input {
+    display: none;
+}
+
+/* Save*/
+div.file-save{
+    margin-left: auto;
+    padding: 0px 4px;
+    margin: 0px;
+}
+img.file-save {
+    width: 32px;
+    margin: 0px;
+    padding: 0px;
+}
+div.file-save-box {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    background-color:rgb(221, 221, 221);
+    z-index: 9;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+input.filename {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+img.file-cancel{
+    padding: 0px 4px;
+    width: 32px;
+}
+a.file-save{
+    margin-left: auto;
+}
+img.file-save-enable{
+    margin-left: auto;
+    padding: 0px 4px;
+    width: 32px;
+}
+img.file-save-disable{
+    margin-left: auto;
+    padding: 0px 4px;
+    width: 32px;
+}
+
+div.filename {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div.file-save-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:36px;
+}
+
+
+div.mainEditor {
+    display: flex;
+    flex-direction: row;
+}
+
+/*JSON edditor*/
+div.editorBox {
+    display: block;
+}
+
+/* Preview*/
+div.preview-main-box {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+div.description-preview {
+    width: 375px;
+    margin: 2px;
+    padding-bottom: 3px;
+    box-sizing: content-box;
+}
+h3.full-description-preview {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    box-sizing: content-box;
+}
+
+div.full-description-preview {
+    font-family: 'Georgia';
+    font-size: 14px;
+    text-align: justify;
+    padding: 5px;
+    border-color: #41270C;
+    border-style: solid;
+    border-radius: 8px;
+    box-sizing: content-box;
+    background-color: #fff4e8;
+}
+
+div.preview-floating-box {
+    position: sticky;
+    top: 20px;
+}
+
+div.preview-box-capacity {
+    width: calc(3 * 33mm);
+    height: calc(3 * 38mm);
+    margin-right: 10px;
+}
+
+div.preview-box-way {
+    width: calc(3 * 33mm);
+    height: calc(3 * 120px);  
+    margin-right: 10px;
+}
+
+div.preview {
+    transform: scale(3);
+    transform-origin: 0% 0% 0px;
+    width: fit-content;
+}
+
+div.ui-icons-mini {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#F8F9F9;
+    border-radius: 4px;
+    height:40px;
+    padding-top: 8px;
+}
+
+img.add-item {
+    margin: 2px;
+    width: 32px;
+}
+
+img.remove-item {
+    margin: 2px;
+    width: 32px;
+}

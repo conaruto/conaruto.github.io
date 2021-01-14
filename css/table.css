@@ -1,0 +1,173 @@
+/* itemTable */
+table.itemTable {
+    margin-left: 18px;
+    border-collapse: collapse;
+    width: calc(100% - 18px);
+    margin-top:8px;
+    margin-bottom: 8px;
+}
+tr.itemTable {
+    width: calc(100% - 18px);
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+tr.itemTable:nth-child(even) {
+    background-color: #dddddd;
+}
+
+th.defaultItemTable {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+td.defaultItemTable {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+img.buttonItemTable {
+    width: 22px;
+    height: 22px;
+}
+td.wayIconItemTable {
+    text-align: center;
+}
+img.wayIconItemTable {
+    width: 22px;
+    height: 22px;
+}
+td.rankItemTable {
+    text-align: center;
+}
+td.limitedItemTable {
+    text-align: center;
+}
+th.nameItemTable {
+    text-align: start;
+    min-width: 150px;
+    max-width: 150px;
+}
+td.nameItemTable {
+    min-width: 150px;
+    max-width: 150px;
+}
+td.nameItemCartTable {
+    min-width: 300px;
+    max-width: 300px;
+}
+th.nameItemCartTable {
+    min-width: 300px;
+    max-width: 300px;
+}
+th.descriptionItemTable {
+    text-align: start;
+}
+summary.descriptionItemTable{
+    margin: 2px;
+    padding: 4px;
+}
+div.descriptionItemTable{
+    margin: 2px;
+    padding: 4px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+}
+tr.itemTable:nth-child(even) > td.descriptionItemTable > details.descriptionItemTable > div.descriptionItemTable {
+    /* background-color:rgb(255, 255, 255); */
+    background-color: #eeeeee;
+}
+tr.itemTable:nth-child(odd) > td.descriptionItemTable > details.descriptionItemTable > div.descriptionItemTable {
+    /* background-color: #dddddd; */
+    background-color: #eeeeee;
+}
+span.descriptionItemTable{
+    margin-right: 4px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+div.profilTableContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+div.profilTableName {
+    font-size: 18px;
+    font-family: "Georgia";
+    width: 100%;
+    background-color: rgb(207, 207, 207);
+    padding-bottom: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-width: 0px;
+    padding-left: 2px;
+}
+div.profilDescriptionTable {
+    width: calc(100% - 4px);
+    margin-bottom: 2px;
+    padding: 2px 4px 2px 2px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-top-width: 0px;
+    background-color: #eeeeee;
+    font-size: 14px;
+    font-family: "Courrier new";
+    text-align: justify;
+}
+
+div.wayTableContainer {
+    display: column;
+    justify-content: flex-start;
+    width: calc(100% - 8px);
+    margin-left: 8px;
+}
+
+div.wayNameTableContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+}
+div.expandCharTable {
+    font-size: 18px;
+    min-width: 18px;
+    max-width: 18px;
+}
+
+div.wayDescriptionTable {
+    margin-left: 18px;
+    margin-bottom: 2px;
+    padding: 4px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-top-width: 0px;
+    font-size: 14px;
+    font-family: "Courrier new";
+    text-align: justify;
+}
+
+div.wayNameTable {
+    font-size: 18px;
+    font-family: "Georgia";
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-width: 0px;
+    background-color: #eeeeee;
+}
+

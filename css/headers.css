@@ -1,0 +1,114 @@
+div.body-container {
+    width: calc(100vw - 30px);
+}
+
+div.headers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    
+}
+
+/* BAnner */
+div.banner {
+    background-image: url("../images/ui/banner-texture.png");
+    background-repeat: repeat;
+    background-color:#D3D3D3;
+    border-radius: 12px 12px 0px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+}
+img.banner {
+    background-color:white;
+    margin-top: 3px;
+    align-content: center;
+    width: auto;
+    height: 95px;
+    border-radius: 6px;
+}
+a.banner {
+    position: fixed;
+    left: 15px;
+    top: 20px;
+    margin-top: 2px;
+    color: #231107; 
+    background-color:white;
+    border-radius: 6px;
+    padding: 3px;
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: 'Times New Roman';
+}
+
+
+/* Menu bar */
+div.menuBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    
+}
+
+div.menuItem {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+
+}
+
+a.menuItem {
+    color: white;
+    background-color:grey;
+    width: 100%;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    text-decoration:none;
+    font-size: 20px;
+    font-family: "Courrier new";
+    padding-top: 4px;
+    padding-bottom: 4px;
+    box-sizing: content-box;
+    line-height: 1;
+}
+
+a.menuItem:hover {
+    background-color:rgb(114, 114, 114);
+    color: white;
+    /* color: rgb(221, 221, 221); */
+    text-decoration:none;
+    box-sizing: content-box;
+}
+
+a.menuItemSelected {
+    line-height: 1;
+    color: white;
+    background-color:rgb(94, 93, 93);
+    width: 100%;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    text-decoration:none;
+    font-size: 20px;
+    font-family: "Courrier new";
+    padding-top: 4px;
+    padding-bottom: 4px;
+    box-sizing: content-box;
+}
+
+a.menuItemSelected:hover {
+    background-color:rgb(94, 93, 93);
+    color: white;
+    text-decoration:none;
+    box-sizing: content-box;
+}
