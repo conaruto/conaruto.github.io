@@ -1,77 +1,7 @@
 var coConfig = {
     "wayUrl": 'data/naruto-ways.json',
-    "helpUrls": {
-        "capacity": "help/help-capacity-table.md",
-        "card": "help/help-capacity-card.md"    
-    },
     "objectUrl": 'data/naruto-objects.json'
 };
-
-var headersDefaults = {
-    'selectedMenu': "capacity",
-};
-
-var coHeadersConfig = {
-    "menus": [{
-        "name": "capacity",
-        "label": "Capacités",
-        "link": "index.html"
-    }, {
-        "name": "card",
-        "label": "Cartes",
-        "link": "cards.html"
-    }, 
-    //{
-    //      "name": "editor",
-    //      "label": "Éditeur",
-    //      "link": "editor.html"
-    // }
-    ],
-}
-
-var coFootersConfig = {
-    "powered-by": [{
-        "name": "game-icons.net",
-        "title": "Game-icons.net",
-        "icon": "images/ui/game-icons.png",
-        "url": "https://game-icons.net"
-    }, {
-        "name": "ogl",
-        "title": "Open Game License",
-        "icon": "images/ui/ogl.png",
-        "url": "http://www.opengamingfoundation.org/ogl.html"
-    }, {
-        "name": "bbe",
-        "title": "Black Book Edition",
-        "icon": "images/ui/bbe.jpeg",
-        "url": "https://www.black-book-editions.fr"
-    }, {
-        "name": "vuejs",
-        "title": "Vue.js",
-        "icon": "images/ui/vuejs.png",
-        "url": "https://vuejs.org"
-    }, {
-        "name": "naruto",
-        "title": "Naruto",
-        "icon": "images/ui/naruto.png",
-        "url": "https://www.kana.fr/univers/naruto"
-    }, {
-        "name": "narutopedia",
-        "title": "Narutopedia",
-        "icon": "images/ui/narutopedia.png",
-        "url": "https://naruto.fandom.com/wiki/Narutopedia"
-    }, {
-        "name": "narutowiki",
-        "title": "Naruto Wiki",
-        "icon": "images/ui/narutowiki.png",
-        "url": "https://naruto.fandom.com/fr/wiki/Accueil"
-    }, {
-        "name": "wikipedia",
-        "title": "Wikipedia",
-        "icon": "images/ui/wikipedia.png",
-        "url": "https://fr.wikipedia.org/wiki/Naruto"
-    }],
-}
 
 var mainDefaults = {
     'items' : [],
@@ -79,14 +9,15 @@ var mainDefaults = {
     'cartDisplay': false
 };
 
-var addToCart = function(vroot,items) {
-    vroot.$emit('addToCartEvent', items);
+var addToCart = function(items) {
+    eventBus.$emit('addToCartEvent', items);
 };
-var removeFromCart = function(vroot, items) {
-    vroot.$emit('removeFromCartEvent', items);
+var removeFromCart = function(items) {
+    eventBus.$emit('removeFromCartEvent', items);
 };
 
 var coItemsConfig = {
+    "cartItemsPerPageCount": 40,
     "headers": {
         "capacities": [
             {

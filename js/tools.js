@@ -1,13 +1,33 @@
+var eventBus = new Vue({});
 
-
-var clone = function(o) {
-    return(JSON.parse(JSON.stringify(o)));
+var saveDataToSession = function(key, value) {
+    //console.log("Save to session : "+key);
+    sessionStorage.setItem(key,JSON.stringify(value));    
 };
 
-var propertyOptionsFill = function(options) {
-    po = Object.assign({}, options, jsonEditorPropertyOptions);
-    return(po);
+var loadDataFromSession = function(defaults, key) {
+    var storedValue = JSON.parse(sessionStorage.getItem(key));
+    var value = null;
+    if (storedValue) {
+        value = storedValue;
+    } else {
+        value = defaults[key];
+    }
+    //console.log("Load ["+key+"] from session : "+JSON.stringify(value));
+    //console.log("Load ["+key+"] from session");
+    return(value);
 };
+
+var getCurrentMenu = function() {
+    var locationRegex = new RegExp('^/(?:(?<category>[^-]+)-)?(?<name>.+).html$');
+    l = window.location.pathname;
+    //console.log("Path : '" + l + "' (" + locationRegex + ")");
+    m = locationRegex.exec(l);
+    //console.log("Match : "+ m + " ("+JSON.stringify(m.group)+")");
+    menuCategory = m.groups.category == undefined ? "default" : m.groups.category;
+    menuName = m.groups.name;
+    return({"category": menuCategory,"name": menuName});
+}
 
 // Retieves multiples json file from url array
 var fetchDatas = (urls) => {
@@ -26,6 +46,32 @@ var fetchMdData = (url) => {
     const request = fetch(url).then(response => response.text());
     return(request);
 };
+
+var clone = function(o) {
+    return(JSON.parse(JSON.stringify(o)));
+};
+
+Array.prototype.default=function() {
+    return(this[0]);
+};
+
+Array.prototype.contains = function(item) {
+    return(this.find(elt => isEqual(elt, item)) != undefined);
+}
+
+Array.prototype.unique = function() {
+    return this.filter(function (value, index, self) { 
+        return self.indexOf(value) === index;
+    });
+};
+
+Array.prototype.getByID = function(id) {
+    if (this != undefined) {
+        return(this.find(i=>i.id == id));
+    } else {
+        return({});
+    }
+}
 
 Array.prototype.getItemsByType = function(otype) {
     //console.log("getItemsByType("+otype+") = "+JSON.stringify(this.filter(i => (('otype' in i) && (i.otype == otype)))));
@@ -58,16 +104,16 @@ var isEqual = function(a, b) {
     return(oid(a) == oid(b));
 }
 
-Array.prototype.contains = function(item) {
-    return(this.find(elt => isEqual(elt, item)) != undefined);
-}
-
-Array.prototype.unique = function() {
-    return this.filter(function (value, index, self) { 
-        return self.indexOf(value) === index;
-    });
+var propertyOptionsFill = function(options) {
+    po = Object.assign({}, options, jsonEditorPropertyOptions);
+    return(po);
 };
 
+var itemCompare = function(a, b) {
+    var aFullName = getOption(a).name;
+    var bFullName = getOption(b).name;
+    return aFullName.localeCompare(bFullName, 'fr');
+};
 
 var getOption = function(item) {
     var name = item.name;
@@ -79,13 +125,6 @@ var getOption = function(item) {
     }
     //console.log("getOption() = "+JSON.stringify({"id":oid(item), "name": name}));
     return({"id":oid(item), "name": name});
-};
-
-
-var itemCompare = function(a, b) {
-    var aFullName = getOption(a).name;
-    var bFullName = getOption(b).name;
-    return aFullName.localeCompare(bFullName, 'fr');
 };
 
 var getExamples = function(schemas) {
@@ -123,7 +162,6 @@ var getOptions = function(items, picked, schemas) {
     };
 };
 
-
 var getItem = function(items, schemas, picked, selected) {
     //console.log("getItem('"+picked+"', '"+selected+"')");
     switch(picked) {
@@ -140,27 +178,6 @@ var getItem = function(items, schemas, picked, selected) {
     };
 };
 
-var saveDataToSession = function(key, value) {
-    //console.log("Save to session : "+key);
-    sessionStorage.setItem(key,JSON.stringify(value));    
-};
-
-var loadDataFromSession = function(defaults, key) {
-    var storedValue = JSON.parse(sessionStorage.getItem(key));
-    var value = null;
-    if (storedValue) {
-        value = storedValue;
-    } else {
-        value = defaults[key];
-    }
-    //console.log("Load ["+key+"] from session : "+JSON.stringify(value));
-    //console.log("Load ["+key+"] from session");
-    return(value);
-};
-
-Array.prototype.default=function() {
-    return(this[0]);
-};
 
 var itemStringify = function(obj, padding="")  {
     var jsonData = padding + "{\n";
@@ -180,6 +197,17 @@ var itemsStringify = function(objs)  {
         jsonItemArray.push(itemStringify(obj,"  "));
     });
     jsonData += jsonItemArray.join(",\n")+"\n]";
+// console.log(jsonData);
+    return(jsonData);
+};
+
+var characterStringify = function(character)  {
+    var jsonData = "{\n\t\"characterId\": \""+character.characterId+"\",\n\t\"attributes\": [\n";
+    var jsonItemArray = [];
+    character.attributes.map( obj => {
+        jsonItemArray.push("\t\t" + JSON.stringify(obj));
+    });
+    jsonData += jsonItemArray.join(",\n")+"\n\t]\n}";
 // console.log(jsonData);
     return(jsonData);
 };

@@ -1,0 +1,156 @@
+/* Game */
+div.gameApp {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+div.gameController{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    min-width: 380px;
+    max-width: 380px;
+}
+
+div.characterMenu{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border-width: 1px;
+    border-color: dimgrey;
+    border-style: solid;
+    margin: 1px;
+    width: 208px;
+}
+
+div.characterLabel {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+div.categoryMenu{
+    width: 367px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border-width: 1px;
+    border-color: dimgrey;
+    border-style: solid;
+    margin: 1px;
+}
+
+div.arrow {
+    font-weight: bold;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    background-color: dimgrey;
+    
+}
+
+div.categoryLabel {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+div.itemPreview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 5px;
+}
+
+div.itemPreviewImageBox {
+    width: 70px; 
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-width: 1px;
+    border-color: grey;
+    border-style: solid;
+    margin:1px;
+}
+
+img.itemPreview {
+    max-width: 70px;
+    max-height: 70px;
+    
+}
+
+div.loadAlerts {
+    width: 362px;
+    font-size: 12px;
+    border-width: 1px;
+    border-color: grey;
+    border-style: solid;
+    background-color: rgb(245, 166, 166);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+img.randomCharacterIcon {
+    margin: 30px;
+    width: 64px;
+
+}
+
+div.itemZOrder {
+    display: flex;
+    width: 50px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+}
+
+label.itemZOrder {
+    width: 42px; 
+    order: 1000;
+    height: 23.2px;
+    margin: 1px;
+    text-align: center;
+    font-weight: bold;
+    border-width: 1px;
+    border-color: grey;
+    border-style: solid;
+    font-size:20px;
+}
+
+div.itemZOrderBox {
+    width: 42px; 
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-width: 1px;
+    border-color: grey;
+    border-style: solid;
+    margin:1px;
+}
+img.itemZOrder {
+    max-width: 42px;
+    max-height: 42px;
+}
+
+div.characterImage{
+    border: 1px solid grey;
+    margin: 1px 5px 5px 5px;
+    width: 680px;
+    height: 801px;
+}

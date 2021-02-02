@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv=“Pragma” content=”no-cache”>
+        <meta http-equiv=“Expires” content=”-1″>
+        <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js-ext/vue.js"></script>
+        <script src="js-ext/sjcl.js" defer></script>
+        <script src="js-ext/ajv.min.js" defer></script>
+        <script src="js-ext/stringops.js" defer></script>
+        <script src="js/jsonEditorConfig.js" defer></script>
+        <script src="js/config.js" defer></script>
+        <script src="js/headers-config.js" defer></script>
+        <script src="js/footers-config.js" defer></script>
+        <script src="js/tools.js" defer></script>
+        <script src="js/headers.js" defer></script>
+        <script src="js/footers.js" defer></script>
+        <script src="js/valueTokens.js" defer></script>
+        <script src="js/propertyTokens.js" defer></script>
+        <script src="js/way.js" defer></script>
+        <script src="js/capacity.js" defer></script>
+        <script src="schemas/definitions-schema.js" defer></script>
+        <script src="schemas/profil-schema.js" defer></script>
+        <script src="schemas/way-schema.js" defer></script>
+        <script src="schemas/capacity-schema.js" defer></script>
+        <script src="js-ext/jsoneditor.js"></script>
+        <script src="js/editor.js" defer></script>
+        <link rel="icon" type="image/png" href="images/common/favicon.png">
+        <link rel="stylesheet" type="text/css" href="css-ext/fontawesome.css">
+        <link rel="stylesheet" type="text/css" href="css-ext/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/headers.css">
+        <link rel="stylesheet" type="text/css" href="css/footers.css">
+        <link rel="stylesheet" type="text/css" href="css/editor.css">
+        <link rel="stylesheet" type="text/css" href="css/tokens.css">
+        <link rel="stylesheet" type="text/css" href="css/capacity.css">
+        <link rel="stylesheet" type="text/css" href="css/way.css">
+        <link rel="stylesheet" type="text/css" href="css/json-editor.css">
+        <title>Chroniques Oubliées Fantasy, version Naruto</title>
+    </head>
+    <body>
+        <div class="body-container">
+            <div id="headers">
+                <banner></banner>
+                <menu-bar></menu-bar>
+            </div>
+            <div id="editor-common">
+                <div class="ui-icons">
+                    <div class="reset">
+                        <img class="reset" src="images/ui/reset.png" alt="Réinitialiser tous les filtres" title="Réinitialiser tous les filtres" v-on:click="reset"/>
+                    </div>
+                    <div class="file-upload">
+                        <input id="file-upload" type="file" accept="application/json" v-on:change="uploadFromFile" />
+                        <label for="file-upload"><img class="file-upload" src="images/ui/load.png" alt="Charger une liste d'items depuis un fichier" title="Charger une liste d'items depuis un fichier"/></label>
+                    </div>
+                    <div class="item-types">
+                        <div class="item-type">
+                            <input class="item-type" selected type="radio" id="profil" value="profil" v-model="itemTypePicked"/>
+                            <label class="item-type" for="profil">Profil</label>
+                        </div>
+                        <div class="item-type">
+                            <input class="item-type" type="radio" id="way" value="way" v-model="itemTypePicked">
+                            <label class="item-type" for="way">Voie</label>
+                        </div>
+                        <div class="item-type">
+                            <input class="item-type" type="radio" id="capacity" value="capacity" v-model="itemTypePicked"/>
+                            <label class="item-type" for="capacity">Capacité</label>
+                        </div>  
+                    </div>
+                    <div class="item-selected">
+                        <select v-model="itemNameSelected">
+                            <option v-for="option in options" v-bind:value="option.id">{{ option.name }}</option>
+                        </select>
+                    </div>
+                
+                    
+                    <div class="file-save">
+                        <img v-if="items.length > 0" class="file-save" src="images/ui/save.png" alt="Sauvegarder la liste d'items dans un fichier" title="Sauvegarder la liste d'items dans un fichier" v-on:click="save = true"/>
+                        <img v-else class="file-save" src="images/ui/save.png" alt="Sauvegarder la liste d'items dans un fichier (désactivé)" title="Sauvegarder la liste d'items dans un fichier (désactivé)" v-on:click="save = false"/>
+                        <div v-if="save" class="file-save-box">
+                            <div class="filename">
+                                <label for="filename">Nom du fichier json</label>
+                                <input class="filename" id="filename" selected type="text" placeholder="ma-liste.json" v-model="saveFileName" pattern="[-_a-zA-Z0-9].json" title="ma-liste.json" v-on:input="checkFileName()"/>
+                            </div>
+                            <div class="file-save-actions">
+                                <img class="file-cancel" src="images/ui/cancel.png" alt="Annuler" title="Annuler" v-on:click="cancelSaveFile()"/>
+                                <a class="file-save" v-if="saveEnable" v-bind:href="saveData" v-on:click="saveToFile" v-bind:download="saveFileName">
+                                    <img class="file-save-enable" src="images/ui/ok.png" alt="Sauvegarder la liste d'items dans un fichier" title="Sauvegarder la liste d'items dans un fichier"/>
+                                </a>
+                                <img v-else class="file-save-disable" src="images/ui/ok-disable.png" alt="Sauvegarder la liste d'items dans un fichier (désactivé)" title="Sauvegarder la liste d'items dans un fichier (désactivé)"/>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                <div class="mainEditor">
+                    <!-- https://github.com/json-editor/json-editor -->
+                    <div id="editorBox" class="editorBox"></div>
+                    <div class="preview-main-box">
+                    
+                        <div class="preview-floating-box">
+                            <div class="description-preview">
+                                <h3 class="full-description-preview">Description complète :</h3>
+                                <div class="full-description-preview">{{item['full-description']}}</div>
+                            </div>
+                            <div v-show="item.otype == 'capacity'" class="preview-box-capacity">
+                                <div class="preview">
+                                    <capacity v-bind:item="item" v-bind:items="items"></capacity>
+                                </div>
+                            </div>
+                            <div v-show="item.otype == 'way'" class="preview-box-way">
+                                <div class="preview">
+                                    <way v-bind:item="item"></way>
+                                </div>
+                            </div>
+                    
+                            <div class="ui-icons-mini">
+                                <img v-if="inItems()" class="add-item" v-on:click="addToList()" src="images/ui/update-item.png" alt="Appliquer les changements" title="Appliquer les changements"/>
+                                <img v-else class="add-item" v-on:click="addToList()" src="images/ui/add-item.png" alt="Ajouter l'item à la liste" title="Ajouter l'item à la liste"/>
+                                <img v-show="inItems()" class="remove-item" v-on:click="removeFromList()" src="images/ui/remove-item.png" alt="Enlever l'item de la liste" title="Enlever l'item de la liste"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footers">
+                <footer-banner></footer-banner>
+            </div>
+        </div>
+    </body>
+</html>

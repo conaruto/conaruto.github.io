@@ -8,7 +8,7 @@ var rowTable = {
             return(this.header[attr](this.row));
         },
         action: function(r) {
-            this.get('action')(this.$root, r);
+            this.get('action')(r);
         }
     },
     template: 
@@ -35,7 +35,7 @@ var itemTable = {
     },
     methods: {
         action: function(h,t) {
-            h.action()(this.$root, t);
+            h.action()(t);
         }
     },
     template: 
