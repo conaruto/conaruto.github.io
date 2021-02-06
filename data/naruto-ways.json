@@ -6017,9 +6017,9 @@
         "test": "CHA",
         "values": [
           {
-            "name": "other",
+            "name": "free",
             "adjustment": "=",
-            "other": ":"
+            "value": ":"
           },
           {
             "name": "quantity",
