@@ -17,6 +17,10 @@ Pour choisir un item, il suffit de cliquer dessus et il se positionne automatiqu
 
 Il est possible de changer l'ordre d'empilement des images en les glissant/déposant dans la colonne "Z". Plus l'item est haut dans cette collone, plus il est visible et plus il est bas plus il est caché.
 
+## Ajustement
+
+Il est possible de changer la position de chacune des images composant le personnage simplement en cliquant dessus pour la déplacer à la position désirée. 
+
 ## Icones
 
 <img src="../images/ui/reset.png" height="30px" width="30px"/> Réinitialise la page et le personnage.
