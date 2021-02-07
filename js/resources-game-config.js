@@ -19,6 +19,7 @@ var coCharacterConfig = {
             {'categoryId': 'shirt', 'itemId': '1'},
             {'categoryId': 'animal', 'itemId': '1'},
             {'categoryId': 'weapon', 'itemId': '1'},
+            {'categoryId': 'extra', 'itemId': '1'},
         ],
         "items": [{
             'id': 'body',
@@ -211,6 +212,20 @@ var coCharacterConfig = {
             'label': 'Pieds',
             'x': 42.210,
             'y': 480.054
+        }, {
+            'id': 'extra',
+            'items': [
+                {'id': '1'},
+                //{'id': '3', 'x': -56.127, 'y': -105.233},
+                {'id': '3', "x": -98.437, "y": -92.234},
+                {'id': '4', "x": -90.437, "y": -89.234},
+                {'id': '6', "x": -73.252, "y": -93.362},
+                {'id': '7'},
+                
+            ],
+            'label': 'Extras',
+            'x': -78.105,
+            'y': -80.379
         }, {
             'id': 'animal',
             'items': [
@@ -429,7 +444,6 @@ var coCharacterConfig = {
                 {'id': '4', 'x': -50.437, 'y': -95.234},
                 {'id': '5'},
                 {'id': '6', 'x': -30.252, 'y': -103.362},
-                {'id': '8'},
                 {'id': '7'},
                 
             ],
