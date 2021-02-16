@@ -21,7 +21,7 @@ Chaque capacité ne peut être ajoutée qu'une seule fois au panier.
 
 <img src="../images/ui/addtocart.png" height="30px" width="30px"/> Ajouter une ou toutes les capacités d'une voie dans le panier.
 
-
+[Retour au menu d'aide](https://github.com/conaruto/conaruto.github.io/wiki/help)
 
 
 

@@ -15,3 +15,5 @@ Recharger la page réinitialise toutes les modifications apportées.
 ## Impression
 
 Pour imprimer les cartes, il suffit d'utiliser la fonction d'impression de son navigateur.
+
+[Retour au menu d'aide](https://github.com/conaruto/conaruto.github.io/wiki/help)

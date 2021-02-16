@@ -33,6 +33,6 @@ Il est possible de changer la position de chacune des images composant le person
 
 <img src="../images/ui/random.png" height="30px" width="30px"/> Permet de générer un personnage alèatoirement.
 
-
+[Retour au menu d'aide](https://github.com/conaruto/conaruto.github.io/wiki/help)
 
 [1]: <font size="2">L’auteur de la présente application accepte sans réserve de retirer tout ou partie des ressources à la demande direct de l'auteur original.</font> 
