@@ -9,8 +9,8 @@ Ressouces pour le jeu de rôle Chroniques 0ubliées Fantasy version Naruto
 
 ## Feuille de personnage
 
-* Feuille de personnage au format PDF : [Feuille-Personnage-COFvN.pdf](https://github.com/conaruto/conaruto.github.io/raw/master/resources/character/Feuille-Personnage-COFvN.pdf)
-* Feuille de personnage au format ODG : [Feuille-Personnage-COFvN.odg](https://github.com/conaruto/conaruto.github.io/raw/master/resources/character/Feuille-Personnage-COFvN.odg)
+* Feuille de personnage au format PDF : [Feuille-Personnage-COFvN.pdf](https://github.com/conaruto/conaruto.github.io/raw/master/ressources/character/Feuille-Personnage-COFvN.pdf)
+* Feuille de personnage au format ODG : [Feuille-Personnage-COFvN.odg](https://github.com/conaruto/conaruto.github.io/raw/master/ressources/character/Feuille-Personnage-COFvN.odg)
 
 ## Application
 
