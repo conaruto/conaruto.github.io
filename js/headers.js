@@ -204,21 +204,60 @@ var menuBar = {
             selectedMenu: menu.name,
             selectedCategory: menu.category,
             menus: coHeadersConfig.menus,
+            showMenus: false
         });
     },
+    computed: {
+        categories: function() {
+            return(this.menus.map(m=>m.category).unique());
+        }
+    },
     methods: {
-        menuClick: function(m){
-            saveDataToSession('selectedMenu', m.name);
+        isVisible: function(c, menu) {
+            index = this.menus.filter(m=>m.category==c).map(m=>m.name).indexOf(menu.name);
+            isCurrent = this.isCurrent(menu);
+            r = (isCurrent)||((this.selectedCategory != c)&&(index==0));
+            console.log("isVisible("+c+", "+menu.name+") = "+r+"("+isCurrent+","+index+")");
+            return(r);
+        },
+        getMenus: function(c){
+            return(this.menus.filter(m=>m.category == c));
+        },
+        isGroupedMenus: function(c) {
+            return(this.getMenus(c).length > 1);
+        },
+        groupedMenuIcon: function(c) {
+            if (this.isGroupedMenus(c)) {
+                return("▼");
+            } else {
+                return("");
+            }
         },
         isCurrent: function(m) {
             return((m.name == this.selectedMenu) && (m.category == this.selectedCategory));
+        },
+        toggleMenusOn: function(){
+            this.showMenus = true;
+        },
+        toggleMenusOff: function(){
+            this.showMenus = false;
         }
     },
     template: 
         `<div class="menuBar notprintable">
-            <div class="menuItem" v-for="menu in menus">
-                <a v-if="isCurrent(menu)" class="menuItemSelected" v-bind:href="menu.link" v-on:click="menuClick(menu)">{{menu.label}}</a>
-                <a v-else class="menuItem" v-bind:href="menu.link" v-on:click="menuClick(menu)">{{menu.label}}</a>
+            <div v-for="c in categories" class="menuGroup">
+                <div class="menuItem" v-for="(menu, index) in getMenus(c)">
+                    <div v-if="isVisible(c, menu)" class="visibleMenu">
+                        <a v-if="isCurrent(menu)" class="menuItemSelected">{{menu.label}}{{groupedMenuIcon(c)}}</a>
+                        <a v-else class="menuItem" v-bind:href="menu.link">{{menu.label}}{{groupedMenuIcon(c)}}</a>
+                    </div>
+                </div>
+                <div class="hiddenMenuGroup" v-if="isGroupedMenus(c)">
+                    <div class="menuItem" v-for="(menu, index) in getMenus(c)">
+                        <a v-if="isCurrent(menu)" class="menuItemSelected">{{menu.label}}</a>
+                        <a v-else class="menuItem" v-bind:href="menu.link">{{menu.label}}</a>
+                    </div>
+                </div>
             </div>
         </div>`
 };

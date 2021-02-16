@@ -4,7 +4,14 @@ var coHeadersConfig = {
         "label": "Capacités",
         "link": "tables-capacity.html",
         "category": "tables"
-    }, {
+    },
+    // {
+    //     "name": "object",
+    //     "label": "Objets",
+    //     "link": "tables-object.html",
+    //     "category": "tables"
+    // }, 
+    {
         "name": "capacity",
         "label": "Cartes",
         "link": "cards-capacity.html",
@@ -14,18 +21,17 @@ var coHeadersConfig = {
         "label": "Personnage",
         "link": "resources-game.html",
         "category": "resources"
-    }, 
-    // {
-    //     "name": "resources",
-    //     "label": "Aides de jeu",
-    //     "link": "resources-resources.html",
+    }, {
+        "name": "resources",
+        "label": "Aides de jeu",
+        "link": "resources-resources.html",
+        "category": "resources"
+    }
+    // , {
+    //     "name": "editor",
+    //     "label": "Éditeur",
+    //     "link": "resources-editor.html",
     //     "category": "resources"
-    // }, 
-    // {
-    //       "name": "editor",
-    //       "label": "Éditeur",
-    //       "link": "resources-editor.html",
-    //       "category": "resources"
     //  }
     ],
     "icons": {
