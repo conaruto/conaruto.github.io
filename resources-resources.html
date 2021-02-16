@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv=“Pragma” content=”no-cache”>
+        <meta http-equiv=“Expires” content=”-1″>
+        <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js-ext/vue.js"></script>
+        <script src="js-ext/marked.min.js"></script>
+        <script src="js-ext/sjcl.js" defer></script>
+        <script src="js-ext/ajv.min.js" defer></script>
+        <script src="js-ext/stringops.js" defer></script>
+        <script src="js/config.js" defer></script>
+        <script src="js/headers-config.js" defer></script>
+        <script src="js/footers-config.js" defer></script>
+        <script src="js/tools.js" defer></script>
+        <script src="js/headers.js" defer></script>
+        <script src="js/footers.js" defer></script>
+        <script src="js/resources-resources.js" defer></script>
+        <link rel="icon" type="image/png" href="images/common/favicon.png">
+        <link rel="stylesheet" type="text/css" href="css/headers.css">
+        <link rel="stylesheet" type="text/css" href="css/footers.css">
+        <link rel="stylesheet" type="text/css" href="css/resources-game.css">
+        <title>Chroniques Oubliées Fantasy, version Naruto</title>
+    </head>
+    <body>
+        <div class="bodycontainer">
+            <div class="headers" id="headers">
+                <banner></banner>
+                <menu-bar></menu-bar>
+            </div>
+            <div id="resources">
+                <div class="resouces" v-html="resources"></div>
+            </div>
+            <div id="footers">
+                <footer-banner></footer-banner>
+            </div>
+        </div>
+    </body>
+</html>
