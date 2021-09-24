@@ -5,6 +5,12 @@ var cards = new Vue({
         cartItems: [],
         cartItemsPerPageCount: coItemsConfig.cartItemsPerPageCount,
         displayItems: loadDataFromSession(mainDefaults, 'cartItems'),
+        showContextMenu: -1,
+        dataUri: undefined,
+        imgs: {},
+        loadedImg: false,
+        contextmenuX: 0.0,
+        contextmenuY: 0.0,
     },
     computed: {
         cartItemsCount: function() {
@@ -46,6 +52,33 @@ var cards = new Vue({
         'capacity' : capacity
     },
     methods: {
+        oid: function(item) {
+            //console.log("oid:"+oid(item));
+            return(oid(item));
+        },
+        displayContextMenu: function(event, item) {
+            //console.log("itemId="+item.id+" ("+JSON.stringify(item)+")");
+            if ('otype' in item) {
+                this.showContextMenu = item.id;
+                p = document.getElementById(item.id);
+                console.log(event.pageX, p.getBoundingClientRect().x);
+                console.log(event.pageY, p.getBoundingClientRect().y);
+                this.contextmenuX = event.pageX-p.getBoundingClientRect().x;
+                this.contextmenuY = event.pageY-p.getBoundingClientRect().y;
+            }
+        },
+        hideContextMenu: function() {
+            this.showContextMenu = -1;
+        },
+        saveAsImage: function(item) {
+            this.showContextMenu = -1;
+            htmlToImage.toPng(
+                document.getElementById(this.oid(item)),
+                {'backgroundColor': 'white', 'pixelRatio': 4}
+            ).then(function (dataUrl) {
+                download(dataUrl, 'image.png');
+            });
+        },
         getId: function(page,count) {
             return(((page)*this.cartItemsPerPageCount)+count);
         },

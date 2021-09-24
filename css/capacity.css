@@ -25,7 +25,7 @@ div.capacity-headers {
     align-content: flex-start;
     flex: 0 0 auto;
     width: 33mm;
-    height: 36px;
+    height: 30px;
     background-color: #b49a7d;
     border-bottom-color: #41270C;
     border-bottom-style: solid;
@@ -42,7 +42,7 @@ div.capacity-header {
     justify-content: space-between;
     align-items: center;
     align-content: space-between;
-    height: 27px;
+    height: 20px;
     box-sizing: content-box;
     
 }
@@ -54,7 +54,7 @@ div.capacity-left-header {
     justify-content: flex-start;
     align-items: center;
     align-content: space-between;
-    height: 27px;
+    height: 20px;
     box-sizing: content-box;
 }
 

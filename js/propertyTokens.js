@@ -162,10 +162,7 @@ var propertyToken = {
             <span v-bind:class="classes('unit')">{{label("unit")}}</span>
         </div>
         <div v-else-if="is('property')" class="propertyTokenContainer" v-bind:ref="refname">
-            <div>
-            <span v-bind:class="classes('property')">{{label('property')}}</span>
-            <span v-bind:class="classes('value')">{{label("value")}}</span>
-            </div>
+            <span v-bind:class="classes('property')">{{label('property')}}</span><span v-bind:class="classes('value')">{{label("value")}}</span>
         </div>
         <div v-else-if="is('character')" class="propertyTokenContainer" v-bind:ref="refname">
             <img v-if="hasIcon()" v-bind:class="classes()" v-bind:src="icon()" v-bind:title="label()"/>
@@ -237,9 +234,10 @@ var standardPropertyTokens = {
     },
     template:
         `<div v-if="standardPropertyTokens.length > 0" class="standardPropertyTokensContainer">
-             <span class="standardPropertyTokens">Propriétés spéciales</span>
+                <span class="standardPropertyTokens">Propriétés spéciales</span>
              <div class="standardPropertyTokens" v-for="sp in standardPropertyTokens">
-                 <img class="standardPropertyTokens" src="images/common/standard-property.png"/>
+                 <img v-if="sp.property != ''" class="standardPropertyTokens" src="images/common/standard-property.png"/>
+                 <span v-else class="emptyProperty"></span>
                  <propertyToken v-bind:propertyToken="sp" v-bind:ptype="'standard'"></propertyToken>
              </div>
          </div>`

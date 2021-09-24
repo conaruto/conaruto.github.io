@@ -10,7 +10,11 @@ var capacity = {
             } else {
                 return(0);
             }
-        }
+        },
+        oid: function() {
+            //console.log("oid:"+oid(this.item));
+            return(oid(this.item));
+        },
     },
     methods: {
         limited: function(r){
@@ -40,6 +44,9 @@ var capacity = {
         },
         toid(r) {
             return(this._uid + "_" + String(r.name).toSlug() + "_" );
+        },
+        saveAsPng() {
+            console.log("Save as png ...")
         }
     },
     components: {
@@ -48,7 +55,7 @@ var capacity = {
         'iconifiedPropertyTokens': iconifiedPropertyTokens,
     },
     template:
-        `<div v-if="isCapacity" class="capacity">
+        `<div v-if="isCapacity" class="capacity" v-bind:id="oid">
             <div class="capacity-headers"> 
                 <div class="capacity-header">
                     <div class="capacity-left-header">

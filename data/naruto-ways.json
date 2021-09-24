@@ -4950,17 +4950,32 @@
       {
         "name": "property",
         "property": "Verte",
-        "value": "+2 FOR, Att. et DEF (combat) et 3 points de chakra supplémentaire (tour)"
+        "value": "+2 FOR, Att. et DEF (combat)"
+      },
+      {
+        "name": "property",
+        "property": "",
+        "value": "+3 points de chakra pour le prochain tour"
       },
       {
         "name": "property",
         "property": "Jaune",
-        "value": "+4 FOR, Att. et DEF (combat) et 6 points de chakra supplémentaire (tour)"
+        "value": "+4 FOR, Att. et DEF (combat)"
+      },
+      {
+        "name": "property",
+        "property": "",
+        "value": "+6 points de chakra pour le prochain tour"
       },
       {
         "name": "property",
         "property": "Rouge",
-        "value": "+6 FOR, Att. et DEF (combat) et 9 points de chakra supplémentaire (tour)"
+        "value": "+6 FOR, Att. et DEF (combat)"
+      },
+      {
+        "name": "property",
+        "property": "",
+        "value": "+9 points de chakra pour le prochain tour"
       }
     ],
     "mudras": []

@@ -210,7 +210,7 @@ div.preview-box-way {
 div.preview {
     transform: scale(3);
     transform-origin: 0% 0% 0px;
-    width: fit-content;
+    width: fit-content-box;
 }
 
 div.ui-icons-mini {

@@ -229,7 +229,7 @@ var coUIconfig = {
                             case "iconified":
                                 return(["propertyToken", "smallcapsPropertyToken"]);
                             default:
-                                return(["propertyToken", "rightPaddingPropertyToken", "condensedPropertyToken", "boldPropertyToken"]);
+                                return(["propertyToken", "rightPaddingPropertyToken", "boldPropertyToken"]);
                         }
                     }
                 },
@@ -241,7 +241,7 @@ var coUIconfig = {
                             case "highlighted":
                                 return(["propertyToken", "rightJustifyPropertyToken", "emphasesPropertyToken"]);
                             case "standard":    
-                                return(["propertyToken", "condensedPropertyToken", "wrapPropertyToken"]);
+                                return(["propertyToken", "wrapPropertyToken"]);
                             default:
                                 return(["propertyToken", "hiddenPropertyToken"]);
                         }
