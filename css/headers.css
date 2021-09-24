@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Georgia";
+    src: url("/css/fonts/georgia.woff2") format("woff2"),
+         url("/css/fonts/georgia-bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "sage-sans";
+    src: url("/css/fonts/sagesans-regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Ferox";
+    src: url("/css/fonts/ferox.woff2") format("woff2");
+}
+
 div.body-container {
     width: calc(100vw - 30px);
 }
