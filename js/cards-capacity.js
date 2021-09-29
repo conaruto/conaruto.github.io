@@ -63,8 +63,8 @@ var cards = new Vue({
                 p = document.getElementById(item.id);
                 console.log(event.pageX, p.getBoundingClientRect().x);
                 console.log(event.pageY, p.getBoundingClientRect().y);
-                this.contextmenuX = event.pageX-p.getBoundingClientRect().x;
-                this.contextmenuY = event.pageY-p.getBoundingClientRect().y;
+                this.contextmenuX = event.clientX-p.getBoundingClientRect().x;
+                this.contextmenuY = event.clientY-p.getBoundingClientRect().y;
             }
         },
         hideContextMenu: function() {
