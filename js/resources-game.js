@@ -355,7 +355,7 @@ var gameApp = {
             <div class="itemZOrder">
                 <label class="itemZOrder">Z</label>
                 <div v-for="(a, index) in attributes" class="itemZOrderBox" 
-                    v-on:drop="onDrop($event, index)" v-on:dragover.prevent v-on:dragenter.prevent>
+                    v-on:drop.stop.prevent="onDrop($event, index)" v-on:dragover.prevent v-on:dragenter.prevent>
                     <img v-bind:src="getSrc(a.categoryId,a.itemId)" class="itemZOrder" v-bind:title="getLabel(a.categoryId)"
                         draggable="true" v-on:dragstart="startDrag($event, index)" v-on:dragover.prevent v-on:dragenter.prevent />
                 </div>
