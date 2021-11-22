@@ -66,7 +66,7 @@ div.standardPropertyTokensContainer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 33mm;
+    width: 100%;
     flex: 0 0 auto;
     margin-top: 1px;
     font-size: 8px;
@@ -78,7 +78,7 @@ div.standardPropertyTokens {
     flex-flow: nowrap;
     justify-content: flex-start;
     align-items: center;
-    width: 33mm;
+    width: 100%;
     font-family: 'Times New Roman';
     font-size: 7px;
     box-sizing: content-box;
@@ -97,7 +97,7 @@ span.standardPropertyTokens{
     flex-flow: nowrap;
     color: #41270C;
     flex: 0 1 auto ;
-    width: 32.5mm;
+    width: 100%;
     align-self: center;
     margin-left: 1px;
     margin-right: 1px;
@@ -110,23 +110,36 @@ span.standardPropertyTokens{
     box-sizing: content-box;
 }
 
+div.iconifiedPropertyTokensPlaceholder {
+    min-height: 24px;
+    max-height: 24px;
+    width: calc(100%-1px);
+    background-color: whitesmoke;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    margin-left: 0.5px;
+    box-sizing: content-box;
+}
+
 div.iconifiedPropertyTokensContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
-    width: 124px;
-    flex: 0 0 auto;
-    max-height: 28px;
+    display: grid;
+    grid-template-columns: repeat(6, 20.5px [ip]);
+    column-gap: 0px;
+    row-gap: 0px;
+    justify-items: start;
+    align-items: start;
+    align-content: start;
+    justify-content: start;
+    width: calc(100%-1px);
     font: 6px "Arial Narrow";
     background-color: whitesmoke;
     border-bottom: 1px solid rgb(214, 214, 214);
     overflow: hidden;
     margin-left: 0.5px;
+    margin-right: 0.5px;
     box-sizing: content-box;
 }
+
+
 div.iconifiedPropertyTokens {
     height: 8px;
     display: flex;
@@ -141,10 +154,12 @@ div.smallIconifiedPropertyTokens{
 }
 div.bigIconifiedPropertyTokens{
     width: 41.333px;
+    
     box-sizing: content-box;
 }
 div.veryBigIconifiedPropertyTokens{
     width: 61.999px;
+    
     box-sizing: content-box;
 }
 div.highlightedPropertyTokensContainer {
@@ -153,7 +168,7 @@ div.highlightedPropertyTokensContainer {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    width: 123px;
+    width: calc(100%-1px);
     flex: 0 0 auto;
     font: 9px "Arial Narrow";
     background-color: whitesmoke;

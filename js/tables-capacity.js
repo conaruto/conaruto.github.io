@@ -32,9 +32,9 @@ var tables = new Vue({
             aItems.map( item => {
                 if (!this.cartItems.contains(item)) {
                     this.cartItems.push(item);
-                    saveDataToSession("cartItems",this.cartItems);
                 }
             });
+            saveDataToSession("cartItems",this.cartItems);
         },
         removeFromCart: function(items) {
             aItems = []
@@ -46,9 +46,9 @@ var tables = new Vue({
             aItems.map( item => {
                 if (this.cartItems.contains(item)) {
                     this.cartItems = this.cartItems.filter(i => !isEqual(i, item));
-                    saveDataToSession("cartItems",this.cartItems);
                 }
             });
+            saveDataToSession("cartItems",this.cartItems);
         },
         displayCart: function() {
             console.log("Displaying cart ...");

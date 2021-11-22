@@ -15,6 +15,13 @@ var capacity = {
             //console.log("oid:"+oid(this.item));
             return(oid(this.item));
         },
+        extraIconifiedProperties: function() {
+            //console.log("ExtraIconifiedProperties : "+JSON.stringify((({icon,quantity}) => ({icon,quantity}))(this.item)));
+            return((({icon,quantity}) => ({icon,quantity}))(this.item));
+        },
+        extraIconifiedPropertiesKey: function() {
+            return(objHash(this.extraIconifiedProperties));
+        }
     },
     methods: {
         limited: function(r){
@@ -36,11 +43,11 @@ var capacity = {
             if (way != null) {
                 return(way.icon);
             } else {
-                return(coUIconfig.way.default)
+                return(coUIConfig.way.default)
             }
         },
         getMudraIcon: function(m){
-            return(coUIconfig.mudra[m]);
+            return(coUIConfig.mudra[m]);
         },
         toid(r) {
             return(this._uid + "_" + String(r.name).toSlug() + "_" );
@@ -70,7 +77,8 @@ var capacity = {
                 <div class="capacity-voname">{{ vo(item) }}</div>
             </div>
             <div class="capacity-content">
-                <iconifiedPropertyTokens v-bind:properties="item.properties" v-bind:parentid="toid(item)"></iconifiedPropertyTokens>
+            <iconifiedPropertyTokens v-bind:key="extraIconifiedPropertiesKey" v-bind:properties="item.properties" 
+            v-bind:parentid="toid(item)" v-bind:extra="extraIconifiedProperties"></iconifiedPropertyTokens>
                 <div class="capacity-short-description">{{ item['short-description'] }}</div>
                 <highlightedPropertyTokens v-bind:properties="item.properties"></highlightedPropertyTokens>
                 <standardPropertyTokens v-bind:properties="item.properties"></standardPropertyTokens>

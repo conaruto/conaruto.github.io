@@ -1,5 +1,10 @@
 var rowTable = {
     props: ['row', 'header'],
+    computed: {
+        name: function() {
+            return(this.header.name);
+        },
+    },
     methods: {
         is: function(htype) {
             return(this.header.type == htype);
@@ -9,14 +14,14 @@ var rowTable = {
         },
         action: function(r) {
             this.get('action')(r);
-        }
+        },
     },
     template: 
         `<td v-if="is('icon')" v-bind:class="get('classes')">
            <img v-bind:class="get('classes')" v-bind:src="get('icon')" v-bind:title="get('title')"/>
         </td>
         <td v-else-if="is('button')" v-bind:class="get('classes')">
-            <img v-bind:class="get('classes')" v-bind:src="get('icon')" v-on:click="action(row)" v-bind:title="get('title')"/>
+            <img v-bind:class="get('classes')" v-bind:src="get('icon')" v-bind:id="name" v-on:click="action(row)" v-bind:title="get('title')"/>
         </td>
         <td v-else-if="is('text')" v-bind:class="get('classes')">{{get('text')}}</td>
         <td v-else-if="is('detail')" v-bind:class="get('classes')">
@@ -27,9 +32,8 @@ var rowTable = {
         </td>`
 }
 
-
 var itemTable = {
-    props: ['items', 'headers', 'cartItems'],
+    props: ['items', 'headers', 'footers'],
     components: {
         'rowTable': rowTable
     },
@@ -48,6 +52,12 @@ var itemTable = {
             </tr>
             <tr class="itemTable" v-for="item in items">
                 <rowTable v-for="header in headers" v-bind:row="item" v-bind:key="header.name" v-bind:header="header"></rowTable>
+            </tr>
+            <tr class="itemTable">
+                <th v-for="footer in footers" v-bind:class="footer.classes()">
+                    <span v-if="footer.label">{{footer.label}}</span>
+                    <span v-else-if="footer.text">{{footer.text(items)}}</span>
+                </th>
             </tr>
         </table>`
 };

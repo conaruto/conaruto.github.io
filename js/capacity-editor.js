@@ -91,50 +91,27 @@ var editorCommon = new Vue({
             //console.log("inItems() = "+this.items.map(item => oid(item)).includes(oid(this.item)));
             return(this.items.map(item => oid(item)).includes(oid(this.item)));
         },
-        uploadFromFile: function(event) {
-            let files = event.target.files || event.dataTransfer.files;
+        loadJson: function(files, event) {
+            this.loadAlerts = [];
             if (!files.length) {
                 console.log('Error while uploading file ...');
-                return;
+            } else {
+                var reader = new FileReader();
+                reader.readAsText(files[0]);
+                reader.onload = e => { 
+                    this.items.push(...JSON.parse(e.target.result));
+                    this.options = getOptions(this.items, this.itemTypePicked, this.schemas);
+                }
             }
-            this.readFile(files[0]);
         },
-        readFile: function(file) {
-            let reader = new FileReader();
-            reader.onload = e => {
-              this.items.push(...JSON.parse(e.target.result));
-              this.options = getOptions(this.items, this.itemTypePicked, this.schemas);
-              console.log("Data loaded");
-            };
-            reader.readAsText(file);
-        },
-        saveToFile: function() {
-            this.saveFileName = "";
-            this.save = false;
-            this.saveEnable = false;
-        },
-        cancelSaveFile: function() {
-            this.saveFileName = "";
-            this.save = false;
-            this.saveEnable = false;
-        },
-        checkFileName: function() {
-            //console.log("checkFileName("+this.saveFileName+")");
-            saveFileNameRegex = new RegExp("[-_a-zA-Z0-9].json");
-            if (this.saveFileName.match(saveFileNameRegex)) {
-                console.time("saveToFile("+this.saveFileName+")");
-                this.saveEnable = true;
-                
-                blob = new Blob([itemsStringify(this.items)], {type: 'application/json; charset=utf-8'});
-                this.saveData = URL.createObjectURL(blob);
-                //console.log("Save data URL:"+this.saveData);
-                console.timeEnd("saveToFile("+this.saveFileName+")");
-            }
+        saveJson: function() {
+            source = encodeURIComponent(itemsStringify(this.items));
+            download("data:application/json;utf8,"+source, "objets.json");
         },
         reset: function() {
             console.log("reset");
             sessionStorage.clear();
-            //console.log(sessionStorage)
+            console.log(sessionStorage)
             this.items = editorDefaults.items;
             this.itemTypePicked = editorDefaults.itemTypePicked;
             this.options = getOptions(this.items, this.itemTypePicked, this.schemas);
@@ -218,5 +195,8 @@ var editorCommon = new Vue({
             }
         });
         console.timeEnd("JSON Editor initialization");
+        eventBus.$on('resetEvent', this.reset);
+        eventBus.$on('loadJsonEvent', this.loadJson);
+        eventBus.$on('saveJsonEvent', this.saveJson);
     }
 });

@@ -6,12 +6,12 @@ Vous pouvez visualiser les cartes des voies ajoutées au panier en allant dans l
 ## Icones
 <img src="../images/ui/reset.png" height="30px" width="30px"/> Vide le panier et réinitialise la page.
 
-<img src="../images/ui/cart.png" height="30px" width="30px"/> Permet d'afficher / cacher le panier et indique le nombre de capacité actuellement présente dans le panier.
+<img src="../images/ui/cart.png" height="30px" width="30px"/> Permet d'afficher / cacher le panier et indique le nombre de capacités actuellement présentes dans le panier.
 
 
 ## Panier
 
-<img src="../images/ui/removefromcart.png" height="30px" width="30px"/> Supprimer une capacité dans le panier ou vider le panier.
+<img src="../images/ui/removefromcart.png" height="30px" width="30px"/> Supprimer une capacité du panier ou vider le panier.
 
 ## Liste des capacités
 

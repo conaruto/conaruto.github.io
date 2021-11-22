@@ -1,0 +1,297 @@
+div.thing{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: stretch;
+    border-color: #41270C;
+    border-style: solid;
+    border-radius: 3px;
+    height: 45mm;
+    width: 32mm;
+    border-width: 1px;
+    margin: 0;
+    box-sizing: content-box;
+    line-height: normal;
+}
+
+div.thing-headers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    flex: 0 0 auto;
+    width: 32mm;
+    height: 20px;
+    background-color: #b49a7d;
+    border-bottom-color: #41270C;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-sizing: content-box;
+}
+
+div.thing-left-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-between;
+    box-sizing: content-box;
+}
+
+div.thing-name {
+    flex: 0 0 auto;
+    color: #41270C;
+    font-size: 8px;
+    font-family: "Georgia";
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+    box-sizing: content-box;
+}
+
+img.thing-type {
+    flex: 0 0 auto;
+    margin: 0px;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    margin-right: 2px;
+    box-sizing: content-box;
+}
+
+div.thing-content {
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: flex-start;
+    height: 100%;
+    width: 100%;
+    box-sizing: content-box;
+}
+
+img.thing-icon {
+    position: absolute;
+    top: 22px;
+    left: calc((124px - 24px) / 2);
+    margin: 0px;
+    width: 24px;
+    height: 24px;
+    margin-left: 2px;
+    margin-right: 2px;
+    box-sizing: content-box;
+    background-color: white;
+    border-left: 1px solid rgb(214, 214, 214);
+    border-right: 1px solid rgb(214, 214, 214);
+}
+
+div.thing-quantity {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: center;
+    position: absolute;
+    top: 23px;
+    left: 90px;
+    box-sizing: content-box;
+    background-color: white;
+    border: 1px;
+    border-radius: 4px;
+    border: 1px solid #ae9a87;
+    min-width: 20px;
+    min-height: 20px;
+}
+span.thing-quantity{
+    flex-flow: nowrap;
+    color: #41270C;
+    flex: 0 1 auto ;
+    width: 100%;
+    align-self: center;
+    flex: 0 0 auto;
+    font-size: 6px;
+    text-align: center;
+    color: #41270C;
+    font-family: "Times New Roman";
+    box-sizing: content-box;
+    margin-bottom: unset;
+}
+
+div.iconifiedPropertyTokensContainer {
+    min-height: 24px;
+}
+
+div.thing-short-description {
+    top: 45px;
+    padding:  1px 2px 0px 2px;
+    text-align: justify;
+    font-size: 7px;
+    font-family: "Georgia";
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: content-box;
+}
+
+div.space {
+    position: relative;
+    margin-top: auto;
+}
+div.thing-use-container {
+    margin-top: 2px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+span.thing-use{
+    flex-flow: nowrap;
+    color: #41270C;
+    flex: 0 1 auto ;
+    width: 100%;
+    align-self: center;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 1px solid #ae9a87;
+    font-variant: small-caps;
+    font-family: 'Georgia';
+    box-sizing: content-box;
+    font-size: 6px;
+}
+
+div.thing-use {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.thing-use-checkbox {
+    border: 1px;
+    border-radius: 4px;
+    border: 1px solid #ae9a87;
+    width: 4mm;
+    height: 4mm;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+div.thing-footers {
+    height: 10px;
+    background-color: #b49a7d;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    flex: 0 0 auto;
+    width: 32mm;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    border-top-color: #41270C;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: content-box;
+}
+
+div.thing-weight {
+    width: 40px;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: content-box;
+}
+label.thing-weight {
+    flex: 0 0 auto;
+    font-size: 9px;
+    text-align: center;
+    color: #41270C;
+    font-family: "Times New Roman";
+    box-sizing: content-box;
+    margin-bottom: unset;
+}
+img.thing-weight {
+    flex: 0 0 auto;
+    margin: 0px;
+    width: 10px;
+    height: 10px;
+    margin-right: 1px;
+    box-sizing: content-box;
+}
+
+div.thing-cost {
+    height: 10px;
+    width: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-sizing: content-box;
+}
+label.thing-cost {
+    flex: 0 0 auto;
+    font-size: 9px;
+    text-align: center;
+    color: #41270C;
+    font-family: "Times New Roman";
+    box-sizing: content-box;
+    margin-bottom: unset;
+}
+img.thing-cost {
+    flex: 0 0 auto;
+    margin: 0px;
+    width: 10px;
+    height: 10px;
+    margin-right: 1px;
+    box-sizing: content-box;
+}
+div.thing-hands {
+    width: 40px;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    box-sizing: content-box;
+}
+label.thing-hands {
+    flex: 0 0 auto;
+    font-size: 10px;
+    text-align: center;
+    color: #41270C;
+    font-family: "Times New Roman";
+    box-sizing: content-box;
+    margin-bottom: unset;
+    font-weight: bolder;
+}
+img.thing-hands {
+    flex: 0 0 auto;
+    margin: 0px;
+    width: 10px;
+    height: 10px;
+    margin-right: 1px;
+    box-sizing: content-box;
+}

@@ -193,7 +193,7 @@ var gameApp = {
             //console.log("Save Svg :" +source);
             eventBus.$emit('jsonDataUriEvent', "data:application/json;utf8,"+source);
         },
-        loadJson: function(files) {
+        loadJson: function(files, event) {
             this.loadAlerts = [];
             if (!files.length) {
                 console.log('Error while uploading file ...');

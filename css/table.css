@@ -22,6 +22,14 @@ th.defaultItemTable {
     padding-left: 2px;
     padding-right: 2px;
 }
+
+th.ItemCartTableHidden {
+    border-style: none;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
 td.defaultItemTable {
     border-color: black;
     border-width: 1px;
@@ -38,6 +46,13 @@ img.buttonItemTable:active {
     background-color: #4a4a4aff;
 }
 
+td.typeIconItemTable {
+    text-align: center;
+}
+img.typeIconItemTable {
+    width: 22px;
+    height: 22px;
+}
 td.wayIconItemTable {
     text-align: center;
 }
@@ -49,6 +64,9 @@ td.rankItemTable {
     text-align: center;
 }
 td.limitedItemTable {
+    text-align: center;
+}
+th.countItemCartTable {
     text-align: center;
 }
 th.nameItemTable {
@@ -63,6 +81,9 @@ td.nameItemTable {
 td.nameItemCartTable {
     min-width: 300px;
     max-width: 300px;
+}
+th.totalItemCartTable {
+    text-align: right;
 }
 th.nameItemCartTable {
     min-width: 300px;
@@ -90,12 +111,28 @@ tr.itemTable:nth-child(odd) > td.descriptionItemTable > details.descriptionItemT
     /* background-color: #dddddd; */
     background-color: #eeeeee;
 }
-span.descriptionItemTable{
+
+span.descriptionItemTable {
     margin-right: 4px;
     font-weight: bold;
     text-decoration: underline;
 }
+td.countItemCartTable {
+    text-align: center;
+    white-space: nowrap;
+    width: 15px;
+}
 
+td.costItemTable {
+    text-align: right;
+    white-space: nowrap;
+    width: 75px;
+}
+th.costItemTable {
+    text-align: right;
+    white-space: nowrap;
+    width: 75px;
+}
 
 div.profilTableContainer {
     display: flex;

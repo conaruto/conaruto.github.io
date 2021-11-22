@@ -40,6 +40,19 @@ img.banner {
     height: 95px;
     border-radius: 6px;
 }
+img.banner-reset {
+    position: absolute;
+    left: 15px;
+    top: 50px;
+    margin-top: 2px;
+    color: #231107; 
+    background-color:white;
+    border-radius: 6px;
+    padding: 3px;
+    width: 10px;
+    height: 10px;
+    box-sizing: content-box;
+}
 a.banner {
     position: absolute;
     left: 15px;
