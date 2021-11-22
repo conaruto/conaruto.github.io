@@ -1,6 +1,6 @@
 # Aide
 
-Avant de pouvoir visualiser les capacités, vous devez les ajouter dans le panier en allant dans le menu capacités.
+Avant de pouvoir visualiser les capacités, vous devez les ajouter dans le panier en allant dans le menu "Capacités".
 
 ## Cartes
 

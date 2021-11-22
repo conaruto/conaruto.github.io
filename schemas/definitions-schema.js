@@ -193,7 +193,8 @@ schemaDefinitions = {
             {"$ref": "#/definitions/rangeToken"},
             {"$ref": "#/definitions/areaToken"},
             {"$ref": "#/definitions/durationToken"},
-            {"$ref": "#/definitions/weighedToken"}
+            {"$ref": "#/definitions/weighedToken"},
+            {"$ref": "#/definitions/containerToken"}
         ]
     },
     "property": {
@@ -254,7 +255,7 @@ schemaDefinitions = {
             "character": {
                 "title": "Attribut",
                 "type": "string",
-                "enum": ["init", "PV", "Chakra", "Mana"],
+                "enum": ["init", "PV", "Chakra", "Mana", "DEF"],
                 "default": "init",
                 "options": propertyOptionsFill({
                     "infoText": "Attribut d'un personnage (initiative, PV, etc...)",
@@ -516,7 +517,7 @@ schemaDefinitions = {
             },
             "damage": {
                 "options": propertyOptionsFill({
-                    "grid_columns": 12
+                    "grid_columns": 10
                 }),
                 "default": [{
                     "name":"damage",
@@ -529,6 +530,13 @@ schemaDefinitions = {
                 "items": {
                     "$ref": "#/definitions/damageToken"
                 }
+            },
+            "critical": {
+                "options": propertyOptionsFill({
+                    "grid_columns": 2,
+                    "grid_break": true
+                }),
+                "$ref": "#/definitions/criticalToken"
             },
             "detail": {
                 "title": "Détail",
@@ -909,7 +917,7 @@ schemaDefinitions = {
     "stateToken": {
         "title": "État",
         "type": "string",
-        "enum": ["Aveuglé", "Affaibli", "Étourdi", "Immobilisé", "Paralysé", "Ralenti", "Renversé", "Surpris"],
+        "enum": ["Aveuglé", "Affaibli", "Étourdi", "Immobilisé", "Paralysé", "Ralenti", "Renversé", "Surpris", "Immunisé"],
         "default": "Aveuglé",
         "options": propertyOptionsFill({
             "infoText": "État préjudiciable",
@@ -1034,6 +1042,36 @@ schemaDefinitions = {
             }
         }
     },
+    "containerToken": {
+        "title": "Contenance de l'objet",
+        "type": "object",
+        "format": "grid-strict",
+        "required": [ "measure", "values", "unit"], 
+        "properties": {
+            "measure": {
+                "type": "string",
+                "enum": ["capacity"],
+                "default": "capacity",
+                "readonly": true,
+                "options": propertyOptionsFill({
+                    "hidden": true
+                }),
+            },
+            "values": {
+                "$ref": "#/definitions/valuesToken",
+                "options": propertyOptionsFill({
+                    "grid_columns": 10,
+                }),
+            },
+            "unit": {
+                "$ref": "#/definitions/capacityToken",
+                "options": propertyOptionsFill({
+                    "grid_columns": 2,
+                    "infoText": "Unité du contenant",
+                })
+            }
+        }
+    },
     "weighedToken": {
         "title": "Poids",
         "type": "object",
@@ -1065,11 +1103,35 @@ schemaDefinitions = {
             }
         }
     },
+    "criticalToken": {
+        "options": propertyOptionsFill({}),
+        "title": "Plage de critique",
+        "type": "array",
+        "format": "checkbox",
+        "uniqueItems": true,
+        "default": [20],
+        "example": [20],
+        "items": {
+            "type": "integer",
+            "default": 20,
+            "enum": [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0],
+            "options": propertyOptionsFill({
+                "grid_columns": 2,
+                "infoText": "Nombres sur lesquels un critique survient",
+            })
+        },
+    },
     "metricToken": {
         "title": "Unité",
         "type": "string",
         "enum": ["m", "cm", "mm", "Km"],
         "default": "m"
+    },
+    "capacityToken": {
+        "title": "Unité",
+        "type": "string",
+        "enum": ["L", "cL", "mL"],
+        "default": "L"
     },
     "timeToken": {
         "title": "Unité",
@@ -1082,6 +1144,12 @@ schemaDefinitions = {
         "type": "string",
         "enum": ["Kg", "g", "t"],
         "default": "Kg"
+    },
+    "currencyToken": {
+        "title": "Unité",
+        "type": "string",
+        "enum": ["Ryô"],
+        "default": "Ryô"
     },
     // Damage
     "damageToken": {
@@ -1209,7 +1277,7 @@ schemaDefinitions = {
     "actionDEXToken": {
         "title": "Action (DEX)",
         "type": "string",
-        "enum": ["Acrobatie", "Équilibre", "Grimper", "Sauter", "Sprinter", "Discétion", "Chaparder", "Esquive"],
+        "enum": ["Acrobatie", "Équilibre", "Grimper", "Sauter", "Sprinter", "Discrétion", "Chaparder", "Esquive"],
         "default": "Discétion",
         "options": propertyOptionsFill({
             "infoText": "Action basée sur la dextérité",
@@ -1262,9 +1330,9 @@ schemaDefinitions = {
         "title": "Action (autres)",
         "type": "string",
         "enum": [
-            "Difficulté", "Utilisation", "Maintenir", "Attaque", "Attaque sournoise", "Defense", "Taille", 
+            "Difficulté", "Utilisation", "Maintenir", "Attaque", "Déclencher", "Attaque sournoise", "Defense", "Taille", 
             "Quantité", "Se relever", "Soigne", "Méditer", "Absorbe", "Déplacement", "Contourner", "Cible", 
-            "Portée", "Coût", "Protéger", "Indisponible"
+            "Portée", "Coût", "Protéger", "Indisponible", "Équiper/Ranger", "Reculer", "Déplier",
         ],
         "default": "Difficulté",
         "options": propertyOptionsFill({

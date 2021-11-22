@@ -2,9 +2,8 @@ var cards = new Vue({
     el: '#cards',
     data: {
         items: loadDataFromSession(mainDefaults, 'items'),
-        cartItems: [],
-        cartItemsPerPageCount: coItemsConfig.cartItemsPerPageCount,
-        displayItems: loadDataFromSession(mainDefaults, 'cartItems'),
+        cartItems: loadDataFromSession(mainDefaults, 'cartItems'),
+        cartItemsPerPageCount: coItemsConfig.capacityConfig.cartItemsPerPageCount,
         showContextMenu: -1,
         dataUri: undefined,
         imgs: {},
@@ -35,16 +34,16 @@ var cards = new Vue({
                 pi = [];
                 for (i = 0; i < this.cartItemsPerPageCount; i++) {
                     id = this.getId(p,i);
-                    if (this.displayItems[id] == undefined) {
-                        this.displayItems[id] = {"id": id};
+                    if (this.cartItems[id] == undefined) {
+                        this.cartItems[id] = {"id": id};
                     } else {
-                        this.displayItems[id]['id'] = id;
+                        this.cartItems[id]['id'] = id;
                     }
-                    pi.push(this.displayItems[id]);
+                    pi.push(this.cartItems[id]);
                 }
                 cp.push(pi);
             }
-            //console.log("Page Array : "+JSON.stringify(cp.map(i => i.map(j => j.id))));
+            // console.log("Page Array : "+JSON.stringify(cp.map(i => i.map(j => j.id))));
             return(cp);
         },
     },
@@ -102,17 +101,17 @@ var cards = new Vue({
             evt.dataTransfer.setData('itemID', item.id);
         },
         onDrop (evt, item) {
-            nitems = clone(this.displayItems);
+            nitems = clone(this.cartItems);
             itemID = evt.dataTransfer.getData('itemID');
             //console.log("Drop "+itemID+" in "+item.id);
             if (item == undefined) {
-                nitems = this.displayItems.filter(i => i.id != itemID);
+                nitems = this.cartItems.filter(i => i.id != itemID);
             } else {
-                nitems[item.id] = this.displayItems[itemID];
+                nitems[item.id] = this.cartItems[itemID];
                 nitems[itemID] = item;
                 
             }
-            this.displayItems = nitems;
+            this.cartItems = nitems;
         }
     },
     mounted: function () {

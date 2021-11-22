@@ -1,28 +1,39 @@
 isExpandedProperty = function(p) {
-    isExpanded = (
+    var isExpanded = (
         ( p != undefined ) && ('name' in p) && 
-        (p.name in coUIconfig.properties.expanded)
+        (p.name in coUIConfig.properties.expanded)
     );
 // console.log("isExpandedProperty("+JSON.stringify(p)+"):" + isExpanded);
     return(isExpanded);
 };
 
-isIconifiedProperty = function(p) {
-    isIconified = (
-        ( p != undefined ) && ('name' in p) &&
-        p.name in coUIconfig.properties.iconified) && (
-            coUIconfig.properties.iconified[p.name].includes("all") ||
-            ( ( p.name in p ) &&
-              coUIconfig.properties.iconified[p.name].includes(p[p.name])
+isIconifiedProperty = function(pname, p) {
+    var isIconified = (
+        ( pname != undefined ) &&
+        (pname in coUIConfig.properties.iconified) && (
+            coUIConfig.properties.iconified[pname].includes("all") ||
+            coUIConfig.properties.iconified[pname].includes(p.name)
         )
     );
-    //console.log("isIconifiedProperty("+JSON.stringify(p)+"):" + isIconified);
+    //console.log("isIconifiedProperty("+pname+","+JSON.stringify(p)+"):" + isIconified);
     return(isIconified);
+};
+
+hasIconifiedProperty = function(p) {
+    var hasIconified = (
+        ( p != undefined ) && ('name' in p) && p.name in coUIConfig.properties.iconified) && (
+            coUIConfig.properties.iconified[p.name].includes("all") ||
+            ( ( p.name in p ) && coUIConfig.properties.iconified[p.name].includes(p[p.name]) ||
+            isExpandedProperty(p)
+        )
+    );
+    //console.log("hasIconifiedProperty("+JSON.stringify(p)+"):" + hasIconified);
+    return(hasIconified);
 };
 
 iconifiedProperties = function(ip) {
     if (Array.isArray(ip)) {
-        return(ip.filter(p => isIconifiedProperty(p)));
+        return(ip.filter(p => hasIconifiedProperty(p)));
     } else {
         return([]);
     }
@@ -31,19 +42,19 @@ iconifiedProperties = function(ip) {
 expandProperty = function(p) {
     expandedProperties = [];
     if (isExpandedProperty(p) && ('name' in p)) {
-        refArray = Object.keys(coUIconfig.properties.expanded[p.name]);
+        refArray = Object.keys(coUIConfig.properties.expanded[p.name]);
         //console.log("Expected order :"+JSON.stringify(refArray));
         for (const [ep, ev] of Object.entries(p).sort(function([a,], [b,]) {
             return(refArray.indexOf(a) - refArray.indexOf(b));
         })) {
             //console.log("Expanding property '"+ep+"'");
-            if ((ep in coUIconfig.properties.expanded[p.name]) && 
-                ('template' in coUIconfig.properties.expanded[p.name][ep])) {
-                nep = clone(coUIconfig.properties.expanded[p.name][ep]['template']);
+            if ((ep in coUIConfig.properties.expanded[p.name]) && 
+                ('template' in coUIConfig.properties.expanded[p.name][ep])) {
+                nep = clone(coUIConfig.properties.expanded[p.name][ep]['template']);
             
                 //console.log("Expanding '"+ep+"' with '"+JSON.stringify(nep)+"'");
-                if ('map' in coUIconfig.properties.expanded[p.name][ep]) {
-                    for (const [ip, tp] of Object.entries(coUIconfig.properties.expanded[p.name][ep]['map'])) {
+                if ('map' in coUIConfig.properties.expanded[p.name][ep]) {
+                    for (const [ip, tp] of Object.entries(coUIConfig.properties.expanded[p.name][ep]['map'])) {
                         if ((ip in p) &&(typeof(tp) == "string" ) && (tp in nep)) {
                             //console.log("Mapping template '"+tp+"("+JSON.stringify(p[ip])+")' property with '"+p.name+"' property '"+tp+"'");
                             if (Array.isArray(nep[tp])) {
@@ -74,7 +85,7 @@ expandProperty = function(p) {
                 } else {
 // console.log("No internal property to expand for property '"+ep+"'");
                 }
-// console.log("Expanded property :"+JSON.stringify(nep));
+//console.log("Expanded property :"+JSON.stringify(nep));
                 expandedProperties.push(nep);
             
             } else {
@@ -87,30 +98,42 @@ expandProperty = function(p) {
     return(expandedProperties);
 };
 
-isHighlightedProperty = function(p) {
+isHighlightedProperty = function(pname, p) {
     isHighlighted = (
-        ( p != undefined ) && ('name' in p) &&
-        p.name in coUIconfig.properties.highlighted) && (
-            coUIconfig.properties.highlighted[p.name].includes("all") ||
-            ( ( p.name in p ) &&
-              coUIconfig.properties.highlighted[p.name].includes(p[p.name])
+        ( pname != undefined ) &&
+        (pname in coUIConfig.properties.highlighted) && (
+            coUIConfig.properties.highlighted[pname].includes("all") ||
+            coUIConfig.properties.highlighted[pname].includes(p.name)
         )
     );
-    //console.log("isHighlightedProperty("+JSON.stringify(p)+"):" + isHighlighted);
+    //console.log("isHighlightedProperty("+pname+","+JSON.stringify(p)+"):" + isHighlighted);
     return(isHighlighted);
+};
+
+hasHighlightedProperty = function(p) {
+    hasHighlighted = (
+        ( p != undefined ) && ('name' in p) &&
+        p.name in coUIConfig.properties.highlighted) && (
+            coUIConfig.properties.highlighted[p.name].includes("all") ||
+            ( ( p.name in p ) && coUIConfig.properties.highlighted[p.name].includes(p[p.name]) ||
+            isExpandedProperty(p)
+        )
+    );
+    //console.log("hasHighlightedProperty("+JSON.stringify(p)+"):" + hasHighlighted);
+    return(hasHighlighted);
 };
 
 highlightedProperties = function(hp) {
     if (Array.isArray(hp)) {
         //console.log("highlightedProperties : "+JSON.stringify(hp.filter(p => isHighlightedProperty(p))));
-        return(hp.filter(p => isHighlightedProperty(p)));
+        return(hp.filter(p => hasHighlightedProperty(p)));
     } else {
         return([]);
     }
 };
 
 isStandardProperty = function(p) {
-    isStandard = ((!(isIconifiedProperty(p))) && (!(isHighlightedProperty(p))));
+    isStandard = ((!(hasIconifiedProperty(p))) && (!(hasHighlightedProperty(p))));
     //console.log("isStandardProperty("+JSON.stringify(p)+") :" + isStandard);
     return(isStandard);
 };
@@ -193,6 +216,10 @@ var propertyToken = {
         <div v-else-if="is('state')" class="propertyTokenContainer" v-bind:ref="refname">
             <span class="propertyToken rightPaddingPropertyToken condensedPropertyToken boldPropertyToken">État:</span>
             <span v-bind:class="classes()">{{label()}}</span><span v-bind:class="classes('detail')">{{label("detail")}}</span>
+        </div>
+        <div v-else-if="is('critical') && label('values')" class="propertyTokenContainer" v-bind:ref="refname">
+            <img v-bind:class="classes()" v-bind:src="icon('critical')" title="Plage de critique"/>
+            <span v-bind:class="classes()">{{label("values")}}</span>
         </div>`  
 };
 
@@ -205,7 +232,11 @@ var highlightedPropertyTokens = {
         expandedHighlightedPropertyTokens: function() {
             ehpts = [];
             this.highlightedPropertyTokens.map(hpt => {
-                expandProperty(hpt).map(ep => ehpts.push(ep));
+                expandProperty(hpt).map(ep => {
+                    if (isHighlightedProperty(hpt.name, ep)) {
+                        return(ehpts.push(ep));
+                    }
+                });
             });
             return(ehpts);
         }
@@ -214,7 +245,7 @@ var highlightedPropertyTokens = {
         'propertyToken': propertyToken
     },
     template:
-        `<div v-if="highlightedPropertyTokens.length > 0" class="highlightedPropertyTokensContainer">
+        `<div v-if="expandedHighlightedPropertyTokens.length > 0" class="highlightedPropertyTokensContainer">
              <div class="highlightedPropertyTokens" v-for="hp in expandedHighlightedPropertyTokens">
                  <propertyToken v-bind:propertyToken="hp" v-bind:ptype="'highlighted'"></propertyToken>
              </div>
@@ -244,55 +275,66 @@ var standardPropertyTokens = {
     
 };
 var iconifiedPropertyTokens = {
-    props: ['properties', 'parentid'],
+    props: ['properties', 'parentid', 'extra'],
     computed: {
+        extraPropertyIcon: function() {
+            //console.log("extraPropertyIcon = "+(('icon' in this.extra) && (this.extra.icon != "") && (this.extra.icon != undefined)));
+            return(('icon' in this.extra) && (this.extra.icon != "") && (this.extra.icon != undefined));
+        },
+        extraPropertyQuantity: function() {
+            //console.log("extraPropertyQuantity = "+(('quantity' in this.extra) && (parseInt(this.extra.quantity) > 0) && (this.extra.quantity != undefined)));
+            //onsole.log(('quantity' in this.extra), (parseInt(this.extra.quantity) > 0), (this.extra.quantity != undefined));
+            return(('quantity' in this.extra) && (parseInt(this.extra.quantity) > 0) && (this.extra.quantity != undefined));
+        },
         iconifiedPropertyTokens: function() {
             return(iconifiedProperties(this.properties));
         },
         expandedIconifiedPropertyTokens: function() {
             eipts = [];
             this.iconifiedPropertyTokens.map(ipt => {
-                expandProperty(ipt).map(ep => eipts.push(ep));
+                expandProperty(ipt).map(ep => {
+                    if (isIconifiedProperty(ipt.name, ep)) {
+                        return(eipts.push(ep));
+                    }
+                });
             });
             return(eipts);
         }
     },
-    updated: function () {
+    mounted: function() {
+        this.$nextTick(function () {
+            updateIconifiedPropertyTokens(
+                this.$refs, 
+                coUIConfig.properties['max-icon-per-column'],
+                this.extraPropertyIcon, this.extraPropertyQuantity
+            );         
+        })
+    },
+    updated: function() {
         //console.log("Hacked :"+ document.querySelector("#iproperties"));
         this.$nextTick(function () {
-          // Code that will run only after the
-          // entire view has been re-rendered
-          Object.keys(this.$refs).map(r => {
-            ip = document.getElementById(r);
-            p = document.getElementById(r+'-propertyToken');
-            if (( ip != null ) && ( p != null )){
-                wp = p.parentElement.parentElement.getBoundingClientRect().width;
-                //console.log("parent :" +wp);
-                w =p.getBoundingClientRect().width;
-// console.log("["+r+"] Width : " + w);
-                if (w < (wp / 6.0)+1) {
-                    //console.log("["+r+"] Keep width (" + w +")");
-                    ip.className = "iconifiedPropertyTokens smallIconifiedPropertyTokens";
-                } else {
-                    if (w < (wp / 3.0)+1) {
-                        //console.log("["+r+"] New width (" + w +")");
-                        ip.className = "iconifiedPropertyTokens bigIconifiedPropertyTokens";
-                    } else {
-                        //console.log("["+r+"] New width (" + w +")");
-                        ip.className = "iconifiedPropertyTokens veryBigIconifiedPropertyTokens";
-                    }
-                }
-            }
-            });
-        })
-      },
+            updateIconifiedPropertyTokens(
+                this.$refs, 
+                coUIConfig.properties['max-icon-per-column'],
+                this.extraPropertyIcon, this.extraPropertyQuantity
+            );  
+        });
+    },
+    methods: {
+        extraProperty: function(key) {
+            //console.log("extraProperty("+key+") = "+((key in this.extra) && (this.extra[key] != "") && (this.extra[key] != undefined)));
+            return((key in this.extra) && (this.extra[key] != "") && (this.extra[key] != undefined));
+        }
+    },
     components: {
         'propertyToken': propertyToken
     },
     template:
-        `<div id="iconifiedPropertyTokens" v-if="iconifiedPropertyTokens.length > 0" class="iconifiedPropertyTokensContainer">
+        `<div id="iconifiedPropertyTokens" v-if="expandedIconifiedPropertyTokens.length > 0" class="iconifiedPropertyTokensContainer">
              <div class="iconifiedPropertyTokens" v-for="(ip, index) in expandedIconifiedPropertyTokens" v-bind:id="parentid + 'iconifiedPropertyTokens' + index" v-bind:ref="parentid + 'iconifiedPropertyTokens' + index">
                  <propertyToken v-bind:ptype="'iconified'" v-bind:id="parentid + 'iconifiedPropertyTokens' + index +'-propertyToken'" v-bind:propertyToken="ip"></propertyToken>
              </div>
+         </div>
+         <div id="iconifiedPropertyTokens" v-else-if="extraPropertyIcon" class="iconifiedPropertyTokensPlaceholder">
          </div>`  
 };

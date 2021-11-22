@@ -1,4 +1,8 @@
-small.form-text{
+
+input.form-control ~ small.form-text {
+    display: none;
+}
+textarea.form-control ~ small.form-text {
     display: none;
 }
 

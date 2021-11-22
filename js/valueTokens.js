@@ -41,7 +41,7 @@ var valueToken = {
             <img v-for="dm in valueToken.dm" v-bind:class="classes(dm)" v-bind:src="icon(dm)" v-bind:title="label(dm)"/>
         </div>
         <div v-else-if="is('element')" class="valueToken">
-            <span v-bind:class="classes('adjustment')">{{label("adjustment")}}</span><span v-bind:class="classes('count')">{{label("count")}}</span><img v-bind:class="classes('element')" v-bind:src="icon('element')" v-bind:title="label('element')"/>
+            <span v-bind:class="classes('adjustment')">{{label("adjustment")}}</span><span v-if="label('count') > 0" v-bind:class="classes('count')">{{label("count")}}</span><img v-bind:class="classes('element')" v-bind:src="icon('element')" v-bind:title="label('element')"/>
         </div>
         <div v-else-if="is('measure')" class="valueToken">
             <span v-bind:class="classes('adjustment')">{{label("adjustment")}}</span><span v-bind:class="classes()">{{label()}}</span>
@@ -60,8 +60,8 @@ var valueTokens = {
             expandedTokens = [];
 //console.log("Expanded '"+JSON.stringify(this.valueTokens)+"'");
             this.valueTokens.map( vt => {
-                if (('name' in vt) && (vt.name in coUIconfig.values.expanded)) {
-                coUIconfig.values.expanded[vt.name].map( t => {
+                if (('name' in vt) && (vt.name in coUIConfig.values.expanded)) {
+                coUIConfig.values.expanded[vt.name].map( t => {
                     if (t in vt) {
                         if (Array.isArray(vt[t])) {
                             vt[t].map( v => {
