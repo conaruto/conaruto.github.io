@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   style="height: 64px; width: 64px;"
+   version="1.1"
+   id="svg95"
+   sodipodi:docname="lampe-torche.svg"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview97"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.30141808"
+     inkscape:cx="-923.96582"
+     inkscape:cy="-336.74158"
+     inkscape:window-width="2504"
+     inkscape:window-height="1376"
+     inkscape:window-x="1976"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg95" />
+  <defs
+     id="defs67">
+    <radialGradient
+       id="delapouite-flashlight-gradient-2"
+       gradientTransform="scale(0.99993497,1.000065)"
+       cx="401.62245"
+       cy="110.38398"
+       fx="401.62245"
+       fy="110.38398"
+       r="96.222153"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#faf5ab"
+         stop-opacity="1"
+         id="stop2" />
+      <stop
+         offset="100%"
+         stop-color="#f8e71c"
+         stop-opacity="1"
+         id="stop4" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-3"
+       gradientTransform="scale(1.0150004,0.98522131)"
+       cx="354.2035"
+       cy="158.09316"
+       fx="354.2035"
+       fy="158.09316"
+       r="109.95634"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#0f3e75"
+         stop-opacity="1"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#2e4a6b"
+         stop-opacity="1"
+         id="stop9" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-4"
+       gradientTransform="scale(1.0052604,0.99476712)"
+       cx="207.65465"
+       cy="306.57068"
+       fx="207.65465"
+       fy="306.57068"
+       r="163.2879"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#133966"
+         stop-opacity="1"
+         id="stop12" />
+      <stop
+         offset="100%"
+         stop-color="#0a2950"
+         stop-opacity="1"
+         id="stop14" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-5"
+       gradientTransform="scale(0.99967704,1.0003231)"
+       cx="209.34865"
+       cy="302.58084"
+       fx="209.34865"
+       fy="302.58084"
+       r="62.609444"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop17" />
+      <stop
+         offset="100%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop19" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-6"
+       gradientTransform="scale(0.98892068,1.0112035)"
+       cx="229.23901"
+       cy="259.05929"
+       fx="229.23901"
+       fy="259.05929"
+       r="4.4858955"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop22" />
+      <stop
+         offset="100%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop24" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-7"
+       gradientTransform="scale(1.0016443,0.99835842)"
+       cx="215.70943"
+       cy="296.54665"
+       fx="215.70943"
+       fy="296.54665"
+       r="37.798413"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop27" />
+      <stop
+         offset="100%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop29" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-8"
+       gradientTransform="scale(1.0709406,0.93375861)"
+       cx="232.74053"
+       cy="305.08163"
+       fx="232.74053"
+       fy="305.08163"
+       r="4.2874073"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop32" />
+      <stop
+         offset="100%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop34" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-9"
+       gradientTransform="scale(1.008095,0.99197003)"
+       cx="183.3671"
+       cy="330.12327"
+       fx="183.3671"
+       fy="330.12327"
+       r="20.040172"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop37" />
+      <stop
+         offset="100%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop39" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-10"
+       gradientTransform="scale(0.98405739,1.0162009)"
+       cx="194.52696"
+       cy="337.74107"
+       fx="194.52696"
+       fy="337.74107"
+       r="3.9970172"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop42" />
+      <stop
+         offset="100%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop44" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-11"
+       gradientTransform="scale(1.0163818,0.98388219)"
+       cx="166.06366"
+       cy="325.82286"
+       fx="166.06366"
+       fy="325.82286"
+       r="3.9974247"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop47" />
+      <stop
+         offset="100%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop49" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-12"
+       gradientTransform="scale(0.99999863)"
+       cx="80.31903"
+       cy="431.68033"
+       fx="80.31903"
+       fy="431.68033"
+       r="64.95528"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#1b579d"
+         stop-opacity="1"
+         id="stop52" />
+      <stop
+         offset="100%"
+         stop-color="#082649"
+         stop-opacity="1"
+         id="stop54" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-13">
+      <stop
+         offset="0%"
+         stop-color="#8b572a"
+         stop-opacity="1"
+         id="stop57" />
+      <stop
+         offset="100%"
+         stop-color="#5e320c"
+         stop-opacity="1"
+         id="stop59" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-flashlight-gradient-14">
+      <stop
+         offset="0%"
+         stop-color="#8b572a"
+         stop-opacity="1"
+         id="stop62" />
+      <stop
+         offset="100%"
+         stop-color="#5e320c"
+         stop-opacity="1"
+         id="stop64" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-stun-grenade-gradient-2"
+       gradientTransform="scale(1.0725492,0.93235816)"
+       cx="297.65462"
+       cy="141.98244"
+       fx="297.65462"
+       fy="141.98244"
+       r="124.43553"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop2-7" />
+      <stop
+         offset="100%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop4-6" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-stun-grenade-gradient-3"
+       gradientTransform="scale(0.72003977,1.3888122)"
+       cx="551.02632"
+       cy="160.3299"
+       fx="551.02632"
+       fy="160.3299"
+       r="140.55562"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop7-7" />
+      <stop
+         offset="100%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop9-3" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-stun-grenade-gradient-4"
+       gradientTransform="scale(1.3293887,0.75222546)"
+       cx="191.65576"
+       cy="84.039964"
+       fx="191.65576"
+       fy="84.039964"
+       r="38.363498"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop12-6" />
+      <stop
+         offset="100%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop14-5" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-stun-grenade-gradient-5"
+       gradientTransform="scale(0.99410868,1.0059262)"
+       cx="216.46121"
+       cy="291.33689"
+       fx="216.46121"
+       fy="291.33689"
+       r="169.29019"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop17-6" />
+      <stop
+         offset="100%"
+         stop-color="#2c2b2a"
+         stop-opacity="1"
+         id="stop19-3" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-stun-grenade-gradient-6"
+       gradientTransform="scale(0.99648029,1.0035321)"
+       cx="91.05675"
+       cy="417.49107"
+       fx="91.05675"
+       fy="417.49107"
+       r="78.055408"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop22-9" />
+      <stop
+         offset="100%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop24-4" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-stun-grenade-gradient-7">
+      <stop
+         offset="0%"
+         stop-color="#a20101"
+         stop-opacity="1"
+         id="stop27-8" />
+      <stop
+         offset="100%"
+         stop-color="#5e0101"
+         stop-opacity="1"
+         id="stop29-1" />
+    </radialGradient>
+    <radialGradient
+       id="delapouite-stun-grenade-gradient-8">
+      <stop
+         offset="0%"
+         stop-color="#a20101"
+         stop-opacity="1"
+         id="stop32-2" />
+      <stop
+         offset="100%"
+         stop-color="#5e0101"
+         stop-opacity="1"
+         id="stop34-9" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-aerosol-gradient-2"
+       gradientTransform="matrix(0.96480333,0,0,1.0364807,-259.296,-114.30982)"
+       cx="329.77111"
+       cy="203.51038"
+       fx="329.77111"
+       fy="203.51038"
+       r="185.39191"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop872" />
+      <stop
+         offset="100%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop874" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-aerosol-gradient-3"
+       gradientTransform="matrix(1.1068709,0,0,0.90344774,-259.296,-114.30982)"
+       cx="313.40004"
+       cy="145.34367"
+       fx="313.40004"
+       fy="145.34367"
+       r="37.734638"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop877" />
+      <stop
+         offset="100%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop879" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-aerosol-gradient-4"
+       gradientTransform="matrix(0.89179904,0,0,1.1213289,-259.296,-114.30982)"
+       cx="468.02773"
+       cy="191.14129"
+       fx="468.02773"
+       fy="191.14129"
+       r="64.998674"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop882" />
+      <stop
+         offset="100%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop884" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-aerosol-gradient-5"
+       gradientTransform="matrix(0.89724216,0,0,1.1145263,-259.296,-114.30982)"
+       cx="139.21102"
+       cy="190.87257"
+       fx="139.21102"
+       fy="190.87257"
+       r="28.108354"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop887" />
+      <stop
+         offset="100%"
+         stop-color="#2c2b2a"
+         stop-opacity="1"
+         id="stop889" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-aerosol-gradient-6"
+       gradientTransform="matrix(1.5440106,0,0,0.64766393,-259.296,-114.30982)"
+       cx="80.897758"
+       cy="419.30123"
+       fx="80.897758"
+       fy="419.30123"
+       r="44.14283"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop892" />
+      <stop
+         offset="100%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop894" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-aerosol-gradient-7"
+       gradientTransform="matrix(0.8183984,0,0,1.2218988,-259.296,-114.30982)"
+       cx="152.6231"
+       cy="325.79093"
+       fx="152.6231"
+       fy="325.79093"
+       r="83.050627"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#a20101"
+         stop-opacity="1"
+         id="stop897" />
+      <stop
+         offset="100%"
+         stop-color="#5e0101"
+         stop-opacity="1"
+         id="stop899" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-aerosol-gradient-8">
+      <stop
+         offset="0%"
+         stop-color="#a20101"
+         stop-opacity="1"
+         id="stop902" />
+      <stop
+         offset="100%"
+         stop-color="#5e0101"
+         stop-opacity="1"
+         id="stop904" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-shiny-entrance-gradient-2"
+       gradientTransform="scale(1.026033,0.97462749)"
+       cx="235.96806"
+       cy="18.407033"
+       fx="235.96806"
+       fy="18.407033"
+       r="4.1041321"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#f8e71c"
+         stop-opacity="1"
+         id="stop953" />
+      <stop
+         offset="100%"
+         stop-color="#9d9108"
+         stop-opacity="1"
+         id="stop955" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-shiny-entrance-gradient-3"
+       gradientTransform="scale(1.0157369,0.98450687)"
+       cx="252.41816"
+       cy="259.16621"
+       fx="252.41816"
+       fy="259.16621"
+       r="241.12757"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#fff9ad"
+         stop-opacity="1"
+         id="stop958" />
+      <stop
+         offset="100%"
+         stop-color="#f8e71c"
+         stop-opacity="1"
+         id="stop960" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-shiny-entrance-gradient-4">
+      <stop
+         offset="0%"
+         stop-color="#c9c9c9"
+         stop-opacity="1"
+         id="stop963" />
+      <stop
+         offset="100%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop965" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-shiny-entrance-gradient-5">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop968" />
+      <stop
+         offset="100%"
+         stop-color="#2c2b2a"
+         stop-opacity="1"
+         id="stop970" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-shiny-entrance-gradient-6">
+      <stop
+         offset="0%"
+         stop-color="#4a4a4a"
+         stop-opacity="1"
+         id="stop973" />
+      <stop
+         offset="100%"
+         stop-color="#9b9b9b"
+         stop-opacity="1"
+         id="stop975" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-shiny-entrance-gradient-7">
+      <stop
+         offset="0%"
+         stop-color="#a20101"
+         stop-opacity="1"
+         id="stop978" />
+      <stop
+         offset="100%"
+         stop-color="#5e0101"
+         stop-opacity="1"
+         id="stop980" />
+    </radialGradient>
+    <radialGradient
+       id="lorc-shiny-entrance-gradient-8">
+      <stop
+         offset="0%"
+         stop-color="#a20101"
+         stop-opacity="1"
+         id="stop983" />
+      <stop
+         offset="100%"
+         stop-color="#5e0101"
+         stop-opacity="1"
+         id="stop985" />
+    </radialGradient>
+  </defs>
+  <g
+     class=""
+     transform="matrix(0.92884355,0,0,0.92884355,-12.11038,46.776055)"
+     id="g93">
+    <g
+       id="g91">
+      <path
+         d="m 340.162,18.186 c -9.86,0.138 -17.596,2.957 -22.69,8.052 -9.06,9.058 -10.928,26.47 -3.318,49.3 7.61,22.832 24.437,49.604 48.57,73.737 24.134,24.134 50.906,40.96 73.737,48.57 22.832,7.61 40.244,5.744 49.302,-3.314 6.863,-6.862 9.587,-18.53 7.2,-33.71 -1.16,5.313 -3.534,10.246 -7.442,14.155 -5.97,5.968 -14.318,8.374 -22.776,8.31 -8.458,-0.063 -17.446,-2.342 -26.898,-6.234 -18.906,-7.784 -39.76,-22.21 -59.22,-41.673 -19.463,-19.462 -33.89,-40.317 -41.675,-59.223 -3.89,-9.452 -6.17,-18.438 -6.233,-26.896 -0.01,-1.117 0.03,-2.232 0.11,-3.34 4.08,16.652 17.442,37.534 35.736,55.848 30.733,30.733 66.027,45.265 78.832,32.46 12.806,-12.805 -1.726,-48.099 -32.46,-78.833 -22.65,-22.638 -48.749,-37.292 -66.003,-37.06 -1.638,-0.112 -3.234,-0.17 -4.77,-0.147 z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-2)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path69"
+         style="fill:url(#delapouite-flashlight-gradient-2)" />
+      <path
+         d="m 291.395,50.286 c -6.988,6.83 -13.964,14.17 -18.243,20.107 -5.328,7.392 -11.51,14.412 -15.722,21.066 -4.212,6.653 -6.17,12.26 -5.323,17.483 11.187,68.933 82.017,139.763 150.95,150.95 5.223,0.847 10.83,-1.11 17.484,-5.323 6.655,-4.212 13.675,-10.394 21.067,-15.722 5.936,-4.28 13.276,-11.255 20.108,-18.243 -9.795,-0.105 -20.302,-2.133 -30.945,-5.68 -26.306,-8.77 -54.92,-27.068 -80.772,-52.92 -25.853,-25.854 -44.15,-54.47 -52.92,-80.775 -3.548,-10.643 -5.578,-21.15 -5.683,-30.945 z"
+         class="selected"
+         fill="url(#delapouite-flashlight-gradient-3)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path71"
+         style="fill:url(#delapouite-flashlight-gradient-3)" />
+      <path
+         d="M 244.005,146.533 49.244,359.31 c 17.678,44.414 59.03,85.767 103.446,103.446 L 365.467,267.996 C 312.147,247.008 264.992,199.853 244.004,146.533 Z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-4)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path73"
+         style="fill:url(#delapouite-flashlight-gradient-4)" />
+      <path
+         d="m 227.199,244.133 c 0.597,0.03 1.22,0.094 1.87,0.197 9.537,1.506 17.898,6.978 24.76,13.84 6.862,6.862 12.334,15.223 13.84,24.76 0.82,5.203 -0.81,8.604 -2.547,12.187 -1.736,3.583 -4.078,7.227 -6.89,11.088 -5.626,7.723 -13.153,16.222 -21.196,24.266 -8.043,8.044 -16.545,15.573 -24.267,21.198 -3.862,2.813 -7.505,5.155 -11.088,6.89 -3.583,1.736 -6.985,3.37 -12.188,2.547 -9.536,-1.505 -17.897,-6.977 -24.76,-13.84 -6.862,-6.862 -12.334,-15.222 -13.84,-24.76 -0.82,-5.202 0.812,-8.604 2.547,-12.187 1.737,-3.583 4.08,-7.226 6.892,-11.088 5.625,-7.722 13.154,-16.224 21.197,-24.267 8.043,-8.043 16.542,-15.57 24.265,-21.195 3.86,-2.813 7.505,-5.155 11.088,-6.89 2.687,-1.303 5.272,-2.547 8.592,-2.74 0.553,-0.034 1.126,-0.036 1.724,-0.005 z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-5)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path75"
+         style="fill:url(#delapouite-flashlight-gradient-5)" />
+      <path
+         d="m 226.263,262.109 c 0.275,0.043 0.563,0.103 0.86,0.173 0.084,-0.04 -0.152,-0.062 -0.86,-0.174 z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-6)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path77"
+         style="fill:url(#delapouite-flashlight-gradient-6)" />
+      <path
+         d="m 227.123,262.282 c -0.138,0.064 -1.118,0.174 -2.395,0.793 -2.075,1.005 -5.04,2.838 -8.337,5.24 -6.597,4.805 -14.624,11.862 -22.137,19.375 -3.71,3.71 -7.303,7.542 -10.572,11.267 l 29.36,29.36 c 3.724,-3.27 7.556,-6.864 11.265,-10.573 7.512,-7.513 14.57,-15.54 19.374,-22.137 2.402,-3.298 4.235,-6.262 5.24,-8.336 0.62,-1.276 0.73,-2.256 0.793,-2.393 -0.927,-3.9 -4.15,-9.512 -8.615,-13.98 -4.467,-4.465 -10.08,-7.687 -13.98,-8.614 z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-7)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path79"
+         style="fill:url(#delapouite-flashlight-gradient-7)" />
+      <path
+         d="m 249.716,284.876 c 0.07,0.296 0.13,0.584 0.174,0.86 -0.11,-0.71 -0.134,-0.945 -0.173,-0.86 z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-8)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path81"
+         style="fill:url(#delapouite-flashlight-gradient-8)" />
+      <path
+         d="m 172.524,313.251 c -1.24,1.893 -2.246,3.595 -2.884,4.912 -0.616,1.272 -0.73,2.247 -0.792,2.39 0.925,3.9 4.147,9.515 8.615,13.983 4.468,4.468 10.082,7.69 13.982,8.615 0.144,-0.063 1.12,-0.176 2.39,-0.793 1.318,-0.64 3.02,-1.644 4.913,-2.885 L 172.525,313.25 Z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-9)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path83"
+         style="fill:url(#delapouite-flashlight-gradient-9)" />
+      <path
+         d="m 191.444,343.151 c -0.09,0.04 0.143,0.06 0.856,0.172 -0.273,-0.043 -0.56,-0.102 -0.855,-0.172 z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-10)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path85"
+         style="fill:url(#delapouite-flashlight-gradient-10)" />
+      <path
+         d="m 168.847,320.554 c -0.07,-0.295 -0.13,-0.582 -0.172,-0.856 0.112,0.712 0.132,0.945 0.172,0.855 z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-11)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path87"
+         style="fill:url(#delapouite-flashlight-gradient-11)" />
+      <path
+         d="M 35.895,373.893 19.742,391.54 c 11.654,49.472 51.246,89.064 100.72,100.718 l 17.645,-16.153 C 94.302,456.21 55.79,417.698 35.895,373.893 Z"
+         class=""
+         fill="url(#delapouite-flashlight-gradient-12)"
+         stroke="#4a4a4a"
+         stroke-opacity="1"
+         stroke-width="8"
+         id="path89"
+         style="fill:url(#delapouite-flashlight-gradient-12)" />
+    </g>
+  </g>
+  <g
+     id="g994"
+     transform="matrix(0.29138074,0.33516849,-0.33044977,0.30106626,424.88811,-50.071069)">
+    <path
+       d="m 242.32,17.94 0.002,0.02 v -0.02 z"
+       class=""
+       fill="url(#lorc-shiny-entrance-gradient-2)"
+       stroke="#4a4a4a"
+       stroke-opacity="1"
+       stroke-width="8"
+       id="path990"
+       style="fill:url(#lorc-shiny-entrance-gradient-2)" />
+    <path
+       d="m 242.322,17.96 c -9.777,267.328 -40.363,268.207 -134.91,84.388 63.917,197.254 -23.49019,226.1101 -159.34319,139.6351 93.67,96.082 -20.078228,167.19687 -89.46369,191.7564 63.004003,22.264 42.700538,12.00786 127.660287,29.19301 C -125.29909,288.40282 351.51096,224.66099 353.19397,381.78926 405.75921,334.79617 434.79449,297.3086 553.7998,277.13007 390.8998,281.10007 438.29504,297.94739 489.36,199.24 347.726,323.456 295.0069,336.85981 358.3879,100.06981 275.5639,319.92981 246.48854,319.11717 242.9257,61.595573 Z"
+       class="selected"
+       fill="url(#lorc-shiny-entrance-gradient-3)"
+       stroke="#4a4a4a"
+       stroke-opacity="1"
+       stroke-width="8"
+       id="path992"
+       style="fill:url(#lorc-shiny-entrance-gradient-3)"
+       sodipodi:nodetypes="cccccccccsc" />
+  </g>
+</svg>

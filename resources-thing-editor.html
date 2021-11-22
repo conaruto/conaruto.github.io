@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv=“Pragma” content=”no-cache”>
+        <meta http-equiv=“Expires” content=”-1″>
+        <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js-ext/vue.js"></script>
+        <script src="js-ext/sjcl.js" defer></script>
+        <script src="js-ext/ajv.min.js" defer></script>
+        <script src="js-ext/stringops.js" defer></script>
+        <script src="js-ext/download.min.js" defer></script>
+        <script src="js-ext/marked.min.js"></script>
+        <script src="js/jsonEditorConfig.js" defer></script>
+        <script src="js/config.js" defer></script>
+        <script src="js/headers-config.js" defer></script>
+        <script src="js/footers-config.js" defer></script>
+        <script src="js/tools.js" defer></script>
+        <script src="js/headers.js" defer></script>
+        <script src="js/footers.js" defer></script>
+        <script src="js/valueTokens.js" defer></script>
+        <script src="js/propertyTokens.js" defer></script>
+        <script src="js/thing.js" defer></script>
+        <script src="schemas/definitions-schema.js" defer></script>
+        <script src="schemas/thing-schema.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- <script src="js-ext/jsoneditor.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
+        <!-- https://github.com/json-editor/json-editor -->
+        <script src="js/thing-editor.js" defer></script>
+        <link rel="icon" type="image/png" href="images/common/favicon.png">
+         <link rel="stylesheet" type="text/css" href="css-ext/fontawesome.css">
+        <!--<link rel="stylesheet" type="text/css" href="css-ext/bootstrap.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="css/headers.css">
+        <link rel="stylesheet" type="text/css" href="css/footers.css">
+        <link rel="stylesheet" type="text/css" href="css/editor.css">
+        <link rel="stylesheet" type="text/css" href="css/tokens.css">
+        <link rel="stylesheet" type="text/css" href="css/thing.css">
+        <link rel="stylesheet" type="text/css" href="css/json-editor.css">
+        <title>Chroniques Oubliées Fantasy, version Naruto</title>
+    </head>
+    <body>
+        <div class="body-container">
+            <div id="headers">
+                <banner></banner>
+                <menu-bar></menu-bar>
+                <menu-icons></menu-icons>
+            </div>
+            <div id="editor-common">
+                <div class="ui-icons">
+                    <div class="item-selected">
+                        <select v-model="itemNameSelected">
+                            <option v-for="option in options" v-bind:value="option.id">{{ option.name }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mainEditor">
+                    <!-- https://github.com/json-editor/json-editor -->
+                    <div id="editorBox" class="editorBox"></div>
+                    <div class="preview-main-box">
+                    
+                        <div class="preview-floating-box">
+                            <div class="description-preview-thing">
+                                <h3 class="full-description-preview">Description complète :</h3>
+                                <div class="full-description-preview">{{item['full-description']}}</div>
+                            </div>
+                            <div v-show="item.otype == 'thing'" class="preview-box-thing">
+                                <div class="preview">
+                                    <thing v-bind:item="item" v-bind:items="items"></thing>
+                                </div>
+                            </div>
+                            <div class="ui-icons-mini">
+                                <img v-if="inItems()" class="add-item" v-on:click="addToList()" src="images/ui/update-item.png" alt="Appliquer les changements" title="Appliquer les changements"/>
+                                <img v-else class="add-item" v-on:click="addToList()" src="images/ui/add-item.png" alt="Ajouter l'item à la liste" title="Ajouter l'item à la liste"/>
+                                <img v-show="inItems()" class="remove-item" v-on:click="removeFromList()" src="images/ui/remove-item.png" alt="Enlever l'item de la liste" title="Enlever l'item de la liste"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footers">
+                <footer-banner></footer-banner>
+            </div>
+        </div>
+    </body>
+</html>

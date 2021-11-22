@@ -1,20 +1,3 @@
-@font-face {
-    font-family: "sage-sans";
-    src: url("fonts/sagesans-Regular.ttf");
-}
-@font-face {
-    font-family: "Georgia";
-    src: url("fonts/Georgia.ttf");
-}
-@font-face {
-    font-family: "Georgia Bold";
-    src: url("fonts/Georgia Bold.ttf");
-}
-@font-face {
-    font-family: "Ferox";
-    src: url("fonts/Ferox.ttf");
-}
-
 div.ui-icons {
     display: flex;
     flex-direction: row;
@@ -165,12 +148,20 @@ div.preview-main-box {
     flex-direction: column;
 }
 
-div.description-preview {
+div.description-preview-capacity {
     width: 375px;
     margin: 2px;
     padding-bottom: 3px;
     box-sizing: content-box;
 }
+
+div.description-preview-thing {
+    width: calc(3 * 32mm);
+    margin: 2px;
+    padding-bottom: 3px;
+    box-sizing: content-box;
+}
+
 h3.full-description-preview {
     font-size: 16px;
     font-weight: bold;
@@ -204,6 +195,12 @@ div.preview-box-capacity {
 div.preview-box-way {
     width: calc(3 * 33mm);
     height: calc(3 * 120px);  
+    margin-right: 10px;
+}
+
+div.preview-box-thing {
+    width: calc(3 * 32mm);
+    height: calc(3 * 45mm);
     margin-right: 10px;
 }
 

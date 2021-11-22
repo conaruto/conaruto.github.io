@@ -43,7 +43,7 @@ var loadJsonIcon = {
     methods: {
         loadJsonEvent: function(evt) {
             files = evt.target.files || evt.dataTransfer.files;
-            eventBus.$emit('loadJsonEvent', files);
+            eventBus.$emit('loadJsonEvent', files, evt);
         }
     },
     template: 
@@ -152,6 +152,7 @@ var menuIcons = {
     data: function() {
         menu = getCurrentMenu();
         console.log("Location menu: " + menu.name);
+        console.log("Location menu (c): " + menu.category);
         return({
             selectedMenu: menu.name,
             selectedCategory: menu.category,
@@ -168,6 +169,7 @@ var menuIcons = {
     },
     mounted: function () {
         helpFile = "help/" + this.selectedCategory + "-" + this.selectedMenu + ".md";
+        console.log("Help file : "+helpFile);
         fetchMdData(helpFile).then(data => {
             this.help = marked(data);
         });
@@ -199,32 +201,65 @@ var menuIcons = {
 var menuBar = {
     data: function() {
         menu = getCurrentMenu();
-        console.log("Location menu: " +menu.name);
+        console.log("Location menu [" +menu.name +"/"+ menu.category+"]");
+        if (('reset' in menu) && (!menu.selected)) {
+            saveDataToSession('cartItems', mainDefaults.cartItems);
+            saveDataToSession('cartDisplay', mainDefaults.cartDisplay);
+            clearDataSession(["items", "item", "itemNameSelected", "itemTypePicked"]);
+        } 
+        eventBus.$emit('resetEvent',undefined);
+        menus = loadDataFromSession(coHeadersConfig, 'menus').map( m => {
+            if (m.category == menu.category) {
+                if (m.name == menu.name) {
+                    m.selected = true;
+                } else {
+                    m.selected = false;
+                }
+            } else {
+                if (m.linked == menu.category) {
+                    if (m.name == menu.name) {
+                        m.selected = true;
+                    } else {
+                        m.selected = false;
+                    }
+                }
+            }
+            //console.log('Menu :'+JSON.stringify(m));
+            return(m);
+        });
+        saveDataToSession('menus', menus);
         return({
             selectedMenu: menu.name,
             selectedCategory: menu.category,
-            menus: coHeadersConfig.menus,
+            menus: menus,
             showMenus: false
         });
     },
     computed: {
         categories: function() {
+            //console.log('categories:' + JSON.stringify(this.menus) );
             return(this.menus.map(m=>m.category).unique());
         }
     },
     methods: {
         isVisible: function(c, menu) {
-            index = this.menus.filter(m=>m.category==c).map(m=>m.name).indexOf(menu.name);
-            isCurrent = this.isCurrent(menu);
-            r = (isCurrent)||((this.selectedCategory != c)&&(index==0));
-            console.log("isVisible("+c+", "+menu.name+") = "+r+"("+isCurrent+","+index+")");
+            // index = this.menus.filter(m=>m.category==c).map(m=>m.name).indexOf(menu.name);
+            // isCurrent = this.isCurrent(menu);
+            // r = (isCurrent)||((this.selectedCategory != c)&&(index==0));
+            r = this.menus.find(m => ((m.name == menu.name)&&(m.category == c))).selected;
+            //console.log("isVisible("+c+", "+menu.name+") = "+r);
             return(r);
         },
         getMenus: function(c){
+            //console.log('getMenus');
             return(this.menus.filter(m=>m.category == c));
         },
+        linkedMenus: function(c) {
+            return(this.getMenus(c).reduce((a, b) => (a && b.linked), true));
+        },
         isGroupedMenus: function(c) {
-            return(this.getMenus(c).length > 1);
+            //console.log('isGroupedMenus');
+            return((this.getMenus(c).length > 1) && (!(this.linkedMenus(c))));
         },
         groupedMenuIcon: function(c) {
             if (this.isGroupedMenus(c)) {
@@ -263,13 +298,24 @@ var menuBar = {
 };
 
 var banner = {
+    methods: {
+        resetAll: function(){
+            sessionStorage.clear();
+            saveDataToSession('items', mainDefaults.items);
+            saveDataToSession('cartItems', mainDefaults.cartItems);
+            saveDataToSession('cartDisplay', mainDefaults.cartDisplay);
+            saveDataToSession('menus', coHeadersConfig.menus);     
+            window.location.replace("/index.html");
+        },
+    },
     template: 
         `<div class="banner notprintable">
-            <img class="banner" src="images/ui/banner.png"/>
+            <img class="banner" src="images/ui/banner.png" />
             <a class="banner" 
                 href="https://github.com/conaruto/conaruto.github.io#chroniques-oubli%C3%A9es-fantasy-version-naruto">
                  Mentions légales
-             </a>
+            </a>
+            <img class="banner-reset" src="images/ui/reset.png" title="Tout réinitialiser" v-on:click="resetAll"/>
         </div>`
 };
 
