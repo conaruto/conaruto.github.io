@@ -13,17 +13,31 @@ isIconifiedProperty = function(pname, p) {
         (pname in coUIConfig.properties.iconified) && (
             coUIConfig.properties.iconified[pname].includes("all") ||
             coUIConfig.properties.iconified[pname].includes(p.name)
-        )
+        ) && (!(
+            ( pname in coUIConfig.properties.iconifiedException ) &&
+            ( p.name in coUIConfig.properties.iconifiedException[pname] ) &&
+            coUIConfig.properties.iconifiedException[pname][p.name].includes(JSON.stringify(p.values))
+        ))
     );
+  
+    // if (( pname in coUIConfig.properties.iconifiedException ) &&
+    //     ( p.name in coUIConfig.properties.iconifiedException[pname] )) {
+    //     console.log("coUIConfig.properties.iconifiedException["+pname+"]["+p.name+"].includes("+JSON.stringify(p.values)+") = "+coUIConfig.properties.iconifiedException[pname][p.name].includes(p.values));
+    // }
     //console.log("isIconifiedProperty("+pname+","+JSON.stringify(p)+"):" + isIconified);
     return(isIconified);
 };
 
 hasIconifiedProperty = function(p) {
     var hasIconified = (
-        ( p != undefined ) && ('name' in p) && p.name in coUIConfig.properties.iconified) && (
+        ( p != undefined ) && 
+        ('name' in p) && 
+        (p.name in coUIConfig.properties.iconified) && (
             coUIConfig.properties.iconified[p.name].includes("all") ||
-            ( ( p.name in p ) && coUIConfig.properties.iconified[p.name].includes(p[p.name]) ||
+            (
+                ( p.name in p ) && 
+                coUIConfig.properties.iconified[p.name].includes(p[p.name])
+            ) ||
             isExpandedProperty(p)
         )
     );
@@ -55,13 +69,15 @@ expandProperty = function(p) {
                 //console.log("Expanding '"+ep+"' with '"+JSON.stringify(nep)+"'");
                 if ('map' in coUIConfig.properties.expanded[p.name][ep]) {
                     for (const [ip, tp] of Object.entries(coUIConfig.properties.expanded[p.name][ep]['map'])) {
-                        if ((ip in p) &&(typeof(tp) == "string" ) && (tp in nep)) {
+                        if ((ip in p) && (typeof(tp) == "string" ) && (tp in nep)) {
                             //console.log("Mapping template '"+tp+"("+JSON.stringify(p[ip])+")' property with '"+p.name+"' property '"+tp+"'");
+                            
                             if (Array.isArray(nep[tp])) {
                                 nep[tp].push(clone(p[ip]));
                             } else {
                                 nep[tp] = clone(p[ip]);
                             }
+                            
                         } else {
 // console.log("Map property is not a string : " + JSON.stringify(tp));
                             if ((ip in p) && (!!tp) && (tp.constructor === Object)) {

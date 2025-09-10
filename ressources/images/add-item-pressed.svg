@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   style="height: 64px; width: 64px;"
+   version="1.1"
+   id="svg20"
+   sodipodi:docname="add-item-pressed.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview22"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.7050781"
+     inkscape:cx="255.70676"
+     inkscape:cy="256"
+     inkscape:window-width="1559"
+     inkscape:window-height="1082"
+     inkscape:window-x="4834"
+     inkscape:window-y="117"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg20" />
+  <defs
+     id="defs12">
+    <radialGradient
+       id="gradient-2">
+      <stop
+         offset="0%"
+         stop-color="#417505"
+         stop-opacity="1"
+         id="stop2" />
+      <stop
+         offset="100%"
+         stop-color="#7ed321"
+         stop-opacity="1"
+         id="stop4" />
+    </radialGradient>
+    <linearGradient
+       x1="0"
+       x2="0"
+       y1="0"
+       y2="1"
+       id="gradient-3">
+      <stop
+         offset="0%"
+         stop-color="#417505"
+         stop-opacity="1"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#7ed321"
+         stop-opacity="1"
+         id="stop9" />
+    </linearGradient>
+  </defs>
+  <g
+     class=""
+     transform="translate(0,0)"
+     style="touch-action: none;"
+     id="g18">
+    <g
+       transform="translate(25.6, 25.6) scale(0.9, 0.9) rotate(0, 256, 256)"
+       id="g16">
+      <path
+         d="M196 16C179.431 16 166 29.431 166 46L166 166L46 166C29.431 166 16 179.431 16 196L16 316C16 332.569 29.431 346 46 346L166 346L166 466C166 482.569 179.431 496 196 496L316 496C332.569 496 346 482.569 346 466L346 346L466 346C482.569 346 496 332.569 496 316L496 196C496 179.431 482.569 166 466 166L346 166L346 46C346 29.431 332.569 16 316 16L196 16Z"
+         class="selected"
+         fill="url(#gradient-2)"
+         id="path14" />
+    </g>
+  </g>
+  <rect
+     style="fill:#f2f2f2;stroke-width:1.8;opacity:0.5"
+     id="rect861"
+     width="512"
+     height="512"
+     x="-0.38158649"
+     y="0.52913803"
+     inkscape:export-filename="/home/plic/Documents/dev/conaruto.github.io/images/ui/add-item-pressed.png"
+     inkscape:export-xdpi="24"
+     inkscape:export-ydpi="24" />
+</svg>

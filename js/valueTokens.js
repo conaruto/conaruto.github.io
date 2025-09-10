@@ -20,6 +20,13 @@ var valueToken = {
             r = getUIConfigKey("values", "labels", this.valueToken, tp)
             return(r);
         },
+        isIconifiedLabel: function(l) {
+            if (l.toLowerCase().match(/\.(jpg|jpeg|png|svg|gif)/)) {
+                return(true);
+            } else {
+                return(false);
+            }
+        }
     },
     template: 
         `<div v-if="is('quantity')" class="valueToken">
@@ -35,13 +42,13 @@ var valueToken = {
             <span v-bind:class="classes('adjustment')">{{label("adjustment")}}</span><span v-bind:class="classes('count')">{{label("count")}}</span><span v-bind:class="classes('die')">{{label("die")}}</span>
         </div>
         <div v-else-if="is('other')" class="valueToken">
-            <span v-bind:class="classes('adjustment')">{{label("adjustment")}}</span><span v-bind:class="classes('other')">{{label("other")}}</span>
+            <span v-bind:class="classes('adjustment')">{{label("adjustment")}}</span><img v-if="isIconifiedLabel(label('other'))" v-bind:class="classes('other')" v-bind:src="label('other')" v-bind:title="label('other')"/><span v-else="isIconifiedLabel(label('other'))" v-bind:class="classes('other')">{{label("other")}}</span>
         </div>
         <div v-else-if="is('dm')" class="valueToken">
             <img v-for="dm in valueToken.dm" v-bind:class="classes(dm)" v-bind:src="icon(dm)" v-bind:title="label(dm)"/>
         </div>
         <div v-else-if="is('element')" class="valueToken">
-            <span v-bind:class="classes('adjustment')">{{label("adjustment")}}</span><span v-if="label('count') > 0" v-bind:class="classes('count')">{{label("count")}}</span><img v-bind:class="classes('element')" v-bind:src="icon('element')" v-bind:title="label('element')"/>
+            <span v-bind:class="classes('adjustment')">{{label("adjustment")}}</span><span v-if="label('count') > 1" v-bind:class="classes('count')">{{label("count")}}</span><img v-bind:class="classes('element')" v-bind:src="icon('element')" v-bind:title="label('element')"/>
         </div>
         <div v-else-if="is('measure')" class="valueToken">
             <span v-bind:class="classes('adjustment')">{{label("adjustment")}}</span><span v-bind:class="classes()">{{label()}}</span>

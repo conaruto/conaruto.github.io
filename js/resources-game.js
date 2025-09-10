@@ -158,7 +158,7 @@ var gameApp = {
         
         saveSvg: function() {
             var serializer = new XMLSerializer();
-            var source = serializer.serializeToString(this.image);
+            var source = DOMPurify.sanitize(serializer.serializeToString(this.image));
             source = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>' + encodeURIComponent(source);
             //console.log("Save Svg :" +source);
             eventBus.$emit('svgDataUriEvent', "data:image/svg+xml;utf8,"+source);

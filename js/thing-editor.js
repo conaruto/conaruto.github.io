@@ -25,6 +25,9 @@ var editorCommon = new Vue({
         saveData: editorDefaults['saveData'],
         saveFileName: editorDefaults['saveFileName'],
         jsonEditor: null,
+        imageUpdateSrc: "images/ui/update-item.png",
+        imageAddSrc: "images/ui/add-item.png",
+        imageRemoveSrc: "images/ui/remove-item.png",
     },
     components: {
         'thing': thing,
@@ -53,34 +56,10 @@ var editorCommon = new Vue({
             //console.log("NewItem : "+JSON.stringify(newItem));
             if (oid(newItem) != oid(this.item)) {
                 this.item = newItem;
-                
-                // Json editor update
+                //console.log("JSON editor 2("+this.jsonEditor+")");
                 if (this.jsonEditor != null) {
-                    this.jsonEditor.destroy();
+                    this.jsonEditor.setValue(this.item);
                 }
-                const element = document.getElementById('editorBox');
-    
-                this.jsonEditor = new JSONEditor(element, 
-                    Object.assign({}, {
-                        startval: this.item,
-                        schema: this.schemas[this.itemTypePicked]
-                    }, jsonEditorConfig)
-                    
-                );
-                var optionalCheckboxes = document.getElementsByClassName("json-editor-opt-in");
-                optionalCheckboxes.forEach(c => {
-                    //console.log("Hack element : ["+c.id+"]" )
-                    c.checked = true;
-                    c.click();
-                });
-                this.jsonEditor.on('change',() => {
-                    var jsonEditorErrors = this.jsonEditor.validate();
-                    if (jsonEditorErrors.length) {
-                        x=1;
-                    } else {
-                        this.item = this.jsonEditor.getValue();
-                    }
-                  });
             }
             //console.log("itemNameSelected("+newItemNameSelected+")");
             saveDataToSession("itemNameSelected",newItemNameSelected);
@@ -107,6 +86,15 @@ var editorCommon = new Vue({
         saveJson: function() {
             source = encodeURIComponent(itemsStringify(this.items));
             download("data:application/json;utf8,"+source, "objets.json");
+        },
+        saveText: function() {
+            var text="";
+            this.items.forEach( (item) => {
+                text += item.name+"\n";
+                text += item['full-description']+"\n";
+            });
+            source = encodeURIComponent(text);
+            download("data:application/txt;utf8,"+source, "objets.txt");
         },
         reset: function() {
             console.log("reset");
@@ -137,6 +125,24 @@ var editorCommon = new Vue({
             //console.log("removeFromList("+this.item.otype+", "+this.item.name+")");
             this.items = this.items.filter(o => oid(o) != oid(this.item));
             this.itemNameSelected = this.options.default().id;
+        },
+        imageUpdateListPress: function() {
+            this.imageUpdateSrc = "images/ui/update-item-pressed.png"
+        },
+        imageUpdateListRelease: function() {
+            this.imageUpdateSrc = "images/ui/update-item.png"
+        },
+        imageAddToListPress: function() {
+            this.imageAddSrc = "images/ui/add-item-pressed.png"
+        },
+        imageAddToListRelease: function() {
+            this.imageAddSrc = "images/ui/add-item.png"
+        },
+        imageRemoveFromListPress: function() {
+            this.imageRemoveSrc = "images/ui/remove-item-pressed.png"
+        },
+        imageRemoveFromListRelease: function() {
+            this.imageRemoveSrc = "images/ui/remove-item.png"
         }
     },
     mounted: function () {
@@ -148,23 +154,22 @@ var editorCommon = new Vue({
         console.timeEnd("COFvN schema data loaded");
         console.time("Initialization");
         this.items = loadDataFromSession(editorDefaults, "items");
+        //console.log("items loaded("+JSON.stringify(this.items)+")");
         this.itemTypePicked = loadDataFromSession(editorDefaults, "itemTypePicked");
+        //console.log("itemTypePicked("+JSON.stringify(this.itemTypePicked)+")");
         this.options = getOptions(this.items, this.itemTypePicked, this.schemas);
+        //console.log("options("+JSON.stringify(this.options)+")");
         this.itemNameSelected = loadDataFromSession(editorDefaults, "itemNameSelected");
         //console.log("itemNameSelected("+this.itemNameSelected+")");
-        if (this.itemNameSelected == null) {
-            this.itemNameSelected = examplesOids(this.schemas).default();
-        }
-        this.item = loadDataFromSession(editorDefaults, "item");
-        
         console.timeEnd("Initialization");
         
         console.time("JSON Editor initialization");
+        console.log("JSON editor("+JSON.stringify(this.jsonEditor)+")");
         if (this.jsonEditor != null) {
             this.jsonEditor.destroy();
         }
         const element = document.getElementById('editorBox');
-
+        console.log("JSON editor 1("+JSON.stringify(this.jsonEditor)+")");
         this.jsonEditor = new JSONEditor(element, 
             Object.assign({}, {
                 startval: this.item,
@@ -172,13 +177,24 @@ var editorCommon = new Vue({
             }, jsonEditorConfig)
             
         );
-        var optionalCheckboxes = document.getElementsByClassName("json-editor-opt-in");               
-        optionalCheckboxes.forEach(c => {
-            //console.log("Hack element : ["+c.id+"]" )
-            c.checked = true;
-            c.click();
+        
+        var optionalCheckboxes = document.getElementsByClassName("json-editor-opt-in");
+        //console.log("Hack element ("+optionalCheckboxes.length+") : ["+JSON.stringify(document.getElementsByClassName("json-editor-opt-in"))+"]");     
+        if (optionalCheckboxes.length > 0) {
+            optionalCheckboxes.forEach(c => {
+                //console.log("Hack element : ["+c.id+"]" )
+                //console.log("Hack element : ["+JSON.stringify(c)+"]" );
+                c.checked = true;
+                c.click();
+            });
+        }   
+        this.jsonEditor.on('ready',() => {
+            if (this.itemNameSelected == null) {
+                this.itemNameSelected = examplesOids(this.schemas).default();
+            }
+            this.item = loadDataFromSession(editorDefaults, "item");
+            //console.log("items("+JSON.stringify(this.item)+")");
         });
-
         this.jsonEditor.on('change',() => {
             var jsonEditorErrors = this.jsonEditor.validate();
             if (jsonEditorErrors.length) {
@@ -196,5 +212,6 @@ var editorCommon = new Vue({
         eventBus.$on('resetEvent', this.reset);
         eventBus.$on('loadJsonEvent', this.loadJson);
         eventBus.$on('saveJsonEvent', this.saveJson);
+        eventBus.$on('saveTextEvent', this.saveText);
     }
 });

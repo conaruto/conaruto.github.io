@@ -40,6 +40,7 @@ var capacity = {
         },
         getWayIcon: function(r) {
             way = this.items.find(i => ((i.otype == 'way') && (i.name == r.way)));
+            //console.debug("Way ["+r.way+"] = "+JSON.stringify(way));
             if (way != null) {
                 return(way.icon);
             } else {

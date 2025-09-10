@@ -22,6 +22,41 @@ var tables = new Vue({
         }
     },
     methods: {
+        loadJson: function(files, event) {
+            this.reset(true);
+            this.loadAlerts = [];
+            if (!files.length) {
+                console.log('Error while uploading file ...');
+            } else {
+                var reader = new FileReader();
+                reader.readAsText(files[0]);
+                reader.onload = e => { 
+                    this.items = [];
+                    this.items.push(...JSON.parse(e.target.result));
+                    this.items.map(item => {
+                        item["count"] = 0;
+                    })
+                    saveDataToSession("items",this.items);
+                }
+            }
+        },
+        saveJson: function() {
+            source = encodeURIComponent(itemsStringify(this.cartItems));
+            download("data:application/json;utf8,"+source, "cart-capacites.json");
+        },
+        saveText: function() {
+            var text="";
+            this.cartItems.forEach( (item) => {
+                title = item.name;
+                if (item.limited) {
+                    title = title + "\xa0(L)"
+                }
+                text += title+"\n";
+                text += item['full-description']+"\n";
+            });
+            source = encodeURIComponent(text);
+            download("data:application/txt;utf8,"+source, "cart-capacites.txt");
+        },
         addToCart: function(items) {
             aItems = []
             if (Array.isArray(items)) {
@@ -54,28 +89,36 @@ var tables = new Vue({
             console.log("Displaying cart ...");
             this.cartDisplay = ! this.cartDisplay;
         },
-        reset: function() {
-            console.log("reset");
-            sessionStorage.clear();
+        reset: function(soft) {
+            console.log("reset [soft="+soft+"]");
+            //sessionStorage.clear();
             //console.log(sessionStorage)
             this.items = mainDefaults.items;
             this.cartItems = mainDefaults.cartItems;
             this.cartDisplay = mainDefaults.cartDisplay
-            document.location.reload();
+            if (!(soft)) {
+                document.location.reload();
+            }
         },
     },
     mounted: function () {
         menu = getCurrentMenu();
-        fetch(coConfig.wayUrl)
-        .then(response => response.json())
-        .then(data => {
-            this.items = data;
-            //console.log("Initial load : "+JSON.stringify(this.items));
-        });
+        if (this.items.length < 1) {
+            fetch(coConfig.wayUrl)
+            .then(response => response.json())
+            .then(data => {
+                this.items = data;
+                //console.log("Initial load : "+JSON.stringify(this.items));
+                saveDataToSession("items",this.items);
+            });
+        }   
         this.cartItems = loadDataFromSession(mainDefaults, 'cartItems'),
         eventBus.$on('addToCartEvent', this.addToCart);
         eventBus.$on('removeFromCartEvent', this.removeFromCart);
         eventBus.$on('resetEvent', this.reset);
+        eventBus.$on('loadJsonEvent', this.loadJson);
+        eventBus.$on('saveJsonEvent', this.saveJson);
+        eventBus.$on('saveTextEvent', this.saveText);
         eventBus.$on('displayCartEvent', this.displayCart);
     },
 });

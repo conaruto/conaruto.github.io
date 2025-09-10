@@ -26,6 +26,36 @@ var tables = new Vue({
         }
     },
     methods: {
+        loadJson: function(files, event) {
+            this.reset(true);
+            this.loadAlerts = [];
+            if (!files.length) {
+                console.log('Error while uploading file ...');
+            } else {
+                var reader = new FileReader();
+                reader.readAsText(files[0]);
+                reader.onload = e => { 
+                    this.items = [];
+                    this.items.push(...JSON.parse(e.target.result));
+                    this.items.map(item => {
+                        item["count"] = 0;
+                    })
+                }
+            }
+        },
+        saveJson: function() {
+            source = encodeURIComponent(itemsStringify(this.cartItems));
+            download("data:application/json;utf8,"+source, "cart-objets.json");
+        },
+        saveText: function() {
+            var text="";
+            this.cartItems.forEach( (item) => {
+                text += item.name+"\n";
+                text += item['full-description']+"\n";
+            });
+            source = encodeURIComponent(text);
+            download("data:application/txt;utf8,"+source, "cart-objets.txt");
+        },
         addToCart: function(items) {
             var aItems = [];
             if (Array.isArray(items)) {
@@ -72,31 +102,56 @@ var tables = new Vue({
             console.log("Displaying cart ...");
             this.cartDisplay = ! this.cartDisplay;
         },
-        reset: function() {
-            console.log("reset");
-            sessionStorage.clear();
-            //console.log(sessionStorage)
+        reset: function(soft) {
+            
+            console.log("reset [soft="+soft+"]");
+            // sessionStorage.clear();
+            // console.log(sessionStorage)
             this.items = mainDefaults.items;
             this.cartItems = mainDefaults.cartItems;
             this.cartDisplay = mainDefaults.cartDisplay
-            document.location.reload();
+            if (!(soft)) {
+                document.location.reload();
+            }
         },
     },
     mounted: function () {
         menu = getCurrentMenu();
+        sortOrder = [ "Material", "Armor", "Weapon", "Shield", "Hat", "Glove", "Ring", "Boot", "Bracer", "Cloak", "Belt", "Amulet" ];
         fetch(coConfig.thingUrl)
         .then(response => response.json())
         .then(data => {
-            this.items = data;
+            this.items = data.sort((a,b) => {
+                if (sortOrder.indexOf(a.ttype) == sortOrder.indexOf(b.ttype)) {
+                    if (a.cost.value == b.cost.value) {
+                        if (a.name < b.name) {
+                            return( -1 );
+                        }
+                        if (a.name > b.name) {
+                            return( 1 );
+                        }
+                        return(0);
+                    } else {
+                        return(b.cost.value - a.cost.value);
+                    }
+                } else {
+                    return(sortOrder.indexOf(a.ttype) - sortOrder.indexOf(b.ttype));
+                }
+            });
             this.items.map(item => {
                 item["count"] = 0;
             })
             //console.log("Initial load : "+JSON.stringify(this.items));
+            saveDataToSession("items",this.items);
         });
-        this.cartItems = loadDataFromSession(mainDefaults, 'cartItems'),
+
+        this.cartItems = loadDataFromSession(mainDefaults, 'cartItems');
         eventBus.$on('addToCartEvent', this.addToCart);
         eventBus.$on('removeFromCartEvent', this.removeFromCart);
         eventBus.$on('resetEvent', this.reset);
+        eventBus.$on('loadJsonEvent', this.loadJson);
+        eventBus.$on('saveJsonEvent', this.saveJson);
+        eventBus.$on('saveTextEvent', this.saveText);
         eventBus.$on('displayCartEvent', this.displayCart);
     },
 });

@@ -173,10 +173,10 @@ var coItemsConfig = {
                 "title": function() {return("Ajouter au panier");},
                 "action": function() {return(addToCart);}
             },{
-                "name": "type", 
+                "name": "Icone", 
                 "type": "icon", 
                 "classes": function() {return(["defaultItemTable", "typeIconItemTable"]);},
-                "label": "Type",
+                "label": "Icone",
                 "icon": function(r) {
                     if (('icon' in r) && (r.icon != "")) {
                         return(r.icon);
@@ -351,9 +351,17 @@ var coUIConfig = {
                 "other": function(v) { 
                     switch(v) {
                         case ",":
-                            return(v + "\xa0");
                         case ":":
                             return(v + "\xa0");
+                            case "space":
+                                return("\xa0");
+                        case "melee":
+                        case "range":
+                        case "magical":
+                        case "jutsu":    
+                        case "jutsu-melee":
+                        case "jutsu-range":    
+                            return("images/common/attack-"+v+".png");
                         default:
                             return("[" + v + "]");
                     }
@@ -449,6 +457,7 @@ var coUIConfig = {
             "measure": {
                 "range": function(v,t) {return("images/common/range.png")},
                 "area": function(v,t) {return("images/common/area.png")},
+                "height": function(v,t) {return("images/common/height.png")},
                 "duration": function(v,t) {return("images/common/duration.png")},
                 "weight": function(v,t) {return("images/common/weight.png")},
                 "capacity": function(v,t) {return("images/common/capacity.png")},
@@ -537,6 +546,11 @@ var coUIConfig = {
             "character": ["all"],
             "fight": ["critical"]
         },
+        "iconifiedException": {
+           "fight": {
+                "critical": ["[20]", "[]", "null"]
+           }
+        },
         "expanded": {
             "fight": {
                 "attack": {
@@ -563,10 +577,10 @@ var coUIConfig = {
                     "map": {"detail": "value"}
                 },
                 "critical": {
-                    "template": {"name": "critical", "critical":"critical","values": null},
+                    "template": {"name": "critical", "critical": "critical","values": null},
                     "map": {
                         "critical": "values",
-                    }
+                    },
                 }
             },
             "damage": {

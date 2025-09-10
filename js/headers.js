@@ -8,15 +8,29 @@ var fakeIcon = {
 
 var resetIcon = {
     props: ["label", "title"],
+    data: function() {
+        return({ 
+            imgSrc: "images/ui/reset.png"
+        });
+    },
     methods: {
         resetEvent: function() {
             eventBus.$emit('resetEvent',undefined);
+        },
+        imagePress: function() {
+            this.imgSrc = "images/ui/reset-pressed.png"
+        },
+        imageRelease: function() {
+            this.imgSrc = "images/ui/reset.png"
         }
     },
     template: 
-        `<img class="defaultIcon" src="images/ui/reset.png" 
+        `<img class="defaultIcon"  v-bind:src="imgSrc" 
               v-bind:alt="label" v-bind:title="title" 
-              v-on:click="resetEvent"/>`
+              v-on:click="resetEvent()"
+              v-on:mousedown="imagePress()"
+              v-on:mouseup="imageRelease()"
+              v-on:mouseleave="imageRelease()" />`
 };
 
 var trashIcon = {
@@ -40,10 +54,21 @@ var trashIcon = {
 
 var loadJsonIcon = {
     props: ["label", "title"],
+    data: function() {
+        return({ 
+            imgSrc: "images/ui/load-json.png"
+        });
+    },
     methods: {
         loadJsonEvent: function(evt) {
             files = evt.target.files || evt.dataTransfer.files;
             eventBus.$emit('loadJsonEvent', files, evt);
+        },
+        imagePress: function() {
+            this.imgSrc = "images/ui/load-json-pressed.png"
+        },
+        imageRelease: function() {
+            this.imgSrc = "images/ui/load-json.png"
         }
     },
     template: 
@@ -51,9 +76,11 @@ var loadJsonIcon = {
             <input id="loadJson" type="file" accept="application/json" 
                    v-on:change="loadJsonEvent($event)" />
             <label class="defaultIcon" for="loadJson">
-                <img class="defaultIcon" 
-                     src="images/ui/load-json.png" 
-                     v-bind:alt="label" v-bind:title="title"/>
+            <img class="defaultIcon" v-bind:src="imgSrc" 
+                v-bind:alt="label" v-bind:title="title"
+                v-on:mousedown="imagePress()"
+                v-on:mouseup="imageRelease()"
+                v-on:mouseleave="imageRelease()" />
             </label>
         </div>`
 };
@@ -61,7 +88,10 @@ var loadJsonIcon = {
 var saveJsonIcon = {
     props: ["label", "title"],
     data: function() {
-        return({ dataUri: undefined });
+        return({ 
+            dataUri: undefined,
+            imgSrc: "images/ui/save-json.png"
+        });
     },
     methods: {
         saveJson: function(data) {
@@ -69,6 +99,12 @@ var saveJsonIcon = {
         },
         saveJsonEvent: function() {
             eventBus.$emit('saveJsonEvent',undefined);
+        },
+        imagePress: function() {
+            this.imgSrc = "images/ui/save-json-pressed.png"
+        },
+        imageRelease: function() {
+            this.imgSrc = "images/ui/save-json.png"
         }
     },
     mounted: function() {
@@ -76,15 +112,58 @@ var saveJsonIcon = {
     },
     template: 
         `<a class="defaultIcon" v-bind:href="dataUri" 
-            v-on:click="saveJsonEvent()" download="data.json">                    
-             <img class="defaultIcon" src="images/ui/save-json.png" 
-                  v-bind:alt="label" v-bind:title="title"/>
+            v-on:click="saveJsonEvent()" download="personnage.json">                    
+             <img class="defaultIcon" v-bind:src="imgSrc" 
+                  v-bind:alt="label" v-bind:title="title"
+                  v-on:mousedown="imagePress()"
+                  v-on:mouseup="imageRelease()"
+                  v-on:mouseleave="imageRelease()" />
         </a>`
 };
+
+var saveTextIcon = {
+    props: ["label", "title"],
+    data: function() {
+        return({ 
+            dataUri: undefined,
+            imgSrc: "images/ui/save-text.png"
+        });
+    },
+    methods: {
+        saveText: function(data) {
+            this.dataUri = data;
+        },
+        saveTextEvent: function() {
+            eventBus.$emit('saveTextEvent',undefined);
+        },
+        imagePress: function() {
+            this.imgSrc = "images/ui/save-text-pressed.png"
+        },
+        imageRelease: function() {
+            this.imgSrc = "images/ui/save-text.png"
+        }
+    },
+    mounted: function() {
+        eventBus.$on('textDataUriEvent', this.saveText);
+    },
+    template: 
+        `<a class="defaultIcon" v-bind:href="dataUri" 
+            v-on:click="saveTextEvent()" download="data.txt">                    
+             <img class="defaultIcon" v-bind:src="imgSrc" 
+                v-bind:alt="label" v-bind:title="title"
+                v-on:mousedown="imagePress()"
+                v-on:mouseup="imageRelease()"
+                v-on:mouseleave="imageRelease()" />
+        </a>`
+};
+
 var saveSvgIcon = {
     props: ["label", "title"],
     data: function() {
-        return({ dataUri: undefined });
+        return({ 
+            dataUri: undefined,
+            imgSrc: "images/ui/save-svg.png"
+        });
     },
     methods: {
         saveSvg: function(data) {
@@ -92,6 +171,12 @@ var saveSvgIcon = {
         },
         saveSvgEvent: function() {
             eventBus.$emit('saveSvgEvent',undefined);
+        },
+        imagePress: function() {
+            this.imgSrc = "images/ui/save-svg-pressed.png"
+        },
+        imageRelease: function() {
+            this.imgSrc = "images/ui/save-svg.png"
         }
     },
     mounted: function() {
@@ -100,15 +185,18 @@ var saveSvgIcon = {
     template: 
         `<a class="defaultIcon" v-bind:href="dataUri" 
             v-on:click="saveSvgEvent()" download="image.svg">                    
-             <img class="defaultIcon" src="images/ui/save-svg.png" 
-                  v-bind:alt="label" v-bind:title="title"/>
+             <img class="defaultIcon" v-bind:src="imgSrc" 
+                v-bind:alt="label" v-bind:title="title"
+                v-on:mousedown="imagePress()"
+                v-on:mouseup="imageRelease()"
+                v-on:mouseleave="imageRelease()" />
         </a>`
 };
 
 var cartIcon = {
     props: ["label", "title"],
     data: function() {
-        return({ count: 0});
+        return({ count: 0 });
     },
     methods: {
         displayCartEvent: function() {
@@ -132,19 +220,33 @@ var cartIcon = {
 
 var helpIcon = {
     props: ["label", "title"],
+    data: function() {
+        return({ 
+            imgSrc: "images/ui/help.png"
+        });
+    },
     methods: {
         displayHelpEvent: function() {
             console.log("Displaying help ...");
             eventBus.$emit('displayHelpEvent', undefined);
         },
+        imagePress: function() {
+            this.imgSrc = "images/ui/help-pressed.png"
+        },
+        imageRelease: function() {
+            this.imgSrc = "images/ui/help.png"
+        }
     },
     template: 
         `<div class="defaultIcon">
             <img class="defaultIcon" 
-                 src="images/ui/help.png" 
                  v-bind:alt="label" 
                  v-bind:title="title" 
-                 v-on:click="displayHelpEvent"/>
+                 v-on:click="displayHelpEvent"
+                 v-bind:src="imgSrc" 
+                 v-on:mousedown="imagePress()"
+                 v-on:mouseup="imageRelease()"
+                 v-on:mouseleave="imageRelease()"/>
         </div>`
 };
 
@@ -180,6 +282,7 @@ var menuIcons = {
         "fake-icon": fakeIcon,
         "load-json-icon": loadJsonIcon,
         "save-json-icon": saveJsonIcon,
+        "save-text-icon": saveTextIcon,
         "save-svg-icon": saveSvgIcon,
         "help-icon": helpIcon,
         "cart-icon": cartIcon,

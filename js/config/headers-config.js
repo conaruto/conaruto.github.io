@@ -40,20 +40,20 @@ var coHeadersConfig = {
         "link": "resources-resources.html",
         "category": "resources",
         "selected": false,
-    // }, {
-    //     "name": "capacity-editor",
-    //     "label": "Éditeur de capacités",
-    //     "link": "resources-capacity-editor.html",
-    //     "category": "resources",
-    //     "selected": false,
-    //     "reset": true,
-    //  }, {
-    //     "name": "thing-editor",
-    //     "label": "Éditeur d'objets",
-    //     "link": "resources-thing-editor.html",
-    //     "category": "resources",
-    //     "selected": false,
-    //     "reset": true,
+    }, {
+        "name": "capacity-editor",
+        "label": "Éditeur de capacités",
+        "link": "resources-capacity-editor.html",
+        "category": "resources",
+        "selected": false,
+        "reset": true,
+     }, {
+        "name": "thing-editor",
+        "label": "Éditeur d'objets",
+        "link": "resources-thing-editor.html",
+        "category": "resources",
+        "selected": false,
+        "reset": true,
       }
     ],
     "icons": {
@@ -63,6 +63,10 @@ var coHeadersConfig = {
                 "label": "reset",
                 "title": "Réinitialiser la page et vider le panier",
             }, { 
+                "name": "load-json",
+                "label": "Charger un fichier json",
+                "title": "Charger un fichier d'objets au format json",
+            }, { 
                 "name": "fake",
                 "label": "fakeIndentRight",
                 "title": "Icone d'indentation des icones suivants à droite de la barre",
@@ -70,6 +74,14 @@ var coHeadersConfig = {
                 "name": "cart",
                 "label": "Panier",
                 "title": "Afficher / Cacher le panier",
+            }, { 
+                "name": "save-json",
+                "label": "Sauvegarder le contenu du panier dans un fichier json",
+                "title": "Sauvegarder les capacités contenues dans le panier au format json",
+            }, { 
+                "name": "save-text",
+                "label": "Sauvegarder  le contenu du panier dans un fichier text",
+                "title": "Sauvegarder les capacités contenues dans le panier au format text",
             }, { 
                 "name": "help",
                 "label": "Aide",
@@ -80,6 +92,10 @@ var coHeadersConfig = {
                 "label": "reset",
                 "title": "Réinitialiser la page et vider le panier",
             }, { 
+                "name": "load-json",
+                "label": "Charger un fichier json",
+                "title": "Charger un fichier d'objets au format json",
+            }, { 
                 "name": "fake",
                 "label": "fakeIndentRight",
                 "title": "Icone d'indentation des icones suivants à droite de la barre",
@@ -87,6 +103,14 @@ var coHeadersConfig = {
                 "name": "cart",
                 "label": "Panier",
                 "title": "Afficher / Cacher le panier",
+            }, { 
+                "name": "save-json",
+                "label": "Sauvegarder le contenu du panier dans un fichier json",
+                "title": "Sauvegarder les objets contenues dans le panier au format json",
+            }, { 
+                "name": "save-text",
+                "label": "Sauvegarder  le contenu du panier dans un fichier text",
+                "title": "Sauvegarder les objets contenues dans le panier au format text",
             }, { 
                 "name": "help",
                 "label": "Aide",
@@ -168,8 +192,12 @@ var coHeadersConfig = {
                 "title": "Icone d'indentation des icones suivants à droite de la barre",
             },{ 
                 "name": "save-json",
-                "label": "Sauvegarder un fichier json",
+                "label": "Sauvegarder dans un fichier json",
                 "title": "Sauvegarder les capacités au format json",
+            },{ 
+                "name": "save-text",
+                "label": "Sauvegarder dans un fichier texte",
+                "title": "Sauvegarder les capacités au format text",
             },{ 
                 "name": "help",
                 "label": "Aide",
@@ -189,8 +217,12 @@ var coHeadersConfig = {
                 "title": "Icone d'indentation des icones suivants à droite de la barre",
             },{ 
                 "name": "save-json",
-                "label": "Sauvegarder un fichier json",
+                "label": "Sauvegarder dans un fichier json",
                 "title": "Sauvegarder les objets au format json",
+            },{ 
+                "name": "save-text",
+                "label": "Sauvegarder dans un fichier texte",
+                "title": "Sauvegarder les objets au format text",
             },{ 
                 "name": "help",
                 "label": "Aide",

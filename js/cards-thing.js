@@ -107,12 +107,7 @@ var cards = new Vue({
     },
     mounted: function () {
         menu = getCurrentMenu();
-        fetch(coConfig.thingUrl)
-        .then(response => response.json())
-        .then(data => {
-            this.items = data;
-            //console.log("Initial load : "+JSON.stringify(this.items));
-        });
+        this.items = loadDataFromSession(mainDefaults, 'items');
         var initialCartItems = loadDataFromSession(mainDefaults, 'cartItems');
         initialCartItems.map( item => {
             for(var i=0;i<item.count;i++) { 

@@ -116,13 +116,8 @@ var cards = new Vue({
     },
     mounted: function () {
         menu = getCurrentMenu();
-        fetch(coConfig.wayUrl)
-        .then(response => response.json())
-        .then(data => {
-            this.items = data;
-            //console.log("Initial load : "+JSON.stringify(this.items));
-        });
-        this.cartItems = loadDataFromSession(mainDefaults, 'cartItems'),
+        this.items = loadDataFromSession(mainDefaults, 'items');
+        this.cartItems = loadDataFromSession(mainDefaults, 'cartItems');
         eventBus.$on('resetEvent', this.reset);
         eventBus.$on('onDropEvent', this.onDrop);
     },
