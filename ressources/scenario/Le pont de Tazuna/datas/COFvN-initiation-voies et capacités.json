@@ -1,0 +1,544 @@
+[
+  {
+    "otype": "profil",
+    "name": "Techniques du village de Kiri",
+    "full-description": "Kiri, le village caché par la brume, est localisé dans le Pays de l'Eau. Les ninjas de ce village ont une affinité spéciale avec l'art de la maîtrise de l'eau."
+  },
+  {
+    "otype": "way",
+    "name": "Voie de la brume",
+    "profil": "Techniques du village de Kiri",
+    "icon": "data:image/png;base64,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",
+    "full-description": "Le Suiton désigne l’art de maîtriser l'eau. Un personnage ayant au moins 1 rang dans cette voie est capable de réaliser des actions simples, comme rendre flou un petit objet."
+  },
+  {
+    "otype": "capacity",
+    "name": "Clone de brume",
+    "voname": "Bunshin no Jutsu",
+    "limited": true,
+    "rank": 1,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de la brume",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "Cette technique consiste à créer plusieurs clones de soi-même constitués de brume. Ces clones possèdent l'apparence de l'utilisateur mais ne sont pas très résistants. En effet, le clone disparaît au moindre contact. L'utilisateur de cette technique peut réaliser jusqu'à 2 clones par rang dans cette voie. Les clones durent pendant [1d4 + niveau du ninja] tours et ne peuvent que se déplacer. À moins de pouvoir visualiser le chakra à l'intérieur d'un corps, il est impossible de savoir qui est l'original.",
+    "short-description": "Cette technique consiste à créer plusieurs clones de soi-même constitués de brume. Le clone disparaît au moindre contact. Les clones ne peuvent que se déplacer. À moins de pouvoir visualiser le chakra à l'intérieur d'un corps, il est impossible de savoir qui est l'original.",
+    "properties": [
+      {"name":"action","action":"Quantité","limited":false,"detail":"clones","values":[{"name":"quantity","adjustment":"=","count":2},{"name":"other","adjustment":"/","other":"rang"}]},
+      {"name":"measure","measure":"duration","values":[{"name":"dice","adjustment":"=","count":1,"die":"4"},{"name":"other","adjustment":"+","other":"niveau"}],"unit":"tr"}
+    ],
+    "mudras": ["Buffle"]
+  },
+  {
+    "otype": "capacity",
+    "name": "Camouflage dans la brume",
+    "voname": "Kirigakure",
+    "limited": true,
+    "rank": 2,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de la brume",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "L'utilisateur de cette technique fait apparaître une zone de brouillard qui réduit la visibilité de ses adversaires. La zone peut faire jusqu'à 20 mètres de diamètre et dure 1d4+[SAG] tours. Les ennemis dans la zone sont aveuglés à moins de réussir un test de SAG supérieur ou égal à 12 ce qui réduit cet état à un tour seulement. L'utilisateur est indétectable par un ennemi tant que celui-ci est aveuglé, sauf si ce dernier a un odorat exceptionnel. Maintenir la technique coûte 1 point de chakra par tour.",
+    "short-description": "L'utilisateur de cette technique fait apparaître une zone de brouillard qui réduit la visibilité de ses adversaires. L'utilisateur est indétectable par un ennemi aveuglé, sauf si ce dernier a un odorat exceptionnel.",
+    "properties": [
+      {"name":"action","action":"Maintenir","limited":false,"detail":"(/ min hors combat)","values":[{"name":"element","adjustment":"=","count":1,"element":"Chakra"},{"name":"measure","adjustment":"/","measure":"tr"}]},
+      {"name":"state","state":"Aveuglé","detail":""},
+      {"name":"test","test":"SAG","values":[{"name":"quantity","adjustment":">","count":12}],"detail":"(aveuglé 1 tr seulement)"},
+      {"name":"measure","measure":"area","values":[{"name":"quantity","adjustment":"=","count":20}],"unit":"m"},
+      {"name":"measure","measure":"duration","values":[{"name":"dice","adjustment":"=","count":1,"die":"4"},{"name":"modifier","adjustment":"+","modifier":"[SAG]"}],"unit":"tr"}
+    ],
+    "mudras": ["Buffle","Serpent","Chèvre"]
+  },
+  {
+    "otype": "capacity",
+    "name": "Bruine",
+    "voname": "Inconnu",
+    "limited": true,
+    "rank": 3,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de la brume",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "L'utilisateur fait tomber une fine pluie qui absorbe tout chakra, autre que le suiton, avec lequel elle entre en contact. La zone de pluie est centrée sur l'utilisateur de la technique et consomme 1 point de chakra par tranche de 20 mètres de rayon par tour. Tant qu'elle est active, cette technique double la consommation de chakra des techniques, utilisant un type de chakra autre que suiton, lancées dans la zone. La technique est interrompue lorsqu'une attaque au contact est réussie sur l'utilisateur.",
+    "short-description": "L'utilisateur fait tomber une fine pluie qui augmente le coût en chakra des techniques, autres que celles utilisant du suiton, des personnages touchés par la pluie. La zone de pluie est centrée sur l'utilisateur. La technique prend fin si une attaque au contact est réussie sur l'utilisateur.",
+    "properties": [
+      {"name":"action","action":"Utilisation","limited":false,"detail":"de rayon","values":[{"name":"element","adjustment":"=","count":1,"element":"Chakra"},{"name":"measure","adjustment":"/","measure":"tr"},{"name":"quantity","adjustment":"/","count":20},{"name":"measure","adjustment":"=","measure":"m"}]},
+      {"name":"action","action":"Attaque","limited":false,"detail":"(sauf suiton)","values":[{"name":"element","adjustment":"x","count":2,"element":"Chakra"}]}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "L'ombre de la brume",
+    "voname": "Kiri no Kage",
+    "limited": true,
+    "rank": 4,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de la brume",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "L'utilisateur de cette technique créé une ombre de brume. Cette brume invisible attaque un ennemi à moins de 20 mètres. Pendant 1d4 tours, l'ombre inflige automatiquement 2d8 DM. La cible peut diviser les dégâts par 2 en réussissant, chaque tour, un test de sagesse d'une difficulté égale à [10 + rang dans la voie]. Si une attaque au contact est réussie sur l'utilisateur de la technique, la technique s'arrête. Maintenir la technique consomme 1 point de chakra par tour.",
+    "short-description": "L'utilisateur de cette technique créé une ombre de brume. Cette brume invisible inflige automatiquement des dégâts. Si une attaque au contact est réussie sur l'utilisateur de la technique, la technique s'arrête.",
+    "properties": [
+      {"name":"measure","measure":"range","values":[{"name":"quantity","adjustment":"=","count":20}],"unit":"m"},
+      {"name":"measure","measure":"duration","values":[{"name":"dice","adjustment":"=","count":1,"die":"4"}],"unit":"tr"},
+      {"name":"action","action":"Attaque","limited":false,"detail":"(automatique)","values":[{"name":"dice","adjustment":"=","count":2,"die":"8"}]},
+      {"name":"test","test":"SAG","values":[{"name":"quantity","adjustment":"≥","count":10},{"name":"other","adjustment":"+","other":"rang"}],"detail":": DM / 2"},
+      {"name":"action","action":"Maintenir","limited":false,"detail":"","values":[{"name":"element","adjustment":"=","count":1,"element":"Chakra"},{"name":"measure","adjustment":"/","measure":"tr"}]}
+    ],
+    "mudras": ["Rat","Serpent","Singe","Lièvre"]
+  },
+  {
+    "otype": "capacity",
+    "name": "Déplacement instantané dans le brouillard",
+    "voname": "Shunshin no Kiri",
+    "limited": true,
+    "rank": 5,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de la brume",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "L'utilisateur utilise cette technique pour se dissoudre en une brume dense et se déplacer instantanément sur une distance maximale de 50 mètres. L'utilisateur peut choisir de réapparaître immédiatement ou au début de son prochain tour. Si l'utilisateur réapparaît derrière un adversaire, il peut porter une attaque sournoise. Cette attaque, si elle réussit, inflige des dégâts supplémentaires de +5d6. Si l'utilisateur réapparaît à moins de 5 mètres de l'ennemi, ce dernier doit réussir un test de SAG supérieur ou égal à 15 pour ne pas être surpris, ce qui augmente la difficulté de parer ou d'esquiver l'attaque sournoise.",
+    "short-description": "L'utilisateur se déplace dans une brume dense et peut réapparaître à tous moments jusqu'au début de son prochain tour. Si l'utilisateur réapparaît derrière un adversaire, il peut porter une attaque et, en cas de réussite, ajouter des dégâts en plus.",
+    "properties": [
+      {"name":"test","test":"SAG","values":[{"name":"quantity","adjustment":"≤","count":15}],"detail":": Surpris (à moins de 5m)"},
+      {"name":"action","action":"Attaque sournoise","limited":false,"detail":"","values":[{"name":"dice","adjustment":"+","count":5,"die":"6"}]},
+      {"name":"measure","measure":"area","values":[{"name":"quantity","adjustment":"=","count":30}],"unit":"m"}
+    ],
+    "mudras": ["Tigre","Serpent","Rat"]
+  },
+  {
+    "otype": "way",
+    "name": "Voie de l'eau",
+    "profil": "Techniques du village de Kiri",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAQAAADa613fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAAAGwAAABsACsczbgAAAAHdElNRQflAgcKJjX1sImZAAAAAW9yTlQBz6J3mgAABqFJREFUeNrtm2tQVVUUx38XLsorXyDKqGhKOlqa4SsfZRblGyfLkJEy9YOm0WgNNumM7xoxHc1pfJWZWjqWTiQFZj5SUQGNqUbxEYqAogKKD/DCvdxz+3CN2fvot7O3UzPnz/f/4rfO2fvstfa6YMuWLVu2bNmyZUuXHBo8oxlAO0o4QoX2/z+KgbSnjP2qjdvyLru5jIcylhCpFaIl0/iBEjxcYZNK43CS2UsVBj58+ChllDaIYBLJpOJ+JAOPOutubKQc731rHz7qmawFIoBOrOdKQ8L8f0rUmAR+p04y9nGBVzRgBDGSXOokDAOXCutmzKDMlJ86iviQUOUY4UznkilhtRSTZt06ikXclTA8nGYNA3Eqx2jOfCpNEOdYx/M0tmrdhhW4pId8ibX0U44AEMlSbksY1/iCASoS1orPqBaMvRxkvPXsPFTNSJNiuTlGMk1UWLcwZaiGr+lOgBaMMBZJsWr5lt5qrINJ5aZgfYtltNYCAUG8R2XDOjRw8Skd1Fg7SOKygFHJfJppwghgDMXCdlLNPFqqMn+OvwSMKpYQrgkD4sgXMFwspoUq6y7sETCqWaERoz2ZwnmhluXqnkYUawVrD9uI0IbRjDXC9u7lG2JUWQfzEbWC9T46acMIJpUbwjfqEL1UWQcwgQrhjf2TgVpqGn+scVwUXuGzDFNnPpQCAaOURII0YcAgTggY5UxWl7J+HBVWx11mazgW/qsnOSBtKAvUxepBFh5hdaxTt388oFh+akiZgZutRKnDyKBeyFEmXTRBOOhIBm4hZdl0VmXdl1+k6i+PQZowAujOXtzCSixQtaE0ZiR5grFBAQmaMEKIJ0d68kWMJlCFdRtmUipVHH8zQRNGFCnShuujmGQaWTcOI54tuKSncZ5kLUf1YIawxVQ4XWKS9erGSV/SKJRWho983tBQwgbSi8UUmGrxsyRZxXDShzTyhaOI/+8g8RowevMJucIu5W8l5TLC6toIYzqnuGeCuMcmuqtZdoICSSGfWlNzp45txFnfqZ6lTEIwMLjI++o+SYKGcMqUsHouM5s21q2dTDLlp4p0BmhqKaRQJTUvqslgEMEqrB2MaqgADKo4xkSaajvhJjYUzAZ3yWGKytommi3cxE05h5lJK20QAJF8yQ3cVJJNqpWi6eH/ZDRjieE8mVzVCOFXa0YTywX2UKI9li1btmzZsmXrfyKr9UUoL/MWg/E+ggNGIG3pRB21qo3DGUc6RbhwcVJbX8WvRvRnNSc4zR4Gq+wZBDGQ77guNG42E6IJIojurONSQ3Gxl7aqrFuTSrHQPvXhY7eWERoHkXxAoTTpUMPTaqx7ssNUZfuoY6kGjCD6sJMaU6xSulq3djKUHLySdT0lbOQJ5RghvE6+qaL3cYOFNLVq3YgkCk0V/QU28qqai3tJ4aRQZIKoIIN3rBfDjZhCsWR8h+0kaFnkjzGH61KsGn5kItHWrZ1MokSyPscsTSMCISwQ7g59GBSRSkcV1gEkSu1lg2yGq2nbPKDGzBXmHPwXri+piiU30jxk0VPT1EkAKVwTMNxsoquqTk439gkYbtKJ1QIBMIZCIZaL1eo+f9F8JQ0I/Mzj2jDiOC71m1fSSpV1GPOEaUUvB+iirWUXw/fS1MkGFT1gvwKZxE3B/A/6a8OIYJWQMg87VY0yAQzlgoBRzGsa7kf8CmWW0NA2yFE1WAbQgyPC6rjFLG0DAoEkCN9xg4sqh59j2CHcI7lZqW5OyiQHvYVxDYObTFZ3pRTB59L86C6Vb6xJndgvzWTNVzf/1ZyPuStg5NFfG0YbdgkDAvVsVXGi8iuCRdJo6kXGa8TYLl26ZvOUKut2LJeuQsuZqek4ArFsl17gM8SrMQ6gF5uFItbgNos13R866UOGVDAXk6RmkTchUZrIMqhhmYaiCSCc8eRKZcEVpqpJWRyruCrVf3dI07LlOujCMtOvDq4xQ8VXqgNzOGGadKhgLs01YDRnCodMscqYSpjV7MQwlxzTOIuPIqZZtX4oxJtkSfWGgZdCxlkvmF8ghzsSgkE9RxmmYrxIkpME9lNpGtNxc5jBKkY8f5PGvHwYlLOBzho23BGcN3WoDG6xnlg15+ka6THf5jgTtPRFglhkenldnORtVXuik9P0up+RGs6RziauoOg3ZJIc0hfCQxFZbKBAXYCx5FFNFUdZqGGMSdTw+30YLwWs50W1sRwEEccz1HGCM3g1YkAoIxlDGOf4laPqbzkerSKJ0TiEbsuWLVu2bNmy9d/SP0cTGQ1wwOB/AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTAyLTA3VDEwOjM4OjUzKzAwOjAw/MsvzAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wMi0wN1QxMDozODo1MyswMDowMI2Wl3AAAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMTEyiIT7XQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxMTIbdasAAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2Uvc3Znv+9wTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE2MTI2OTQzMzO9c8TPAAAADnRFWHRUaHVtYjo6U2l6ZQAwQslvGO0AAAA5dEVYdFRodW1iOjpVUkkAZmlsZTovLy90bXAvdGh1bWJsci9pbWc3NDIwMDQ5MjAwNjQ4ODg0MzU3LnN2Z/1jEyYAAAAASUVORK5CYII=",
+    "full-description": "Le Suiton désigne l’art de maîtriser l'eau. Un personnage ayant au moins 1 rang dans la voie est capable de réaliser des actions simples comme remplir une bouteille d'eau."
+  },
+  {
+    "otype": "capacity",
+    "name": "Camouflage dans l'eau",
+    "voname": "Inconnu",
+    "limited": true,
+    "rank": 1,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de l'eau",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "L'utilisateur de cette technique se confond avec l'eau pour être indétectable par l'ennemi. Cette technique est utilisable même dans une flaque d'eau. Maintenir cette technique consomme 1 point de chakra par minute. Lorsque l'utilisateur de cette technique ressort, l'ennemi est surpris, à moins de réussir un test de SAG supérieur à 15 par temps couvert ou humide et supérieur à 13 par temps ensoleillé. Cette technique est inutilisable une fois le combat commencé.",
+    "short-description": "L'utilisateur de cette technique se cache dans de l'eau. Lorsque l'utilisateur de cette technique ressort, l'ennemi est surpris (pas d’action et -5 en DEF au premier tour de combat) à moins de réussir un test de SAG. Cette technique ne peut s'utiliser en combat.",
+    "properties": [
+      {"name":"action","action":"Maintenir","limited":false,"detail":"(hors combat)","values":[{"name":"element","adjustment":"=","count":1,"element":"Chakra"},{"name":"measure","adjustment":"/","measure":"min"}]},
+      {"name":"test","test":"SAG","values":[{"name":"quantity","adjustment":">","count":15}],"detail":"(détection temps humide)"},
+      {"name":"test","test":"SAG","values":[{"name":"quantity","adjustment":">","count":13}],"detail":"(détection temps ensoleillé)"}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "Cônes du déluge",
+    "voname": "Suidan no jutsu",
+    "limited": true,
+    "rank": 2,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de l'eau",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "Cette technique très polyvalente peut être utilisée de différentes manières. Après avoir malaxé du chakra dans son estomac, l'utilisateur expulse une grande quantité d'eau sous la forme d'un puissant torrent en direction de la cible visée. La cible de l'attaque est automatiquement repoussée de 20 mètres, et si elle rate un test de FOR de difficulté 13, elle est également dans l'état renversé. Cette technique peut également servir pour générer de grandes quantités d'eau, jusqu'à 5 mètres cubes.",
+    "short-description": "L'utilisateur de cette technique expulse une grande quantité d'eau sous la forme d'un puissant torrent en direction de la cible visée. Cette technique peut également servir pour générer de grandes quantités d'eau.",
+    "properties": [
+      {"name":"action","action":"Repousser","limited":false,"detail":"(automatique)","values":[{"name":"quantity","adjustment":"=","count":20},{"name":"measure","adjustment":"=","measure":"m"}]},
+      {"name":"test","test":"FOR","values":[{"name":"quantity","adjustment":"<","count":13}],"detail":": Renversé"},
+      {"name":"action","action":"Générer","limited":false,"detail":"d'eau","values":[{"name":"quantity","adjustment":"≤","count":5},{"name":"measure","adjustment":"=","measure":"m³"}]}
+    ],
+    "mudras": ["Tigre","Buffle","Tigre","Rat"]
+  },
+  {
+    "otype": "capacity",
+    "name": "Technique du clone aqueux",
+    "voname": "Mizu bunshin no jutsu",
+    "limited": true,
+    "rank": 3,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de l'eau",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "Cette technique consiste à créer plusieurs clones de soi-même constitués d'eau. Ces clones possèdent les caractéristiques de l'utilisateur et ses techniques mais ils partagent les mêmes points de chakra et ne sont pas très résistants. En effet, le clone disparaît à la moindre blessure en laissant, à cet endroit, une petite flaque d'eau. L'utilisateur de cette technique peut réaliser jusqu'à un clone par rang dans cette voie. Maintenir 1 clone pour 1 tour supplémentaire consomme un point de chakra. Les clones peuvent attaquer dès le tour où ils sont créés comme l'original le ferait. À moins de pouvoir visualiser le chakra à l'intérieur d'un corps, il est impossible de savoir quel clone est l'original.",
+    "short-description": "Cette technique permet de créer plusieurs clones de soi, ayant les mêmes capacités que l'original, mais très peu résistant. À moins de voir le chakra à l'intérieur d'un corps, il est impossible de distinguer l'original.",
+    "properties": [
+      {"name":"character","character":"PV","values":[{"name":"quantity","adjustment":"=","count":1}]},
+      {"name":"action","action":"Quantité","limited":false,"detail":"clones","values":[{"name":"quantity","adjustment":"=","count":1},{"name":"other","adjustment":"/","other":"rang"}]},
+      {"name":"action","action":"Maintenir","limited":false,"detail":"","values":[{"name":"element","adjustment":"=","count":1,"element":"Chakra"},{"name":"free","adjustment":"/","value":"clone"},{"name":"measure","adjustment":"/","measure":"tr"}]},
+      {"name":"action","action":"Attaque","limited":false,"detail":"Dès le tour où il est créé","values":[]}
+    ],
+    "mudras": ["Tigre"]
+  },
+  {
+    "otype": "capacity",
+    "name": "Dragon aqueux",
+    "voname": "Suiryûdan",
+    "limited": true,
+    "rank": 4,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de l'eau",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "L'utilisateur de cette technique crée un énorme dragon liquide, à partir d'une grande quantité d'eau, qui frappe l'adversaire avec une formidable puissance. Sur une attaque de jutsu réussie, l'attaque inflige 1d6 dégâts par 100 litres d'eau à un ennemi à moins de 50 mètres. L'utilisateur doit collecter de l'eau, celle de l'air à défaut d'une source d'eau proche (inférieure à 50 mètres), à raison de [10 x rang dans la voie] litres par point de chakra dépensé. S'il se trouve à proximité d'une grande quantité d'eau (plusieurs milliers de litres) l'utilisateur de cette technique multiplie les dégâts par 2. ",
+    "short-description": "L'utilisateur de cette technique crée un énorme dragon liquide qui frappe l'adversaire avec une formidable puissance. La force de l'attaque est démultiplié s'il se trouve à proximité d'une grande quantité d'eau.",
+    "properties": [
+      {"name":"fight","fight":"","attack":{"name":"attack","attack":"Jutsu","values":[]},"damage":[{"name":"damage","values":[{"name":"dice","adjustment":"=","count":1,"die":"6"},{"name":"quantity","adjustment":"/","count":100},{"name":"measure","adjustment":"=","measure":"L"}],"dm":{"name":"dm","dm":["Contondant"]}}],"critical":[20],"detail":""},
+      {"name":"action","action":"Quantité","limited":false,"detail":"","values":[{"name":"quantity","adjustment":"=","count":10},{"name":"measure","adjustment":"=","measure":"L"},{"name":"other","adjustment":"/","other":"rang"},{"name":"element","adjustment":"/","count":1,"element":"Chakra"}]},
+      {"name":"action","action":"DM","limited":false,"detail":"(si eau à proximité < 50 m)","values":[{"name":"quantity","adjustment":"x","count":2}]},
+      {"name":"measure","measure":"capacity","values":[{"name":"quantity","adjustment":"≥","count":1000}],"unit":"L"},
+      {"name":"measure","measure":"range","values":[{"name":"quantity","adjustment":"=","count":50}],"unit":"m"}
+    ],
+    "mudras": ["Tigre","Singe","Chèvre","Rat","Sanglier","Coq","Rat","Tigre","Chien","Serpent"]
+  },
+  {
+    "otype": "capacity",
+    "name": "Grande cataracte",
+    "voname": "Daibakufu",
+    "limited": true,
+    "rank": 5,
+    "profil": "Techniques du village de Kiri",
+    "way": "Voie de l'eau",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "L'utilisateur de cette technique dirige un grand volume d'eau, provenant d'une source préexistante ou de sa bouche, qu'il déverse devant lui. Il faut 2 tours complets à l'utilisateur pour pouvoir composer tous les mudras de la technique. L'eau forme une vague de 3 mètres de haut et de 10 mètres de large qui emporte tout sur son passage sur un maximum de 30 mètres de long. Les personnages pris dans la vague subissent automatiquement 2d6 dégâts. S'ils ratent leur jet de réflexe, à savoir un test de DEX inférieur à 15, ils sont également renversés.",
+    "short-description": "L'utilisateur, après avoir composé les mudras,  dirige un grand volume d'eau provenant d'une source préexistante ou de sa bouche qu'il déverse devant lui. L'eau forme une vague qui emporte tout sur son passage.",
+    "properties": [
+      {"name":"measure","measure":"duration","values":[{"name":"quantity","adjustment":"=","count":2}],"unit":"tr"},
+      {"name":"measure","measure":"height","values":[{"name":"quantity","adjustment":"=","count":3}],"unit":"m"},
+      {"name":"measure","measure":"area","values":[{"name":"quantity","adjustment":"=","count":10}],"unit":"m"},
+      {"name":"test","test":"DEX","values":[{"name":"quantity","adjustment":"<","count":15}],"detail":": Renversé"},
+      {"name":"measure","measure":"range","values":[{"name":"quantity","adjustment":"=","count":30}],"unit":"m"},
+      {"name":"fight","fight":"automatique","attack":{"name":"attack","attack":"Jutsu","values":[]},"damage":[{"name":"damage","values":[{"name":"dice","adjustment":"=","count":2,"die":"6"}],"dm":{"name":"dm","dm":[]}}],"critical":[20],"detail":""}
+    ],
+    "mudras": ["Tigre","Buffle","Singe","Lièvre","Chèvre","Sanglier","Cheval","Chien","Serpent","Coq"]
+  },
+  {
+    "otype": "profil",
+    "name": "Techniques héréditaires",
+    "full-description": "Les techniques héréditaires sont des techniques dont le secret ne se transmet qu'au sein d'un même clan, par un maître ou des dôjutsu, à savoir des techniques réalisables que si l'on possède des pupilles spéciales ou encore si l'on sert de réceptacle pour un bijû.",
+    "count": 0
+  },
+  {
+    "otype": "way",
+    "name": "Voie du croc blanc",
+    "profil": "Techniques héréditaires",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4NCiA8bWV0YWRhdGE+Q3JlYXRlZCBieSBMdWthcyBQZXNzb2EgRGFudGFzPC9tZXRhZGF0YT4NCiA8Zz4NCiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPg0KICA8cGF0aCBmaWxsPSJibGFjayIgZD0ibTI1LjU3MDg5LDI1LjM5MDEyYy0xMy40NTQ5NywxMy40NTUwMiAtMjQuNDc4ODUsMjQuNTEwMzQgLTI0LjQ5OTgsMjQuNTczMTZjLTAuMDIwOTYsMC4wNjI5MyAxMC45OTI0MywxMS4xMzkxNiAyNC40NTc5MSwyNC42MTUwOWwyNC40OTk4NCwyNC40OTk4MmwyNC4zNzQwMywtMjQuMzYzNTdjMTMuNDAyNjIsLTEzLjQwMjU4IDI0LjQyNjQ4LC0yNC40ODkzMiAyNC41MTAzMSwtMjQuNjM1OThjMC4xMzYyNiwtMC4yNzI1MyAtMC4wNzMzMywtMC40ODIwMiAtMjQuMTAxNjIsLTI0LjUyMDg0Yy0xMy4zMjkyMywtMTMuMzI5MjYgLTI0LjM2MzU5LC0yNC4zMzIxNSAtMjQuNTEwMjgsLTI0LjQzNjlsLTAuMjYxOTksLTAuMTk5MDlsLTI0LjQ2ODM5LDI0LjQ2ODMxem0zMC4wMTE3OCwtMTAuNzcyMzlsNS40MTc2MSw1LjQxNzY2bC01LjQyODA5LDUuNDI4MTdsLTUuNDE3NjMsNS40MTc1NmwtNS40NDkwOCwtNS40NDkwOGwtNS40NDkwNSwtNS40NDkwOGw1LjM5NjY3LC01LjM5NjY1YzIuOTY1NTQsLTIuOTY1NTUgNS40MTc2MiwtNS4zOTY2NSA1LjQ0OTA1LC01LjM5NjY1YzAuMDMxNDQsMCAyLjQ5Mzk5LDIuNDQxNjEgNS40ODA1Miw1LjQyODA2em0tMTUuMDQ3OCwyNS44NzI2NmwtNS40MTc2Miw1LjQyODA2bC01LjQ0OTA4LC01LjQ0OTA4bC01LjQ0OTA2LC01LjQ0OTA4bDUuNDE3NjIsLTUuNDE3NTVsNS40MjgxLC01LjQyODE3bDUuNDQ5MDgsNS40NDkwOGw1LjQ0OTA2LDUuNDQ5MDhsLTUuNDI4MSw1LjQxNzY2em0yOS45Njk4MywtMTAuOTUwNThjMi45NTUwNiwyLjk1NTA0IDUuMzc1NzIsNS40MDcxNSA1LjM3NTcyLDUuNDU5NThjMCwwLjA0MTkyIC0yLjQyMDY1LDIuNTA0NDMgLTUuMzc1NzIsNS40NTk0OGwtNS4zODYxOCw1LjM4NjI1bC01LjQzODU5LC01LjQzODU3bC01LjQzODU3LC01LjQzODU4bDUuMzk2NjgsLTUuMzk2NzZjMi45NjU1NSwtMi45NjU1NSA1LjQxNzYxLC01LjM5NjY1IDUuNDQ5MDUsLTUuMzk2NjVjMC4wMzE0MywwIDIuNDczMDEsMi40MjA3IDUuNDE3NjEsNS4zNjUyNHptLTQ0Ljk1NDc2LDI1LjkzNTQ4bC01LjQxNzYzLDUuNDI4MDZsLTUuNDQ5MDUsLTUuNDQ5MDdsLTUuNDQ5MDgsLTUuNDQ5MDhsNS40MTc2MiwtNS40MTc1Nmw1LjQyODExLC01LjQyODE3bDUuNDQ5MDcsNS40NDkwOGw1LjQ0OTA2LDUuNDQ5MDdsLTUuNDI4MTEsNS40MTc2NnptMjkuOTU5MzcsLTAuMDEwNWwtNS40MjgxMiw1LjQxNzY2bC01LjQzODU4LC01LjQzODU3bC01LjQzODU5LC01LjQzODY4bDUuNDE3NjQsLTUuNDE3NTZsNS40MjgxMiwtNS40MjgxN2w1LjQ0OTA1LDUuNDQ5MDhsNS40Mzg1OSw1LjQzODU3bC01LjQyODEyLDUuNDE3Njd6bTMwLjAxMTc1LC0xMC45MDg1Nmw1LjM5NjY4LDUuMzk2NjVsLTUuNDI4MTIsNS40MjgwN2wtNS40MTc2MSw1LjQxNzY2bC01LjQxNzY0LC01LjQxNzY2bC01LjQyODA5LC01LjQyODA3bDUuMzk2NjUsLTUuMzk2NjVjMi45NjU1NSwtMi45NjU2NiA1LjQxNzY0LC01LjM5Njc2IDUuNDQ5MDcsLTUuMzk2NzZjMC4wMzE0MSwwIDIuNDgzNSwyLjQzMTEgNS40NDkwNCw1LjM5Njc2em0tNDQuOTk2NjksMjUuODkzNDZsLTUuNDM4NTcsNS40MDcxNmwtNS40MjgxLC01LjQyODA2bC01LjQzODYsLTUuNDM4NjhsNS40MTc2MiwtNS40MTc1NWw1LjQyODEsLTUuNDI4MDdsNS40Mzg1OSw1LjQzODU4bDUuNDQ5MDUsNS40NDkwN2wtNS40MjgxLDUuNDE3NTZ6bTI5LjkzODQsLTAuMDQxOTJsLTUuNDI4MDksNS40MjgxN2wtNS40MTc2MywtNS40MTc2NmwtNS40MjgwOSwtNS40MjgxN2w1LjQxNzY0LC01LjQxNzU1bDUuNDI4MDksLTUuNDI4MDdsNS40MTc2Myw1LjQxNzU2bDUuNDI4MDksNS40MjgwNmwtNS40MTc2Myw1LjQxNzY2em0tMTQuOTg0OTEsMTQuOTg0OTFsLTUuNDI4MDksNS40MjgxNmwtNS40MTc2NSwtNS40MTc2NmwtNS40MjgxMiwtNS40MjgwNmw1LjQxNzY0LC01LjQxNzY2bDUuNDI4MTIsLTUuNDI4MTdsNS40MTc2MSw1LjQxNzY2bDUuNDI4MTIsNS40MjgxN2wtNS40MTc2NCw1LjQxNzU2eiIgaWQ9InN2Z18yIi8+DQogPC9nPg0KPC9zdmc+",
+    "full-description": "Le croc blanc de Konoha est connu pour sa fiabilité et son coté altruiste, préférant sacrifier sa mission plutôt que ses camarades. Les adeptes de cette voie ont un bonus de +5 à tous les tests de compétences suivants : séduire, commander, convaincre et persuader."
+  },
+  {
+    "otype": "capacity",
+    "name": "Lame de lumière blanche",
+    "voname": "Inconnu",
+    "limited": false,
+    "rank": 1,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du croc blanc",
+    "jutsu": "Kenjutsu",
+    "element": "Inconnu",
+    "full-description": "L'utilisateur de cette technique délivre une série de coups, se terminant par une coupe vers le bas laissant une trace de chakra blanc qui donne son nom à cette technique. Une seule fois par combat, il permet à son utilisateur de porter 3 coups dans le même tour. Pour chaque coup porté, l'utilisateur doit réussir une attaque au contact.",
+    "short-description": "En utilisant le sabre de chakra blanc, l'utilisateur de cette technique délivre une série de coups, se terminant par une coupe vers le bas laissant une traînée de chakra blanc. Pour chaque coup porté, l'utilisateur doit réussir une attaque au contact.",
+    "properties": [
+      {"name":"action","action":"Attaque","limited":false,"detail":"(sabre de chakra blanc)","values":[{"name":"quantity","adjustment":"=","count":3},{"name":"measure","adjustment":"/","measure":"tr"}]},
+      {"name":"action","action":"Utilisation","limited":false,"detail":"","values":[{"name":"quantity","adjustment":"=","count":1},{"name":"other","adjustment":"/","other":"combat"}]}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "Tacticien",
+    "voname": "Inconnu",
+    "limited": false,
+    "rank": 2,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du croc blanc",
+    "jutsu": "Inconnu",
+    "element": "Inconnu",
+    "full-description": "Les adeptes de la voie du croc blanc sont des individus avec une capacité d'analyse hors du commun. Ils réfléchissent vite, même sous la pression du combat, et bénéficient d'un bonus de +5 aux tests de INT ou de SAG lorsqu'ils utilisent l'action limitée \"Prendre un tour\" (p. 9, du livre de règles COFvN). CCette action est possible à tout moment dans un combat et consiste à prendre un tour de combat (action limitée) pour analyser la technique de l'adversaire. Sur un test de INT +5 (analyse) ou de SAG (perception) +5 suivant la table des difficultés (p. 70, du livre de règle COF), le MJ pourra donner un indice plus ou moins important permettant aux joueurs de trouver la faille dans l’attaque ou la défense d’un adversaire.",
+    "short-description": "Les adeptes de la voie du croc blanc sont des individus avec une capacité d'analyse hors du commun. Ils réfléchissent vite, même sous la pression du combat, et bénéficient d'un bonus lorsqu'ils utilisent l'action limitée \"Prendre un tour\" (p. 9, COFvN).",
+    "properties": [
+      {"name":"test","test":"SAG","values":[{"name":"quantity","adjustment":"+","count":5}],"detail":": action \"Prendre un tour\""},
+      {"name":"test","test":"INT","values":[{"name":"quantity","adjustment":"+","count":5}],"detail":": action \"Prendre un tour\""}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "Exécution des mudras accrue",
+    "voname": "Inconnu",
+    "limited": false,
+    "rank": 3,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du croc blanc",
+    "jutsu": "Inconnu",
+    "element": "Inconnu",
+    "full-description": "À partir du rang 3, les adeptes de la voie du croc blanc bénéficient d'une rapidité d'exécution des mudras accrue. À partir de ce rang, l'utilisateur peut dépenser 1 point de chakra, le coût de cette capacité de rang 3, pour exécuter toutes ses capacités limitées nécessitant des mudras comme une action de combat normale.",
+    "short-description": "Les adeptes de la voie du croc blanc bénéficient d'une rapidité d'exécution des mudras accrue. L'utilisateur peut dépenser 1 point de chakra, le coût de cette capacité de rang 3, pour exécuter toutes ses capacités limitées nécessitant des mudras comme une action de combat normale.",
+    "properties": [
+
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "Les crocs traqueurs",
+    "voname": "Tsuiga no jutsu",
+    "limited": false,
+    "rank": 4,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du croc blanc",
+    "jutsu": "Ninjutsu",
+    "element": "Doton",
+    "full-description": "Cette technique consiste à invoquer une meute de chiens. Les chiens sont liés au ninja par un pacte de sang et chaque chien possède les caractéristiques suivantes : FOR +2, DEX +0, CON +0, INT +0, SAG +3, CHA +0, Init 18, DEF 14, PV [niveau x 2], Attaque au contact [niveau], 1d6 DM +2. Les chiens, lorsqu'ils se battent, restent pendant [rang dans la voie] tours et tant qu'il leur reste au moins 1 point de vie. S'ils sont invoqués hors combat, les chiens peuvent rester pendant [rang dans la voie] jours et chaque chien obtient un bonus de +5 aux tests de sagesse pour pister ou suivre des traces.",
+    "short-description": "Cette technique consiste à invoquer une meute de chiens. S'ils sont invoqués hors combat, les chiens peuvent servir pour suivre des traces.",
+    "properties": [
+      {"name":"creature","creature":"Chiens (x8)","init":{"name":"quantity","adjustment":"=","count":18},"PV":[{"name":"other","adjustment":"=","other":"niveau"},{"name":"quantity","adjustment":"x","count":2}],"DEF":{"name":"quantity","adjustment":"=","count":14},"FOR":{"name":"quantity","adjustment":"=","count":2},"DEX":{"name":"quantity","adjustment":"=","count":0},"CON":{"name":"quantity","adjustment":"=","count":0},"INT":{"name":"quantity","adjustment":"=","count":0},"SAG":{"name":"quantity","adjustment":"=","count":3},"CHA":{"name":"quantity","adjustment":"=","count":0},"attack":{"name":"attack","attack":"Contact","values":[{"name":"other","adjustment":"=","other":"niveau"}]},"damage":[{"name":"damage","values":[{"name":"dice","adjustment":"=","count":1,"die":"6"},{"name":"quantity","adjustment":"+","count":2}],"dm":{"name":"dm","dm":["Perforant"]}}]},
+      {"name":"measure","measure":"duration","values":[{"name":"other","adjustment":"=","other":"rang"},{"name":"other","adjustment":"/","other":"space"}],"unit":"tr"},
+      {"name":"action","action":"Utilisation","limited":false,"detail":"(hors combat)","values":[{"name":"other","adjustment":"=","other":"rang"},{"name":"measure","adjustment":"/","measure":"h"}]},
+      {"name":"action","action":"Pister","limited":false,"detail":"(hors combat)","values":[{"name":"quantity","adjustment":"+","count":5}]},
+      {"name":"action","action":"Suivre des traces","limited":false,"detail":"(hors combat)","values":[{"name":"quantity","adjustment":"+","count":5}]}
+    ],
+    "mudras": ["Tigre","Serpent","Dragon","Chien"]
+  },
+  {
+    "otype": "capacity",
+    "name": "Crocs traqueurs de la bête de foudre",
+    "voname": "Raijû Tsuiga",
+    "limited": true,
+    "rank": 5,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du croc blanc",
+    "jutsu": "Ninjutsu",
+    "element": "Raiton",
+    "full-description": "En manipulant du chakra Raiton dans sa main, l'utilisateur peut modeler la foudre pour créer la forme d'un chien. Le chien reste connecté à la main de l'utilisateur et lui permet de le contrôler durant l'attaque. Le chien étant très rapide et ses mouvements imprévisibles, il est très difficile à éviter. L'ennemi visé subit alors automatiquement 3d6 dégâts lors d'une attaque au contact, à moins de réussir un jet de réflexe (DEX > 15). Dans ce dernier cas, il ne subit que la moitié des dégâts. Cette technique épuise cependant très rapidement son utilisateur, qui ne peut pas l'utiliser plus de 3 fois par combat.",
+    "short-description": "En manipulant du chakra Raiton dans sa main, l'utilisateur peut modeler la foudre pour créer la forme d'un chien. Le chien étant très rapide et ses mouvements imprévisibles, il est très difficile à éviter.",
+    "properties": [
+      {"name":"fight","fight":"","attack":{"name":"attack","attack":"Contact","values":[]},"damage":[{"name":"damage","values":[{"name":"dice","adjustment":"=","count":3,"die":"6"}],"dm":{"name":"dm","dm":["Foudre"]}}],"critical":[20],"detail":"(réussite automatique)"},
+      {"name":"test","test":"DEX","values":[{"name":"quantity","adjustment":"≥","count":15}],"detail":": DM / 2"},
+      {"name":"action","action":"Utilisation","limited":false,"detail":"","values":[{"name":"quantity","adjustment":"=","count":3},{"name":"other","adjustment":"/","other":"combat"}]}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "way",
+    "name": "Voie du clan Yuki",
+    "profil": "Techniques héréditaires",
+    "full-description": "Le clan Yuki était un clan important et puissant possédant l'art de maîtriser la glace. Un utilisateur de Hyôton peut faire baisser la température autour de lui de quelques degrés (maximum 5) dans un rayon de 20 mètres. De même, il peut baisser sa propre température corporelle pour ne pas activer les capteurs thermiques.",
+    "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iMTAwIgogICBoZWlnaHQ9IjEwMC4wMDAzIgogICBpZD0ic3ZnMiIKICAgdmVyc2lvbj0iMS4xIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ3IHIyMjU4MyIKICAgc29kaXBvZGk6ZG9jbmFtZT0iTmV3IGRvY3VtZW50IDEiPgogIDxkZWZzCiAgICAgaWQ9ImRlZnM0IiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp6b29tPSIxIgogICAgIGlua3NjYXBlOmN4PSItMTc2Ljk0MzQ4IgogICAgIGlua3NjYXBlOmN5PSItMTcuNTA1NDkiCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9ImxheWVyMSIKICAgICBzaG93Z3JpZD0idHJ1ZSIKICAgICBpbmtzY2FwZTpvYmplY3Qtbm9kZXM9InRydWUiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxMjgwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9Ijk0MCIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiIC8+CiAgPGcKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiCiAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUyMi41LC02NzQuODYyMDMpIj4KICAgIDxnCiAgICAgICBpZD0iZzM2MTgiCiAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjk1MjM4MDk1LDAsMCwwLjk1MjM4MDk1LDI5LjY0MjgyNCwzNi44OTgwNDcpIgogICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDo1O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lIj4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgyODMyIgogICAgICAgICBkPSJtIDU3MCw3MjIuMzYyMTggMCwtNTAiCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIgLz4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzNjA4IgogICAgICAgICBkPSJtIDU3MCw2NzIuMzYyMTggLTIsMiAwLDIgMiwyIDIsLTIgMCwtMiAtMiwtMiB6IgogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIGlkPSJwYXRoMzYxMCIKICAgICAgICAgZD0ibSA1NzAsNjg3LjM2MjE4IDgsLTgiCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzNjEyIgogICAgICAgICBkPSJtIDU3MCw2OTcuMzYyMTggNSwtNSIKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIiAvPgogICAgICA8cGF0aAogICAgICAgICBpZD0icGF0aDM2MTQiCiAgICAgICAgIGQ9Im0gNTY1LDY5Mi4zNjIxOCA1LDUiCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIgogICAgICAgICBkPSJtIDU3MCw2ODcuMzYyMTggLTgsLTgiCiAgICAgICAgIGlkPSJwYXRoMzYxNiIgLz4KICAgIDwvZz4KICAgIDxnCiAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjQ3NjE5MDUxLC0wLjgyNDc4NjE0LDAuODI0Nzg2MTQsMC40NzYxOTA1MSwtMjk0LjcyMjkzLDg1MS4wMDgxMikiCiAgICAgICBpZD0iZzM2ODIiCiAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmUiPgogICAgICA8cGF0aAogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmUiCiAgICAgICAgIGQ9Im0gNTcwLDcyMi4zNjIxOCAwLC01MCIKICAgICAgICAgaWQ9InBhdGgzNjg0IiAvPgogICAgICA8cGF0aAogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiCiAgICAgICAgIGQ9Im0gNTcwLDY3Mi4zNjIxOCAtMiwyIDAsMiAyLDIgMiwtMiAwLC0yIC0yLC0yIHoiCiAgICAgICAgIGlkPSJwYXRoMzY4NiIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIgogICAgICAgICBkPSJtIDU3MCw2ODcuMzYyMTggOCwtOCIKICAgICAgICAgaWQ9InBhdGgzNjg4IiAvPgogICAgICA8cGF0aAogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiCiAgICAgICAgIGQ9Im0gNTcwLDY5Ny4zNjIxOCA1LC01IgogICAgICAgICBpZD0icGF0aDM2OTAiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIKICAgICAgICAgZD0ibSA1NjUsNjkyLjM2MjE4IDUsNSIKICAgICAgICAgaWQ9InBhdGgzNjkyIiAvPgogICAgICA8cGF0aAogICAgICAgICBpZD0icGF0aDM2OTQiCiAgICAgICAgIGQ9Im0gNTcwLDY4Ny4zNjIxOCAtOCwtOCIKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIiAvPgogICAgPC9nPgogICAgPGcKICAgICAgIGlkPSJnMzY5NiIKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KC0wLjQ3NjE5MDUxLC0wLjgyNDc4NjE0LDAuODI0Nzg2MTQsLTAuNDc2MTkwNTEsMjQ4LjEzNDI2LDE1MzguOTcyMSkiCiAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmUiPgogICAgICA8cGF0aAogICAgICAgICBpZD0icGF0aDM2OTgiCiAgICAgICAgIGQ9Im0gNTcwLDcyMi4zNjIxOCAwLC01MCIKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lIiAvPgogICAgICA8cGF0aAogICAgICAgICBpZD0icGF0aDM3MDAiCiAgICAgICAgIGQ9Im0gNTcwLDY3Mi4zNjIxOCAtMiwyIDAsMiAyLDIgMiwtMiAwLC0yIC0yLC0yIHoiCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzNzAyIgogICAgICAgICBkPSJtIDU3MCw2ODcuMzYyMTggOCwtOCIKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIiAvPgogICAgICA8cGF0aAogICAgICAgICBpZD0icGF0aDM3MDQiCiAgICAgICAgIGQ9Im0gNTcwLDY5Ny4zNjIxOCA1LC01IgogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIGlkPSJwYXRoMzcwNiIKICAgICAgICAgZD0ibSA1NjUsNjkyLjM2MjE4IDUsNSIKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIiAvPgogICAgICA8cGF0aAogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiCiAgICAgICAgIGQ9Im0gNTcwLDY4Ny4zNjIxOCAtOCwtOCIKICAgICAgICAgaWQ9InBhdGgzNzA4IiAvPgogICAgPC9nPgogICAgPGcKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KC0wLjk1MjM4MDk1LDAsMCwtMC45NTIzODA5NSwxMTE1LjM1NzIsMTQxMi44MjYzKSIKICAgICAgIGlkPSJnMzcxMCIKICAgICAgIHN0eWxlPSJzdHJva2Utd2lkdGg6NTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSI+CiAgICAgIDxwYXRoCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgICAgZD0ibSA1NzAsNzIyLjM2MjE4IDAsLTUwIgogICAgICAgICBpZD0icGF0aDM3MTIiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIKICAgICAgICAgZD0ibSA1NzAsNjcyLjM2MjE4IC0yLDIgMCwyIDIsMiAyLC0yIDAsLTIgLTIsLTIgeiIKICAgICAgICAgaWQ9InBhdGgzNzE0IiAvPgogICAgICA8cGF0aAogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiCiAgICAgICAgIGQ9Im0gNTcwLDY4Ny4zNjIxOCA4LC04IgogICAgICAgICBpZD0icGF0aDM3MTYiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIKICAgICAgICAgZD0ibSA1NzAsNjk3LjM2MjE4IDUsLTUiCiAgICAgICAgIGlkPSJwYXRoMzcxOCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIgogICAgICAgICBkPSJtIDU2NSw2OTIuMzYyMTggNSw1IgogICAgICAgICBpZD0icGF0aDM3MjAiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIGlkPSJwYXRoMzcyMiIKICAgICAgICAgZD0ibSA1NzAsNjg3LjM2MjE4IC04LC04IgogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiIC8+CiAgICA8L2c+CiAgICA8ZwogICAgICAgaWQ9ImczNzI0IgogICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNDc2MTkwNTEsMC44MjQ3ODYxNCwtMC44MjQ3ODYxNCwtMC40NzYxOTA1MSwxNDM5LjcyMjksNTk4LjcxNTk5KSIKICAgICAgIHN0eWxlPSJzdHJva2Utd2lkdGg6NTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSI+CiAgICAgIDxwYXRoCiAgICAgICAgIGlkPSJwYXRoMzcyNiIKICAgICAgICAgZD0ibSA1NzAsNzIyLjM2MjE4IDAsLTUwIgogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmUiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIGlkPSJwYXRoMzcyOCIKICAgICAgICAgZD0ibSA1NzAsNjcyLjM2MjE4IC0yLDIgMCwyIDIsMiAyLC0yIDAsLTIgLTIsLTIgeiIKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIiAvPgogICAgICA8cGF0aAogICAgICAgICBpZD0icGF0aDM3MzAiCiAgICAgICAgIGQ9Im0gNTcwLDY4Ny4zNjIxOCA4LC04IgogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIGlkPSJwYXRoMzczMiIKICAgICAgICAgZD0ibSA1NzAsNjk3LjM2MjE4IDUsLTUiCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzNzM0IgogICAgICAgICBkPSJtIDU2NSw2OTIuMzYyMTggNSw1IgogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIKICAgICAgICAgZD0ibSA1NzAsNjg3LjM2MjE4IC04LC04IgogICAgICAgICBpZD0icGF0aDM3MzYiIC8+CiAgICA8L2c+CiAgICA8ZwogICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMC40NzYxOTA1MSwwLjgyNDc4NjE0LC0wLjgyNDc4NjE0LDAuNDc2MTkwNTEsODk2Ljg2NTcxLC04OS4yNDgwMTgpIgogICAgICAgaWQ9ImczNzM4IgogICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDo1O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lIj4KICAgICAgPHBhdGgKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lIgogICAgICAgICBkPSJtIDU3MCw3MjIuMzYyMTggMCwtNTAiCiAgICAgICAgIGlkPSJwYXRoMzc0MCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIgogICAgICAgICBkPSJtIDU3MCw2NzIuMzYyMTggLTIsMiAwLDIgMiwyIDIsLTIgMCwtMiAtMiwtMiB6IgogICAgICAgICBpZD0icGF0aDM3NDIiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIKICAgICAgICAgZD0ibSA1NzAsNjg3LjM2MjE4IDgsLTgiCiAgICAgICAgIGlkPSJwYXRoMzc0NCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIgogICAgICAgICBkPSJtIDU3MCw2OTcuMzYyMTggNSwtNSIKICAgICAgICAgaWQ9InBhdGgzNzQ2IiAvPgogICAgICA8cGF0aAogICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiCiAgICAgICAgIGQ9Im0gNTY1LDY5Mi4zNjIxOCA1LDUiCiAgICAgICAgIGlkPSJwYXRoMzc0OCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzNzUwIgogICAgICAgICBkPSJtIDU3MCw2ODcuMzYyMTggLTgsLTgiCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIgLz4KICAgIDwvZz4KICAgIDxnCiAgICAgICBpZD0iZzM3NTYiCiAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmUiCiAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjk1MjM4MDk1LDAsMCwwLjk1MjM4MDk1LDI0Ljg4MDk0OSwzNi44OTgwNDcpIj4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzNzUyIgogICAgICAgICBkPSJtIDU3NSw3MjIuMzYyMTggLTUwLDAiCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjY2NjY2NjIgogICAgICAgICBpZD0icGF0aDM3NTQiCiAgICAgICAgIGQ9Im0gNTI1LDcyMi4zNjIxOCAyLC0yIDI2LDAgMiwyIC0yLDIgLTI2LDAgLTIsLTIgeiIKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIiAvPgogICAgPC9nPgogICAgPGcKICAgICAgIGlkPSJnMzc2MCIKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuNDc2MTkwNTEsLTAuODI0Nzg2MTQsMC44MjQ3ODYxNCwwLjQ3NjE5MDUxLC0yOTcuMTAzODEsODU1LjEzMjA2KSIKICAgICAgIHN0eWxlPSJzdHJva2Utd2lkdGg6NTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSI+CiAgICAgIDxwYXRoCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIKICAgICAgICAgZD0ibSA1NzUsNzIyLjM2MjE4IC01MCwwIgogICAgICAgICBpZD0icGF0aDM3NjIiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIKICAgICAgICAgZD0ibSA1MjUsNzIyLjM2MjE4IDIsLTIgMjYsMCAyLDIgLTIsMiAtMjYsMCAtMiwtMiB6IgogICAgICAgICBpZD0icGF0aDM3NjQiCiAgICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2NjY2NjYyIgLz4KICAgIDwvZz4KICAgIDxnCiAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgtMC40NzYxOTA1MSwtMC44MjQ3ODYxNCwwLjgyNDc4NjE0LC0wLjQ3NjE5MDUxLDI1MC41MTUyNiwxNTQzLjA5NjMpIgogICAgICAgaWQ9ImczNzY2IgogICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDo1O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lIj4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzNzY4IgogICAgICAgICBkPSJtIDU3NSw3MjIuMzYyMTggLTUwLDAiCiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjY2NjY2NjIgogICAgICAgICBpZD0icGF0aDM3NzAiCiAgICAgICAgIGQ9Im0gNTI1LDcyMi4zNjIxOCAyLC0yIDI2LDAgMiwyIC0yLDIgLTI2LDAgLTIsLTIgeiIKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIiAvPgogICAgPC9nPgogICAgPGcKICAgICAgIGlkPSJnMzc3OCIKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuNDc2MTkwNTEsLTAuODI0Nzg2MTQsMC44MjQ3ODYxNCwwLjQ3NjE5MDUxLC0yOTcuMTAzODcsODU1LjEzMjA2KSIKICAgICAgIHN0eWxlPSJzdHJva2Utd2lkdGg6NTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSI+CiAgICAgIDxnCiAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KC0xLDAsMCwtMSwxMTUwLDE0NDQuNzI0NCkiCiAgICAgICAgIGlkPSJnMzc3MiIKICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDo1O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lIj4KICAgICAgICA8cGF0aAogICAgICAgICAgIGlkPSJwYXRoMzc3NCIKICAgICAgICAgICBkPSJtIDU3NSw3MjIuMzYyMTggLTUwLDAiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIiAvPgogICAgICAgIDxwYXRoCiAgICAgICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjY2NjY2NjIgogICAgICAgICAgIGlkPSJwYXRoMzc3NiIKICAgICAgICAgICBkPSJtIDUyNSw3MjIuMzYyMTggMiwtMiAyNiwwIDIsMiAtMiwyIC0yNiwwIC0yLC0yIHoiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIiAvPgogICAgICA8L2c+CiAgICA8L2c+CiAgICA8ZwogICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNDc2MTkwNTEsLTAuODI0Nzg2MTQsMC44MjQ3ODYxNCwtMC40NzYxOTA1MSwyNTAuNTE1MiwxNTQzLjA5NjMpIgogICAgICAgaWQ9ImczNzgzIgogICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDo1O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lIj4KICAgICAgPGcKICAgICAgICAgaWQ9ImczNzg1IgogICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgtMSwwLDAsLTEsMTE1MCwxNDQ0LjcyNDQpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmUiPgogICAgICAgIDxwYXRoCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIgogICAgICAgICAgIGQ9Im0gNTc1LDcyMi4zNjIxOCAtNTAsMCIKICAgICAgICAgICBpZD0icGF0aDM3ODciIC8+CiAgICAgICAgPHBhdGgKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiCiAgICAgICAgICAgZD0ibSA1MjUsNzIyLjM2MjE4IDIsLTIgMjYsMCAyLDIgLTIsMiAtMjYsMCAtMiwtMiB6IgogICAgICAgICAgIGlkPSJwYXRoMzc4OSIKICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2MiIC8+CiAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxnCiAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjk1MjM4MDk1LDAsMCwwLjk1MjM4MDk1LDI0Ljg4MDk0OSwzNi44OTgwNDcpIgogICAgICAgaWQ9ImczNzkxIgogICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDo1O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lIj4KICAgICAgPGcKICAgICAgICAgaWQ9ImczNzkzIgogICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgtMSwwLDAsLTEsMTE1MCwxNDQ0LjcyNDQpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmUiPgogICAgICAgIDxwYXRoCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowIgogICAgICAgICAgIGQ9Im0gNTc1LDcyMi4zNjIxOCAtNTAsMCIKICAgICAgICAgICBpZD0icGF0aDM3OTUiIC8+CiAgICAgICAgPHBhdGgKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1kYXNob2Zmc2V0OjAiCiAgICAgICAgICAgZD0ibSA1MjUsNzIyLjM2MjE4IDIsLTIgMjYsMCAyLDIgLTIsMiAtMjYsMCAtMiwtMiB6IgogICAgICAgICAgIGlkPSJwYXRoMzc5NyIKICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2MiIC8+CiAgICAgIDwvZz4KICAgIDwvZz4KICA8L2c+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhMzc5OSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzp0aXRsZT48L2RjOnRpdGxlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KPC9zdmc+Cg==",
+    "count": 0
+  },
+  {
+    "otype": "capacity",
+    "name": "Danse de l'avalanche",
+    "voname": "Inconnu",
+    "limited": true,
+    "rank": 1,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du clan Yuki",
+    "jutsu": "Shurikenjutsu",
+    "element": "Inconnu",
+    "full-description": "L'utilisateur de cette technique délivre une série de coups de poing et de coups de pied tout en attaquant avec des senbons son adversaire. Si l'utilisateur est équipé dans sa main principale d'un senbon, celui-ci peut faire dans ce tour une attaque au contact de coups de pied et de poing infligeant 2d4 dégâts. Comme ce sont des attaques au contact, l'utilisateur peut ajouter des points de chakra pour faire des dégâts supplémentaires. L'utilisateur de cette technique bénéficie également d'une attaque au contact supplémentaire avec son senbon qui inflige 1d4 DM et qui peut paralyser son adversaire pour un tour si celui-ci rate un test de CON de difficulté 10.",
+    "short-description": "L'utilisateur de cette technique délivre une série de coups de poing et de coups de pied tout en attaquant son adversaire avec des senbons au contact.",
+    "properties": [
+      {"name":"property","property":"Pré-requis","value":"Équipé de senbon"},
+      {"name":"fight","fight":"pieds et poings","attack":{"name":"attack","attack":"Contact","values":[]},"damage":[{"name":"damage","values":[{"name":"dice","adjustment":"=","count":2,"die":"4"},{"name":"element","adjustment":"+","count":1,"element":"Chakra"}],"dm":{"name":"dm","dm":["Contondant"]}}],"critical":[20],"detail":""},
+      {"name":"property","property":"Attaque supplémentaire","value":"Senbon"}
+    ],
+    "mudras": [],
+    "count": 0
+  },
+  {
+    "otype": "capacity",
+    "name": "Pluie d'aiguilles mortelles",
+    "voname": "Sensatsu Suishô",
+    "limited": true,
+    "rank": 2,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du clan Yuki",
+    "jutsu": "Ninjutsu",
+    "element": "Suiton",
+    "full-description": "L'utilisateur de cette technique rassemble l'eau présente dans l'air et dans les alentours et la transforme en mille longues aiguilles. Il les dirige ensuite à grande vitesse vers une cible précise. L'utilisation de cette technique se fait au contact et il faut être capable de composer les mudras d'une seule main. En effet, il faut tenir son adversaire, composer les mudras et faire un bond en arrière juste avant l'impact afin de ne pas être pris dans l'attaque. Alors que les aiguilles entourent une cible de tous les côtés, elles n'apparaissent pas au-dessus de celle-ci, créant ainsi une échappatoire. L'utilisateur dépense 1 point de chakra par aiguille qu'il veut contrôler et sur une attaque au contact réussie, chaque aiguille inflige 1d6 dégâts. Il est cependant possible d'éviter complètement l'attaque en réussissant un jet de réflexe (DEX) supérieur à 15.",
+    "short-description": "L'utilisateur de cette technique transforme l'eau présente dans l'air en mille longues aiguilles. Il les dirige ensuite à grande vitesse vers une cible précise.",
+    "properties": [
+      {"name":"fight","fight":"","attack":{"name":"attack","attack":"Contact","values":[]},"damage":[{"name":"damage","values":[{"name":"dice","adjustment":"=","count":1,"die":"6"},{"name":"element","adjustment":"/","count":1,"element":"Chakra"}],"dm":{"name":"dm","dm":["Perforant"]}}],"critical":[20],"detail":""},
+      {"name":"test","test":"DEX","values":[{"name":"quantity","adjustment":"≥","count":15}],"detail":": Esquive totale"}
+    ],
+    "mudras": [],
+    "count": 0
+  },
+  {
+    "otype": "capacity",
+    "name": "Démoniaques miroirs de glace",
+    "voname": "Makyô Hyôshô",
+    "limited": true,
+    "rank": 3,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du clan Yuki",
+    "jutsu": "Kekkei genkai",
+    "element": "Hyōton",
+    "full-description": "L'utilisateur de cette technique enferme ses ennemis dans une prison composée de miroirs de glace de 5 mètres de diamètre depuis lesquels il peut surgir et attaquer les personnes ainsi emprisonnées. L'utilisateur de la technique se déplace gratuitement, librement et rapidement de miroir en miroir ce qui empêche de connaître sa position exacte. Une fois la prison en place, l'utilisateur de la technique peut, pour une action limitée, attaquer tous les prisonniers à l'aide de senbons qui vont jaillir de tous les miroirs. Il est possible de réduire de moité les dégâts infligés en réalisant un jet de réflexe (DEX) supérieur à 15. Cette technique requiert une grande consommation de chakra, ce qui limite la durée de son utilisation. Si un miroir est brisé, l'utilisateur peut émerger de l'un des fragments et se déplacer vers un autre miroir puis le miroir se régénère. Maintenir la technique coûte deux points de chakra par tour et par prisonnier et la seule façon de s'en échapper est de passer par le sol ou d'attendre l'épuisement du chakra de son utilisateur. Tant que la technique est active, l'utilisateur ne peut pas être touché par les prisonniers.",
+    "short-description": "L'utilisateur de cette technique enferme ses ennemis dans une prison composé de miroirs de glace. Tant que la technique est active, l'utilisateur ne peut pas être touché par les prisonniers.",
+    "properties": [
+      {"name":"fight","fight":"","attack":{"name":"attack","attack":"Distance","values":[]},"damage":[{"name":"damage","values":[{"name":"dice","adjustment":"=","count":1,"die":"6"},{"name":"other","adjustment":"/","other":"prisonnier"}],"dm":{"name":"dm","dm":["Perforant"]}}],"critical":[20],"detail":"(L)"},
+      {"name":"action","action":"Déplacement","limited":false,"detail":"Gratuit (entre les miroirs)","values":[]},
+      {"name":"test","test":"DEX","values":[{"name":"quantity","adjustment":"≥","count":15}],"detail":": DM divisés par 2"},
+      {"name":"action","action":"Maintenir","limited":false,"detail":"","values":[{"name":"element","adjustment":"=","count":2,"element":"Chakra"},{"name":"other","adjustment":"/","other":"prisonnier"},{"name":"measure","adjustment":"/","measure":"tr"}]},
+      {"name":"measure","measure":"area","values":[{"name":"quantity","adjustment":"=","count":5}],"unit":"m"}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "Dôme de glace",
+    "voname": "Hyôgan Dômu",
+    "limited": true,
+    "rank": 4,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du clan Yuki",
+    "jutsu": "Kekkei genkai",
+    "element": "Hyōton",
+    "full-description": "L'utilisateur de cette technique peut rapidement geler l'air ambiant et créer un dôme de glace autour de lui et de ses alliés pour s'abriter de toute attaque ennemie, excepté celles venant du sol. Ce dôme est assez puissant pour résister à l'assaut de plusieurs parchemins explosifs. Créer le dôme nécessite 1 point de chakra par mètre de diamètre et il faut 1 point de chakra par tour pour le maintenir. La seule façon de détruire le dôme est de lui infliger un minimum de 90 dégâts de feu en un seul tour. ",
+    "short-description": "L'utilisateur de cette technique peut créer un dôme de glace autour de lui et de ses alliés mais vulnérable à une attaque par le sol. Ce dôme est assez puissant pour résister à l'assaut de plusieurs parchemins explosifs.",
+    "properties": [
+      {"name":"measure","measure":"area","values":[{"name":"quantity","adjustment":"=","count":1},{"name":"element","adjustment":"/","count":1,"element":"Chakra"}],"unit":"m"},
+      {"name":"action","action":"Maintenir","limited":true,"detail":"","values":[{"name":"element","adjustment":"=","count":1,"element":"Chakra"},{"name":"measure","adjustment":"/","measure":"tr"}]},
+      {"name":"action","action":"Détruire","limited":false,"detail":"DM de feu en 1 tour","values":[{"name":"quantity","adjustment":"=","count":90}]}
+    ],
+    "mudras": ["Buffle","Cheval"],
+    "count": 0
+  },
+  {
+    "otype": "capacity",
+    "name": "Piques de glace",
+    "voname": " Hissatsu Hyôsô",
+    "limited": true,
+    "rank": 5,
+    "profil": "Techniques héréditaires",
+    "way": "Voie du clan Yuki",
+    "jutsu": "Kekkei genkai",
+    "element": "Hyōton",
+    "full-description": "L'utilisateur fait apparaître une zone contenant des piques de glace qui peuvent, par exemple, percer le toit d'un chalet en bois. Les piques surgissent du sol aléatoirement, sauf si des personnes sont présentes dans la zone d'effet. Dans ce cas, au moins un pic surgit sous chaque personne, en commençant par celle la plus proche du centre de la zone.. Cette technique fait apparaître 1d12 piques de glace dans une zone de 10 mètres de diamètre jusqu'à une distance de 20 mètres. La hauteur des piques est de  1 mètre par point de chakra dépensé par l'utilisateur de la technique. Chaque pique inflige à elle seule 1d6 dégâts par hauteur de 50 centimètres. Il est possible d'esquiver en partie une pique qui surgirait juste en dessous ou à coté de soi en réalisant jet de réflexe (DEX) supérieur à 10.",
+    "short-description": "L'utilisateur fait surgir des piques de glace sous chaque personne en commençant par celle la plus proche du centre de la zone ou aléatoirement s'il n'y a personne. La pique inflige des dégâts en fonction de sa hauteur et il est possible de l'esquiver en partie.",
+    "properties": [
+      {"name":"measure","measure":"range","values":[{"name":"quantity","adjustment":"=","count":20}],"unit":"m"},
+      {"name":"measure","measure":"area","values":[{"name":"quantity","adjustment":"=","count":10}],"unit":"m"},
+      {"name":"measure","measure":"height","values":[{"name":"quantity","adjustment":"=","count":50},{"name":"element","adjustment":"/","count":1,"element":"Chakra"}],"unit":"cm"},
+      {"name":"damage","damage":[{"name":"damage","values":[{"name":"dice","adjustment":"=","count":1,"die":"6"},{"name":"quantity","adjustment":"/","count":50},{"name":"measure","adjustment":"=","measure":"cm"}],"dm":{"name":"dm","dm":[]}}]},
+      {"name":"action","action":"Quantité","limited":false,"detail":"piques de glace","values":[{"name":"dice","adjustment":"=","count":1,"die":"12"}]},
+      {"name":"test","test":"DEX","values":[{"name":"quantity","adjustment":"≥","count":10}],"detail":": DM divisés par 2"}
+    ],
+    "mudras": [],
+    "count": 0
+  },
+  {
+    "otype": "profil",
+    "name": "Techniques principales",
+    "full-description": "Les techniques principales sont des techniques simples qui peuvent être maîtrisées par la quasi-totalité des ninjas."
+  },
+  {
+    "otype": "way",
+    "name": "Voie du kenjutsu",
+    "profil": "Techniques principales",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iaGVpZ2h0OiA1MTJweDsgd2lkdGg6IDUxMnB4OyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIiBpZD0ibG9yYy1ibGFkZS1kcmFnLWdyYWRpZW50LTIiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M5YzljOSIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjEiIGlkPSJsb3JjLWJsYWRlLWRyYWctZ3JhZGllbnQtMyI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRhNGE0YSIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSIgaWQ9ImxvcmMtYmxhZGUtZHJhZy1ncmFkaWVudC00Ij48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNGE0YTRhIiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOWM5YzkiIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJsb3JjLWJsYWRlLWRyYWctZ3JhZGllbnQtNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRhNGE0YSIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48L3JhZGlhbEdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0ibG9yYy1ibGFkZS1kcmFnLWdyYWRpZW50LTYiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0YTRhNGEiIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+PC9yYWRpYWxHcmFkaWVudD48cmFkaWFsR3JhZGllbnQgaWQ9ImxvcmMtYmxhZGUtZHJhZy1ncmFkaWVudC03Ij48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNGE0YTRhIiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxnIGNsYXNzPSIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsMCkiIHN0eWxlPSIiPjxnPjxwYXRoIGQ9Ik0yMTQuMDIgMTkuMTE1TDIxNCAxOS4xNzVDMjUyLjAzMyAzMy41NjIgMjg3Ljg2NyA1My4yNjUgMzIwLjM5MyA3Ny42MjFMMzY4LjAyIDE1OC40QzI5Mi4yNTQgNzIuMDYzIDE4MS43MiAyMC42NzggNjQuNjYgMjAuNjA0QzQ5LjcgMjAuNTk0IDM0LjYzMyAyMS40MzggMTkuNTIgMjMuMTM5TDE5LjUyIDQxLjkzOUMxMjcuNjk0IDI5LjE2NSAyMzMuNDMgNjMuMjMxIDMxMy4wNDcgMTMwLjQ5M0wzNTUuMzYxIDIyNy45MDlDMjkwLjg4NyAxMzIuNDg2IDE4Mi40MjUgNzMuODg1IDY2LjM5NSA3My4yMUM2My45NDUgNzMuMTk3IDYxLjQ5NSA3My4yMDggNTkuMDM4IDczLjI0NkM0NS45MzIgNzMuNDQ2IDMyLjc0MSA3NC40MDMgMTkuNTE2IDc2LjExNkwxOS41MTYgOTQuOTY2QzExOC41MTQgODEuNDE0IDIxNS42MzYgMTEzLjQ5OCAyODYuNjI2IDE3Ny4yM0wzMTcuMzM0IDI2NS4wNUMyNjMuNDEyIDE3OS40NyAxNjguODUyIDEyNi4zOTQgNjcuMzQ4IDEyNS4zNkM1MS41MyAxMjUuMTk4IDM1LjU0NCAxMjYuMzE4IDE5LjUxOCAxMjguNzU4TDE5LjUxOCAxNDcuNjcyQzExMi44NDggMTMyLjQ5MiAyMDQuODk4IDE2NS43MjIgMjY3LjE5NSAyMzAuOTQyTDI4Ny44ODkgMzE0Ljg1OUMyNDYuNTU1IDIzMC40MiAxNjAuNjcgMTc2LjcxNiA2Ny43IDE3NS40MjNDNjYuNDQ0IDE3NS40MDUgNjUuMTg2IDE3NS4zOTggNjMuOTI2IDE3NS4zOTlDNDkuMjM4IDE3NS40MTkgMzQuMzg2IDE3Ni43NTkgMTkuNTE4IDE3OS40ODNMMTkuNTE4IDE5OC41MTlDMTA5LjAzMSAxODAuNzI1IDE5OC4xNzMgMjE3LjY3OSAyNDkuODc1IDI4Ny45ODdMMjU0LjQ5NSAzNjEuMzM1QzIyNS41MjIgMjc4LjMyMiAxNDYuNjA3IDIyNC42NDMgNjEuMjM4IDIyNS40NjVDNDcuNDM4IDIyNS41OTcgMzMuNDcgMjI3LjE1OCAxOS41MTggMjMwLjI0NUwxOS41MTggMjQ5LjQzM0M5Ni43MzggMjMwLjUyOSAxNzQuODUxIDI2My40MTYgMjE2LjYxMyAzMjYuNTczTDIyMi40ODYgMzg0LjA2M0MyNDUuODE2IDM3Ny43OCAyNzAuMDIgMzcwLjg0NSAyOTEuMjEzIDM2My4xOUMzMTAuNDA3IDM1Ni4yNiAzMjcuMDk3IDM0OC42NjUgMzM3LjgwOSAzNDEuMTUyQzM0My4xNjMgMzM3LjM5NiAzNDYuOTUxIDMzMy42NzQgMzQ4Ljk4MyAzMzAuNTc4QzM1MS4wMTYgMzI3LjQ4MiAzNTEuNDUzIDMyNS4zOTQgMzUxLjA4MSAzMjIuOTg4TDM0OS44MjkgMzE0Ljg2NUw0ODYuOTAzIDI3NS4zMDlDNDQ2Ljg5NyAxNTkuOTIgMzYzLjY3IDY5Ljk2NCAyNjAuNjU0IDE5LjExNEwyMTQuMDIgMTkuMTE0WiIgY2xhc3M9IiIgZmlsbD0idXJsKCNsb3JjLWJsYWRlLWRyYWctZ3JhZGllbnQtMikiIHN0cm9rZT0iIzRhNGE0YSIgc3Ryb2tlLW9wYWNpdHk9IjEiIHN0cm9rZS13aWR0aD0iNCI+PC9wYXRoPjxwYXRoIGQ9Ik00OTIuODggMjkzLjAzN0w0NTIuNjg0IDMwNC42MzdDNDU0LjMxNCAzMjMuMjk3IDQ0OC4wMTggMzQxLjIwNCA0MzYuMjg3IDM1Ni42OEM0MjIuMTA3IDM3NS4zODcgNDAwLjM1MyAzOTEuMzA3IDM3My45MjQgNDA0LjkzN0MzMjguNjk0IDQyOC4yNjcgMjY5LjQ3NCA0NDQuODE0IDIwOS41MjcgNDUyLjkwN0wyMTMuOTA3IDQ2OS4yNTdDMjgyLjUzNyA0NjEuNTk3IDM1Ny4yNDcgNDQ3LjIxOSA0MTIuMDc3IDQyMC43MTlDNDQyLjU5NCA0MDUuOTY5IDQ2Ni43MSAzODcuNTk2IDQ4MC43OTkgMzY1LjM4OUM0OTMuNTM5IDM0NS4zMDUgNDk4LjU3NCAzMjIuMDA1IDQ5Mi44NzkgMjkzLjAzNloiIGNsYXNzPSIiIGZpbGw9InVybCgjbG9yYy1ibGFkZS1kcmFnLWdyYWRpZW50LTMpIiBzdHJva2U9IiM0YTRhNGEiIHN0cm9rZS1vcGFjaXR5PSIxIiBzdHJva2Utd2lkdGg9IjQiPjwvcGF0aD48cGF0aCBkPSJNNDM0LjM2NyAzMDkuOTIyTDM2OS4zNCAzMjguNjg3QzM2OC42MDQgMzMzLjAzMiAzNjYuOTk1IDMzNy4xOTcgMzY0LjYwNyAzNDAuODM0QzM2MC42ODIgMzQ2LjgxNCAzNTUuMTQ1IDM1MS44MiAzNDguNTM5IDM1Ni40NTRDMzM1LjMyNiAzNjUuNzIgMzE3LjU0MyAzNzMuNTUyIDI5Ny41NjEgMzgwLjc3QzI2NS42MzQgMzkyLjMgMjI5LjE1MSA0MDEuNzY4IDE5OC4wMDMgNDA5LjkwNEwyMDQuNjQ3IDQzNC42OTRDMjYzLjY3NCA0MjYuOTA0IDMyMi4yODcgNDEwLjU0MSAzNjUuMzU3IDM4OC4zMjhDMzkwLjE4NSAzNzUuNTIzIDQwOS43NDUgMzYwLjc1NSA0MjEuMzk0IDM0NS4zODhDNDMwLjE5OCAzMzMuNzc0IDQzNC42NzcgMzIyLjI1MyA0MzQuMzY2IDMwOS45MjJaIiBjbGFzcz0iIiBmaWxsPSJ1cmwoI2xvcmMtYmxhZGUtZHJhZy1ncmFkaWVudC00KSIgc3Ryb2tlPSIjNGE0YTRhIiBzdHJva2Utb3BhY2l0eT0iMSIgc3Ryb2tlLXdpZHRoPSI0Ij48L3BhdGg+PHBhdGggZD0iTTE3Mi42MTMgMzg3LjM1MkwxMzkuNTggMzk2LjIwMkwxNDcuNzc3IDQyNi43OTJDMTU4LjU4OSA0MzAuNzQyIDE2Ni40IDQ0MS4xNzIgMTY2LjQgNDUzLjI3N0MxNjYuNCA0NjAuMTQ3IDE2My44OCA0NjYuNDc3IDE1OS43MjcgNDcxLjM5MUwxNjQuNDQzIDQ4OC45OTFMMTk3LjQ3NyA0ODAuMTQxTDE3Mi42MTMgMzg3LjM1M1oiIGNsYXNzPSIiIGZpbGw9InVybCgjbG9yYy1ibGFkZS1kcmFnLWdyYWRpZW50LTUpIiBzdHJva2U9IiM0YTRhNGEiIHN0cm9rZS1vcGFjaXR5PSIxIiBzdHJva2Utd2lkdGg9IjQiPjwvcGF0aD48cGF0aCBkPSJNMTM4LjIyIDQ0My43OUMxMzYuNzMgNDQzLjc5IDEzNS4zNCA0NDQuMTIgMTM0LjEgNDQ0LjdMNTguNSA0NjQuOTU1QzYxLjQyNiA0NjkuNjYxIDYzLjEyNSA0NzUuMTk1IDYzLjEyNSA0ODEuMDk1QzYzLjEyNSA0ODEuNzY1IDYzLjA5NSA0ODIuNDI1IDYzLjA1MyA0ODMuMDgyTDEzOS4wMTMgNDYyLjczQzE0My45NzMgNDYyLjM0NCAxNDcuNzExIDQ1OC4zNiAxNDcuNzExIDQ1My4yNzdDMTQ3LjcxMSA0NDcuOTI3IDE0My41NzMgNDQzLjc4OSAxMzguMjIxIDQ0My43ODlaIiBjbGFzcz0iIiBmaWxsPSJ1cmwoI2xvcmMtYmxhZGUtZHJhZy1ncmFkaWVudC02KSIgc3Ryb2tlPSIjNGE0YTRhIiBzdHJva2Utb3BhY2l0eT0iMSIgc3Ryb2tlLXdpZHRoPSI0Ij48L3BhdGg+PHBhdGggZD0iTTMyLjMyNyA0NjguOTg1QzI1LjUyOSA0NjguOTg1IDIwLjIxNyA0NzQuMjk3IDIwLjIxNyA0ODEuMDk1QzIwLjIxNyA0ODcuODkzIDI1LjUyOSA0OTMuMjA1IDMyLjMyNyA0OTMuMjA1QzM5LjEyNSA0OTMuMjA1IDQ0LjQzOCA0ODcuODkzIDQ0LjQzOCA0ODEuMDk1QzQ0LjQzOCA0NzQuMjk3IDM5LjEyNSA0NjguOTg1IDMyLjMyOCA0NjguOTg1WiIgY2xhc3M9InNlbGVjdGVkIiBmaWxsPSJ1cmwoI2xvcmMtYmxhZGUtZHJhZy1ncmFkaWVudC03KSIgc3Ryb2tlPSIjNGE0YTRhIiBzdHJva2Utb3BhY2l0eT0iMSIgc3Ryb2tlLXdpZHRoPSI0Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4=",
+    "full-description": "Le Kenjutsu est un art ninja consistant à manipuler un Katana ou autre sabre. En plus des capacités de la voie, le ninja obtient un bonus de +1 par rang dans la voie lorsqu'il attaque avec un sabre ou un katana."
+  },
+  {
+    "otype": "capacity",
+    "name": "Danger des lames dansantes",
+    "voname": "Inconnu",
+    "limited": false,
+    "rank": 1,
+    "profil": "Techniques principales",
+    "way": "Voie du kenjutsu",
+    "jutsu": "Kenjutsu",
+    "element": "Inconnu",
+    "full-description": "L'utilisateur de cette technique effectue une accélération rapide en direction de son adversaire en lui portant un coup d'épée. Grâce à cette technique l'utilisateur peut effectuer une action de mouvement gratuite après avoir effectué une attaque au sabre ou au katana en plus de son action de mouvement classique.",
+    "short-description": "L'utilisateur effectue une accélération rapide en direction de son adversaire en lui portant un coup d'épée.",
+    "properties": [
+      {"name":"action","action":"Déplacement","limited":false,"detail":"après une attaque","values":[{"name":"quantity","adjustment":"+","count":1}]},
+      {"name":"action","action":"Utilisation","limited":false,"detail":"Sabre ou katana uniquement","values":[]}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "Épée volante tournoyante",
+    "voname": "Inconnu",
+    "limited": false,
+    "rank": 2,
+    "profil": "Techniques principales",
+    "way": "Voie du kenjutsu",
+    "jutsu": "Kenjutsu",
+    "element": "Inconnu",
+    "full-description": "L'utilisateur de cette technique lance un katana ou un sabre sur son adversaire en le faisant tournoyer. Cette technique, qui permet d'attaquer un adversaire jusqu'à 20 mètres de distance, n'est pas très précise et subit un malus de -5 à son jet d'attaque de contact. Elle est cependant redoutable lorsque qu'elle touche car elle ajoute 2d6 aux dégâts et les multiplie même par 3 en cas de réussite critique. L'espace entre l'utilisateur de la technique et sa cible doit être dégagé sinon le sabre s'arrête au premier obstacle qu'il rencontre.",
+    "short-description": "L'utilisateur de cette technique lance un katana ou un sabre sur son adversaire en le faisant tournoyer dans un espace dégagé sinon le sabre s'arrête au premier obstacle qu'il rencontre.",
+    "properties": [
+      {"name":"action","action":"Utilisation","limited":false,"detail":"Sabre ou katana uniquement","values":[]},
+      {"name":"action","action":"Attaque","limited":false,"detail":"(contact)","values":[{"name":"quantity","adjustment":"-","count":5}]},
+      {"name":"action","action":"DM","limited":false,"detail":"","values":[{"name":"dice","adjustment":"+","count":2,"die":"6"}]},
+      {"name":"measure","measure":"area","values":[{"name":"quantity","adjustment":"=","count":20}],"unit":"m"},
+      {"name":"action","action":"Critique","limited":false,"detail":"","values":[{"name":"quantity","adjustment":"x","count":3}]}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "Danse sous la nouvelle lune",
+    "voname": "Mikazuki no mai",
+    "limited": true,
+    "rank": 3,
+    "profil": "Techniques principales",
+    "way": "Voie du kenjutsu",
+    "jutsu": "Kenjutsu",
+    "element": "Inconnu",
+    "full-description": "L'utilisateur part à l'assaut de l'ennemi en attaquant sur trois fronts : par la gauche, par la droite et par le haut. En outre, les frappes au sabre ou au katana sont si puissantes qu\"elles infligent des blessures mortelles. Grâce à cette technique, l'utilisateur peut faire jusqu'à 3 attaques de contact avec son arme. Les dégâts sont multipliés par le nombre d'attaques réussies, 1 2 ou 3. Le style et la magnificence de la façon dont l'utilisateur saute et manie ses épées sur le haut du corps de l'adversaire créent un motif orbital dont l'élégance rappelle la forme d'un croissant de lune, d'où le nom de la technique. Cette technique, basée sur le fait de surprendre l'ennemi, ne fonctionne cependant qu'une seule fois par combat.",
+    "short-description": "L'utilisateur part à l'assaut de l'ennemi en attaquant sur trois fronts. En outre, les frappes au sabre ou au katana sont si puissantes qu\"elles infligent des blessures mortelles.",
+    "properties": [
+      {"name":"action","action":"Utilisation","limited":false,"detail":"Sabre ou katana uniquement","values":[]},
+      {"name":"action","action":"Utilisation","limited":false,"detail":"","values":[{"name":"quantity","adjustment":"=","count":1},{"name":"other","adjustment":"/","other":"combat"}]},
+      {"name":"action","action":"Attaque","limited":false,"detail":"","values":[{"name":"quantity","adjustment":"x","count":3}]},
+      {"name":"action","action":"DM","limited":false,"detail":"","values":[{"name":"free","adjustment":"x","value":"Nombre d'attaques réussies"}]}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "Sabre Secret - Ombre Lunaire",
+    "voname": "Hiken - Tsukikage",
+    "limited": true,
+    "rank": 4,
+    "profil": "Techniques principales",
+    "way": "Voie du kenjutsu",
+    "jutsu": "Kenjutsu",
+    "element": "Inconnu",
+    "full-description": "L'utilisateur de cette technique se précipite vers son adversaire avec une grande vitesse avant d'effectuer une attaque rapide latérale avec son katana ou son sabre. La rapidité de l'attaque est telle qu'elle laisse une trace rémanente. Avec cette technique l'utilisateur peut faire une action de mouvement et une action d'attaque pendant son tour. Si l'attaque réussit, alors sa réussite est automatiquement considérée comme critique et les dégâts sont multipliés en conséquence.",
+    "short-description": "L'utilisateur de cette technique se précipite vers son adversaire avec une grande vitesse avant d'effectuer une attaque rapide latérale avec son épée. La rapidité de l'attaque est telle qu'elle laisse une trace rémanente. Avec cette technique l'utilisateur peut faire une action de mouvement et une action d'attaque pendant son tour. ",
+    "properties": [
+      {"name":"action","action":"Utilisation","limited":false,"detail":"Sabre ou katana uniquement","values":[]},
+      {"name":"action","action":"Critique","limited":false,"detail":"(Si attaque réussie)","values":[{"name":"other","adjustment":"=","other":"auto"}]}
+    ],
+    "mudras": []
+  },
+  {
+    "otype": "capacity",
+    "name": "Nuit de lune voilée",
+    "voname": "Inconnu",
+    "limited": false,
+    "rank": 5,
+    "profil": "Techniques principales",
+    "way": "Voie du kenjutsu",
+    "jutsu": "Kenjutsu",
+    "element": "Inconnu",
+    "full-description": "L'utilisateur de cette technique lance son katan ou son sabre dans un mouvement circulaire, laissant derrière elle une successions d'images rémanentes formant une lune.. Avec cette technique l'utilisateur utilise son action de mouvement pour se précipiter sur un ennemi et il peut alors lui porter jusqu'à 5 attaques lors de ce tour. Cette attaque demande cependant une grande concentration et 1 tour entier de préparation.",
+    "short-description": "L'utilisateur de cette technique lance son épée dans un mouvement circulaire formant l'image d'une lune. L'utilisateur utilise son action de mouvement pour se précipiter sur un ennemi et il peut alors lui porter plusieurs attaques lors de ce tour.",
+    "properties": [
+      {"name":"action","action":"Utilisation","limited":false,"detail":"Sabre ou katana uniquement","values":[]},
+      {"name":"action","action":"Préparation","limited":false,"detail":"(complet)","values":[{"name":"quantity","adjustment":"=","count":1},{"name":"measure","adjustment":"=","measure":"tr"}]},
+      {"name":"action","action":"Attaque","limited":false,"detail":"","values":[{"name":"quantity","adjustment":"x","count":5}]}
+    ],
+    "mudras": []
+  }
+]

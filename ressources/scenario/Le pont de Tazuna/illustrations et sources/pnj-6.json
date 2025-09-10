@@ -1,0 +1,22 @@
+{
+	"characterId": "girl",
+	"attributes": [
+		{"categoryId":"body","itemId":"5"},
+		{"categoryId":"eyes","itemId":"32"},
+		{"categoryId":"nose","itemId":"7"},
+		{"categoryId":"mouth","itemId":"12"},
+		{"categoryId":"face","itemId":"26"},
+		{"categoryId":"access","itemId":"14"},
+		{"categoryId":"headband","itemId":"24"},
+		{"categoryId":"shirt","itemId":"22"},
+		{"categoryId":"hair","itemId":"13"},
+		{"categoryId":"forearms","itemId":"6"},
+		{"categoryId":"legs","itemId":"9"},
+		{"categoryId":"feet","itemId":"7"},
+		{"categoryId":"undershirt","itemId":"5"},
+		{"categoryId":"pants","itemId":"31"},
+		{"categoryId":"animal","itemId":"1"},
+		{"categoryId":"weapon","itemId":"13"},
+		{"categoryId":"extra","itemId":"7"}
+	]
+}
