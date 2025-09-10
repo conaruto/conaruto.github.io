@@ -10,6 +10,8 @@ Déplacer une carte sur la poubelle supprime la carte.
 
 Recharger la page réinitialise toutes les modifications apportées.
 
+Vous pouver sauver l'image de la carte en faisant un clic droit sur la carte voulue et ensuite cliquer sur le menu contextuel "Save as png". Attention vous ne devez pas zoomer avec votre navigateur, sinon l'image ne se sauvegardera pas correctement.
+
 ## Impression
 
 Pour imprimer les cartes, il suffit d'utiliser la fonction d'impression de son navigateur.

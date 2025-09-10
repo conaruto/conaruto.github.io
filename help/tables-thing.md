@@ -4,10 +4,16 @@
 Vous pouvez visualiser les cartes des objets ajoutées au panier en allant dans le menu "Cartes".
 
 ## Icones
+
 <img src="../images/ui/reset.png" height="30px" width="30px"/> Vide le panier et réinitialise la page.
+
+<img src="../images/ui/load-json.png" height="30px" width="30px"/> Charge une liste d'objets au format json.
 
 <img src="../images/ui/cart.png" height="30px" width="30px"/> Permet d'afficher / cacher le panier et indique le nombre d'objets actuellement présents dans le panier.
 
+<img src="../images/ui/save-json.png" height="30px" width="30px"/> Sauvegarder les objets contenues dans le panier au format json.
+
+<img src="../images/ui/save-text.png" height="30px" width="30px"/> Sauvegarder les objets contenues dans le panier au format text.
 
 ## Panier
 

@@ -15,9 +15,9 @@
         <!-- <script src="js-ext/html2canvas.js" defer></script> -->
         <script src="js-ext/html-to-image.js" defer></script>
         <script src="js-ext/download.min.js" defer></script>
-        <script src="js/config.js" defer></script>
-        <script src="js/headers-config.js" defer></script>
-        <script src="js/footers-config.js" defer></script>
+        <script src="js/config/global-config.js" defer></script>
+        <script src="js/config/headers-config.js" defer></script>
+        <script src="js/config/footers-config.js" defer></script>
         <script src="js/tools.js" defer></script>
         <script src="js/headers.js" defer></script>
         <script src="js/footers.js" defer></script>
@@ -63,7 +63,7 @@
                                 v-on:mouseleave="hideContextMenu()" ref="'contextmenu'+item.id">
                             <div v-bind:id="'contextmenu'+item.id" v-if="showContextMenu == item.id" class="contextMenu"
                                     v-on:mouseleave="hideContextMenu()" v-bind:style="{top:contextmenuY+'px', left:contextmenuX+'px'}">
-                                <a v-bind:href="dataUri" download="image.svg" class="contextMenu"
+                                <a v-bind:href="dataUri" download="image.png" class="contextMenu"
                                     v-on:click="saveAsImage(item)">Save as png</a>
                             </div>
                             <capacity v-bind:item="item" v-bind:items="items" ></capacity>

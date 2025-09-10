@@ -30,13 +30,13 @@ thingSchema = {
             "title": "Type",
             "type": "string",
             "enum": [
-                "Armor", "Material", "Weapon", "Hat"
+                "Armor", "Material", "Weapon", "Shield", "Hat", "Glove", "Ring", "Boot", "Bracer", "Cloak", "Belt", "Amulet"
             ],
             "example": "Material",
             "default": "Material",
             "options": {
                 "enum_titles": [
-                    "Armure", "Matériel", "Arme", "Chapeau"
+                    "Armure", "Matériel", "Arme", "Bouclier", "Chapeau", "Gants", "Anneau", "Bottes", "Bracelets", "Cape", "Ceinture", "Amulette"
                 ],
                 "infoText": "Type de l'objet",
                 "grid_columns": 2

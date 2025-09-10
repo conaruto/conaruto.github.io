@@ -117,14 +117,14 @@ schemaDefinitions = {
             "name": {
                 "type": "string",
                 "enum": ["action"],
-                "default": "Action",
+                "default": "action",
                 "readonly": true,
                 "options": propertyOptionsFill({
                     "hidden": true
                 }),
             },
             "action": {
-                "title": "Action",
+                "title": "Catégorie d'action : ",
                 "oneOf": [
                     {"$ref": "#/definitions/actionOtherToken"},
                     {"$ref": "#/definitions/actionFORToken"},
@@ -135,7 +135,8 @@ schemaDefinitions = {
                     {"$ref": "#/definitions/actionCHAToken"},
                 ],
                 "options": propertyOptionsFill({
-                    "grid_columns": 4
+                    "grid_columns": 4,
+                    "infoText": "Choisir la catégorie d'action",
                 }),
             },
             "limited": {
@@ -192,6 +193,7 @@ schemaDefinitions = {
         "oneOf": [
             {"$ref": "#/definitions/rangeToken"},
             {"$ref": "#/definitions/areaToken"},
+            {"$ref": "#/definitions/heightToken"},
             {"$ref": "#/definitions/durationToken"},
             {"$ref": "#/definitions/weighedToken"},
             {"$ref": "#/definitions/containerToken"}
@@ -606,7 +608,9 @@ schemaDefinitions = {
                 { "$ref": "#/definitions/elementObjectToken"},
                 { "$ref": "#/definitions/measureObjectToken"},
                 { "$ref": "#/definitions/freeObjectToken"},
+                { "$ref": "#/definitions/damageToken"},
                 { "$ref": "#/definitions/otherObjectToken"}
+               
             ]
         }
     },
@@ -708,7 +712,7 @@ schemaDefinitions = {
             "measure": {
                 "oneOf":[
                     {
-                        "title": "Distance/Aire",
+                        "title": "Distance/Aire/Hauteur",
                         "$ref": "#/definitions/metricToken"
                     },
                     {
@@ -718,6 +722,11 @@ schemaDefinitions = {
                     {
                         "title": "Masse",
                         "$ref": "#/definitions/weightToken"
+
+                    },
+                    {
+                        "title": "Capacité",
+                        "$ref": "#/definitions/capacityToken"
 
                     }
                 ],
@@ -944,9 +953,12 @@ schemaDefinitions = {
     "otherToken": {
         "title": "Autre",
         "type": "string",
-        "enum": ["niveau", "rang", "PJ", "échec", "succès", ",", ":"],
+        "enum": ["niveau", "rang", "PJ", "énnemi", "prisonnier", "échec", "combat", "succès", "auto", "melee", "distance", "magique", "jutsu", ":", ",", "space"],
         "options": propertyOptionsFill({
-            "enum_titles": ["Niveau", "Rang dans la voie", "Personnage-Joueur", "Échec", "Succès"],
+            "enum_titles": [
+                "Niveau", "Rang dans la voie", "Personnage-Joueur", "Ennemi", "Prisonnier", "Échec", "Combat",
+                "Succès", "Automatique", "Attaque au contact", "Attaque à distance", "Attaque magique", "Attaque jutsu", ":", ",", "Espace insécable"
+            ],
             "infoText": "Autre type de référence permettant de définir la valeur de la propriété",
             "grid_columns": 4
         }),
@@ -1009,6 +1021,35 @@ schemaDefinitions = {
                     "grid_columns": 2,
                     "infoText": "Unité de distance",
                 })
+            }
+        }
+    },
+    "heightToken": {
+        "title": "Hauteur",
+        "type": "object",
+        "format": "grid-strict",
+        "required": [ "measure", "values", "unit"],
+        "properties": {
+            "measure": {
+                "type": "string",
+                "enum": ["height"],
+                "default": "height",
+                "readonly": true,
+                "options": propertyOptionsFill({
+                    "hidden": true
+                }),
+            },
+            "values": {
+                "$ref": "#/definitions/valuesToken",
+                "options": propertyOptionsFill({
+                    "grid_columns": 10
+                }),
+            },
+            "unit": {
+                "$ref": "#/definitions/metricToken",
+                "options": {
+                    "grid_columns": 2
+                }
             }
         }
     },
@@ -1125,30 +1166,35 @@ schemaDefinitions = {
         "title": "Unité",
         "type": "string",
         "enum": ["m", "cm", "mm", "Km"],
+        "required" : true,
         "default": "m"
     },
     "capacityToken": {
         "title": "Unité",
         "type": "string",
-        "enum": ["L", "cL", "mL"],
-        "default": "L"
+        "enum": ["m³", "L", "cL", "mL"],
+        "required" : true,
+        "default": "L",
     },
     "timeToken": {
         "title": "Unité",
         "type": "string",
         "enum": ["tr", "s", "min", "h", "j", "Combat", "Scénario", "Campagne"],
-        "default": "tr"
+        "required" : true,
+        "default": "tr",
     },
     "weightToken": {
         "title": "Unité",
         "type": "string",
         "enum": ["Kg", "g", "t"],
+        "required" : true,
         "default": "Kg"
     },
     "currencyToken": {
         "title": "Unité",
         "type": "string",
         "enum": ["Ryô"],
+        "required" : true,
         "default": "Ryô"
     },
     // Damage
@@ -1267,18 +1313,20 @@ schemaDefinitions = {
     "actionFORToken": {
         "title": "Action (FOR)",
         "type": "string",
-        "enum": ["Bras de fer", "Soulever", "Tordre", "Lancer", "Immobiliser"],
-        "default": "Soulever",
+        "enum": ["Bras de fer", "Immobiliser", "Lancer", "Pousser", "Repousser", "Soulever", "Tordre"],
+        "default": "Bras de fer",
+        "required" : true,
         "options": propertyOptionsFill({
             "infoText": "Action basée sur la force",
-            "enum_titles": ["Bras de fer", "Soulever", "Tordre", "Lancer (objet lourd)", "Immobiliser (adversaire)"],
+            "enum_titles": ["Bras de fer", "Immobiliser (adversaire)", "Lancer (objet lourd)", "Pousser", "Repousser", "Soulever", "Tordre"],
         })
     },
     "actionDEXToken": {
         "title": "Action (DEX)",
         "type": "string",
-        "enum": ["Acrobatie", "Équilibre", "Grimper", "Sauter", "Sprinter", "Discrétion", "Chaparder", "Esquive"],
-        "default": "Discétion",
+        "enum": ["Acrobatie", "Chaparder", "Discrétion", "Équilibre", "Esquive", "Grimper", "Sauter", "Sprinter"],
+        "default": "Acrobatie",
+        "required" : true,
         "options": propertyOptionsFill({
             "infoText": "Action basée sur la dextérité",
         })
@@ -1287,7 +1335,8 @@ schemaDefinitions = {
         "title": "Action (CON)",
         "type": "string",
         "enum": ["Endurance", "Encaisser", "Survie"],
-        "default": "Survie",
+        "default": "Endurance",
+        "required" : true,
         "options": propertyOptionsFill({
             "infoText": "Action basée sur la constitution",
         })
@@ -1295,21 +1344,23 @@ schemaDefinitions = {
     "actionINTToken": {
         "title": "Action (INT)",
         "type": "string",
-        "enum": ["Raisoner", "Savoir", "Information", "Mémoire", "Chercher"],
-        "default": "Savoir",
+        "enum": ["Chercher", "Information", "Mémoire", "Raisoner", "Savoir"],
+        "default": "Chercher",
+        "required" : true,
         "options": propertyOptionsFill({
             "infoText": "Action basée sur l'intelligence",
-            "enum_titles": ["Raisoner", "Savoir", "Information (dans un livre)", "Mémoire", "Chercher"]
+            "enum_titles": ["Chercher", "Information (dans un livre)", "Mémoire", "Raisoner", "Savoir", ]
         })
     },
     "actionSAGToken": {
         "title": "Action (SAG)",
         "type": "string",
         "enum": [
-            "Volonté", "Intuition", "Perception", "Observer", "Entendre", "Détecter", "Vision", 
-            "Repérer", "Pister", "Suivre des traces", "Deviner", "Sensation", "Éviter d'être surpris"
+            "Détecter", "Deviner", "Entendre", "Éviter d'être surpris", "Intuition", "Observer", 
+            "Perception", "Pister", "Repérer", "Sensation", "Suivre des traces", "Vision", "Volonté"
         ],
-        "default": "Perception",
+        "required" : true,
+        "default": "Détecter",
         "options": propertyOptionsFill({
             "infoText": "Action basée sur la sagesse",
         })
@@ -1318,10 +1369,11 @@ schemaDefinitions = {
         "title": "Action (CHA)",
         "type": "string",
         "enum": [
-            "Persuader", "Commander", "Baratiner", "Bluffer", "Mentir", "Négocier", 
-            "Séduire", "Intimider", "Convaincre", "Marchander"
+            "Baratiner", "Bluffer", "Commander", "Convaincre", "Intimider", 
+            "Marchander", "Mentir", "Négocier", "Persuader", "Séduire"
         ],
-        "default": "Négocier",
+        "default": "Baratiner",
+        "required" : true,
         "options": propertyOptionsFill({
             "infoText": "Action basée sur le charisme",
         })
@@ -1329,13 +1381,16 @@ schemaDefinitions = {
     "actionOtherToken": {
         "title": "Action (autres)",
         "type": "string",
+        "default": "Absorbe",
         "enum": [
-            "Difficulté", "Utilisation", "Maintenir", "Attaque", "Déclencher", "Attaque sournoise", "Defense", "Taille", 
-            "Quantité", "Se relever", "Soigne", "Méditer", "Absorbe", "Déplacement", "Contourner", "Cible", 
-            "Portée", "Coût", "Protéger", "Indisponible", "Équiper/Ranger", "Reculer", "Déplier",
+            "Absorbe", "Attaque", "Attaque sournoise", "Cible", "Créer", "Contourner", "Coût", "Critique",
+            "Déclencher", "Défense", "DM", "Déplacement", "Déplier", "Détruire", "Difficulté", 
+            "Ennemi tué", "Équiper/Ranger", "Fin du combat", "Générer", "Indisponible", 
+            "Maintenir", "Méditer", "Portée", "Préparation", "Protéger", "Quantité", 
+            "Reculer", "Se relever", "Soigne", "Taille", "Utilisation",             
         ],
-        "default": "Difficulté",
-        "options": propertyOptionsFill({
+        "required" : true,
+        "options": propertyOptionsFill({      
             "infoText": "Autres types d'action",
         })
     },

@@ -13,6 +13,8 @@ Elle utilise la bibiothèque "[JSON Editor](https://github.com/json-editor/json-
 
 <img src="../images/ui/save-json.png" height="30px" width="30px"/> Sauvegarde la liste des profils, voies et capacités au format json.
 
+<img src="../images/ui/save-text.png" height="30px" width="30px"/> Sauvegarde la liste des profils, voies et capacités au format text.
+
 <img src="../images/ui/add-item.png" height="30px" width="30px"/> Ajoute un profil, une voie ou une capacités à la liste.
 
 <img src="../images/ui/remove-item.png" height="30px" width="30px"/> Enlève un profil, une voie ou une capacités de la liste.

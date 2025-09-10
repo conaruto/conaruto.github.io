@@ -15,7 +15,7 @@ Pour choisir un item, il suffit de cliquer dessus et il se positionne automatiqu
 
 ## Superposition
 
-Il est possible de changer l'ordre d'empilement des images en les glissant/déposant dans la colonne "Z". Plus l'item est haut dans cette collone, plus il est visible et plus il est bas plus il est caché.
+Il est possible de changer l'ordre d'empilement des images en les glissant/déposant dans la colonne "Z". Plus l'item est haut dans cette colonne, plus il est visible et plus il est bas plus il est caché.
 
 ## Ajustement
 

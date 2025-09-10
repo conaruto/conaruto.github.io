@@ -14,9 +14,17 @@ Ressouces pour le jeu de rôle Chroniques 0ubliées Fantasy version Naruto
 
 ## Application
 
-* Création de fiche de capacités : [Fiche de capacités](https://conaruto.github.io/tables-capacity.html)
-* Création d'image de personnage : [Création de personnage](https://conaruto.github.io/resources-game.html)<br/>
+* [Création de fiche de capacités](https://conaruto.github.io/tables-capacity.html)
+* [Editeur de profils, voies et capacités](https://conaruto.github.io/resources-thing-editor.html)
+* [Editeur d'objets](https://conaruto.github.io/resources-thing-editor.html)
+* [Création de personnages](https://conaruto.github.io/resources-game.html)<br/>
 <font size="1">Cette application pour générer un personnage de l'univers de Naruto est un portage libre en HTML de l'application [Naruto create a character 4](https://www.newgrounds.com/portal/view/473226) crée par [Knight-Of-Nights](https://knight-of-nights.newgrounds.com). Elle utilise les images de l'application originale sans avoir reçu l'aval de leur auteur.</font>
+* Pour générer un personnage, on peut également utiliser l'outil de création d'image "[Designer](https://www.bing.com/images/create)" proposé par Microsoft. Pour tester, voici un exemple de demande "Personnage original masculin debout dans l'univers de naruto avec des sandales"
+
+## Scénario
+
+* [Modèle pour l'écriture de campagnes et scénario](https://github.com/conaruto/conaruto.github.io/tree/master/ressources/scenario/Modele%20de%20scenario)
+* [Scénario d'initiation à Chroniques Oubliées Fantasy version Naruto](https://github.com/conaruto/conaruto.github.io/tree/master/ressources/scenario/Le%20pont%20de%20Tazuna)
 
 ## Images utilisées
 

@@ -40,7 +40,7 @@ capacitySchema = {
             "default": "Inconnu",
             "minLength": 1,
             "options": {
-                "infoText": "Nom original de la capacité",
+                "infoText": "Nom original de la capacité s'il est connu et 'Inconnu' sinon",
                 "grid_columns": 3
             }
         },
@@ -94,7 +94,13 @@ capacitySchema = {
             "type": "string",
             "description": "Type de la technique",
             "example": "ninjutsu",
-            "enum": ["Inconnu","Ninjutsu", "Genjutsu", "Taijutsu", "Jūken", "Fûinjutsu", "Juinjutsu", "Senjutsu", "Kekkei genkai", "Kekkai ninjutsu", "Dôjutsu", "Bunshinjutsu", "Renkei ninjutsu", "Hiden", "Jujutsu", "Kenjutsu", "Kinjutsu", "Iryô ninjutsu", "Tensei ninjutsu", "Kekkei môra", "Kekkei Tôta", "Jikûkan Ninjutsu", "Bukijutsu", "Chakura Kyûin jutsu", "Chakura nagashi",  "Shurikenjutsu", "Shurikenjutsu", "Nintaijutsu", "Secrète" ],
+            "enum": [
+                "Inconnu","Ninjutsu", "Genjutsu", "Taijutsu", "Jūken", "Fûinjutsu", "Juinjutsu", "Senjutsu", 
+                "Kekkei genkai", "Kekkai ninjutsu", "Dôjutsu", "Bunshinjutsu", "Renkei ninjutsu", "Hiden", 
+                "Jujutsu", "Kenjutsu", "Kinjutsu", "Iryô ninjutsu", "Tensei ninjutsu", "Kekkei môra", 
+                "Kekkei Tôta", "Jikûkan Ninjutsu", "Bukijutsu", "Chakura Kyûin jutsu", "Chakura nagashi",  
+                "Shurikenjutsu", "Nintaijutsu", "Secrète"
+            ],
             "default": "Inconnu",
             "options": {
                 "infoText": "Type de la technique",
@@ -106,7 +112,11 @@ capacitySchema = {
             "description": "Nature du chakra associé à la technique",
             "example": "Katon",
             "type": "string",
-            "enum": ["Inconnu", "Katon", "Suiton", "Doton", "Raiton", "Fūton", "Hyōton", "Mokuton", "Deiton", "Yôton", "Ranton", "Futton", "Bakuton", "Shakuton", "Jiton", "Enton", "Taiton", "Shôton", "Meiton", "Kôton", "Jinton", "Inton", "Yôton","Inyôton"],
+            "enum": [
+                "Inconnu", "Katon", "Suiton", "Doton", "Raiton", "Fūton", "Hyōton", "Mokuton", "Deiton", "Yôton", 
+                "Ranton", "Futton", "Bakuton", "Shakuton", "Jiton", "Enton", "Taiton", "Shôton", "Meiton", "Kôton", 
+                "Jinton", "Inton", "Inyôton"
+        ],
             "default": "Inconnu",
             "options": {
                 "infoText": "Nature du chakra associé à la technique",

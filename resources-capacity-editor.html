@@ -11,10 +11,11 @@
         <script src="js-ext/ajv.min.js" defer></script>
         <script src="js-ext/stringops.js" defer></script>
         <script src="js-ext/marked.min.js"></script>
-        <script src="js/jsonEditorConfig.js" defer></script>
-        <script src="js/config.js" defer></script>
-        <script src="js/headers-config.js" defer></script>
-        <script src="js/footers-config.js" defer></script>
+        <script src="js-ext/download.min.js" defer></script>
+        <script src="js/config/jsonEditor-config.js" defer></script>
+        <script src="js/config/global-config.js" defer></script>
+        <script src="js/config/headers-config.js" defer></script>
+        <script src="js/config/footers-config.js" defer></script>
         <script src="js/tools.js" defer></script>
         <script src="js/headers.js" defer></script>
         <script src="js/footers.js" defer></script>
@@ -92,9 +93,24 @@
                             </div>
                     
                             <div class="ui-icons-mini">
-                                <img v-if="inItems()" class="add-item" v-on:click="addToList()" src="images/ui/update-item.png" alt="Appliquer les changements" title="Appliquer les changements"/>
-                                <img v-else class="add-item" v-on:click="addToList()" src="images/ui/add-item.png" alt="Ajouter l'item à la liste" title="Ajouter l'item à la liste"/>
-                                <img v-show="inItems()" class="remove-item" v-on:click="removeFromList()" src="images/ui/remove-item.png" alt="Enlever l'item de la liste" title="Enlever l'item de la liste"/>
+                                <img v-if="inItems()" class="add-item" v-on:click="addToList()"
+                                     v-on:mousedown="imageUpdateListPress()"
+                                     v-on:mouseup="imageUpdateListRelease()"
+                                     v-on:mouseleave="imageUpdateListRelease()"
+                                     v-bind:src="imageUpdateSrc" alt="Appliquer les changements" 
+                                     title="Appliquer les changements"/>
+                                <img v-else class="add-item" v-on:click="addToList()"
+                                     v-on:mousedown="imageAddToListPress()"
+                                     v-on:mouseup="imageAddToListRelease()"
+                                     v-on:mouseleave="imageAddToListRelease()"
+                                     v-bind:src="imageAddSrc" alt="Ajouter l'item à la liste" 
+                                     title="Ajouter l'item à la liste"/>
+                                <img v-show="inItems()" class="remove-item" v-on:click="removeFromList()" 
+                                     v-on:mousedown="imageRemoveFromListPress()"
+                                     v-on:mouseup="imageRemoveFromListRelease()"
+                                     v-on:mouseleave="imageRemoveFromListRelease()"
+                                     v-bind:src="imageRemoveSrc" alt="Enlever l'item de la liste" 
+                                     title="Enlever l'item de la liste"/>
                             </div>
                         </div>
                     </div>

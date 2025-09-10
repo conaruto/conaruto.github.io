@@ -189,7 +189,7 @@
     "way": "Voie du ninja",
     "jutsu": "Inconnu",
     "element": "Inconnu",
-    "full-description": "Cette technique consiste à créer plusieurs clones de soi même. Ces clones possèdent les caractéristiques de l'utilisateur et ses techniques mais ils partagent les mêmes points de chakra et ne sont pas très résistants. En effet, le clone disparaît à la moindre blessure. L'utilisateur de cette technique peut réaliser jusqu'à un clone par rang dans cette voie. Maintenir un clone pour un tour supplémentaire consomme un point de chakra. Les clones peuvent attaquer dès le tour où ils sont créés comme l'original le ferait. À moins de pouvoir visualiser le chakra à l'intérieur d'un corps, il est impossible de savoir qui est l'original.",
+    "full-description": "Cette technique consiste à créer plusieurs clones de soi mê partagent les mêmes points de chakra et ne sont pas très résistants. En effet, le clone disparaît à la moindre blessure. L'utilisateur de cette technique peut réaliser jusqu'à un clone par rang dans cette voie. Maintenir un clone pour un tour supplémentaire consomme un point de chakra. Les clones peuvent attaquer dès le tour où ils sont créés comme l'original le ferait. À moins de pouvoir visualiser le chakra à l'intérieur d'un corps, il est impossible de savoir qui est l'originalme. Ces clones possèdent les caractéristiques de l'utilisateur et ses techniques mais ils.",
     "short-description": "Cette technique permet de créer plusieurs clones de soi, ayant les mêmes capacités que l'original, mais très peu résistant. À moins de voir le chakra à l'intérieur d'un corps, il est impossible de distinguer l'original.",
     "properties": [
       {
@@ -1571,7 +1571,7 @@
       },
       {
         "name": "action",
-        "action": "Defense",
+        "action": "Défense",
         "limited": false,
         "detail": "pour le soigné",
         "values": [

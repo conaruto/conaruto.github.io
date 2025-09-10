@@ -13,6 +13,8 @@ Elle utilise la bibiothèque "[JSON Editor](https://github.com/json-editor/json-
 
 <img src="../images/ui/save-json.png" height="30px" width="30px"/> Sauvegarde une liste d'objets au format json.
 
+<img src="../images/ui/save-text.png" height="30px" width="30px"/> Sauvegarde une liste d'objets au format text.
+
 <img src="../images/ui/add-item.png" height="30px" width="30px"/> Ajoute un objet à la liste.
 
 <img src="../images/ui/remove-item.png" height="30px" width="30px"/> Enlève un objet de la liste.
